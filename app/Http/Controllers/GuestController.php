@@ -26,8 +26,50 @@ class GuestController extends Controller
      $user->password=Hash::make($request->reg_password);
      $user->utype=2;
      $user->save();
+
+    if($user)
+    {
      return back()->with('status',"User Added successfully");
 
 
     }
+    else
+        {
+            return back()->with('error',"Error! Something wrong Please try again");
+        }
+
+    }
+    public function postLogin(Request $request)
+    {
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+        $remember_me  = ( !empty( $request->remember) )? TRUE : FALSE;
+
+        if(Auth::attempt(['email' => $request->email, 'password' => $request->password],$remember_me)){
+            if(Auth::user()->user_type==1){
+                return redirect('admin.home')->withSuccess('You have Successfully loggedin');
+            }
+            else if(Auth::user()->user_type==2){
+               return redirect('consumer.home')->withSuccess('You have Successfully loggedin');
+               
+            }
+            else{
+                return redirect()->intended('dashboard')->withSuccess('You have Successfully loggedin');
+            
+            }
+        }
+        else{
+            return redirect("login")->withError('Error! You have entered invalid credentials');
+        }
+    }
+    public function logout() {
+        Session::flush();
+        Auth::logout();
+  
+        return Redirect('login');
+    }
 }
+
+

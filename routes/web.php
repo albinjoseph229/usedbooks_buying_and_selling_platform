@@ -53,6 +53,10 @@ Route::get('/adminhome', function () {
     return view('admin/index');
 })->name('adminhome');
 
+Route::get('/admin.adminlogin', function () {
+    return view('admin/adminlogin');
+})->name('admin.adminlogin');
+
 Route::get('/admin.changepassword', function () {
     return view('admin/changepassword');
 })->name('admin.changepassword');
@@ -100,3 +104,5 @@ Route::get('/admin.adminlogin', function () {
 Route::get('adminregistration', [App\Http\Controllers\AdminRegistrationController::class,'index']) ->name ('adminregistration');
 Route::post('postadminform', [App\Http\Controllers\AdminRegistrationController::class,'save']) ->name ('postadminform');
 Route::post('saveuser', [App\Http\Controllers\GuestController::class,'save']) ->name ('saveuser');
+Route::post('login',[App\Http\Controllers\GuestController::class,'postLogin'])->name('postlogin');
+Route::get('logout',[App\Http\Controllers\GuestController::class,'logout'])->name('logout');
