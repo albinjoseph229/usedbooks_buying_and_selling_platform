@@ -49,10 +49,10 @@ class GuestController extends Controller
 
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password],$remember_me)){
             if(Auth::user()->user_type==1){
-                return redirect('admin.home')->withSuccess('You have Successfully loggedin');
+                return redirect('adminhome')->withSuccess('You have Successfully loggedin');
             }
             else if(Auth::user()->user_type==2){
-               return redirect('consumer.home')->withSuccess('You have Successfully loggedin');
+               return redirect('userhome')->withSuccess('You have Successfully loggedin');
                
             }
             else{
