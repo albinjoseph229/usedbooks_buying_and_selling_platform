@@ -104,5 +104,5 @@ Route::get('/admin.adminlogin', function () {
 Route::get('adminregistration', [App\Http\Controllers\AdminRegistrationController::class,'index']) ->name ('adminregistration');
 Route::post('postadminform', [App\Http\Controllers\AdminRegistrationController::class,'save']) ->name ('postadminform');
 Route::post('saveuser', [App\Http\Controllers\GuestController::class,'save']) ->name ('saveuser');
-Route::post('login',[App\Http\Controllers\GuestController::class,'postLogin'])->name('postlogin');
-Route::get('logout',[App\Http\Controllers\GuestController::class,'logout'])->name('logout');
+Route::post('login',[App\Http\Controllers\AdminRegistrationController::class,'postLogin'])->name('postlogin');
+Route::get('logout',[App\Http\Controllers\AdminRegistrationController::class,'logout'])->name('logout');

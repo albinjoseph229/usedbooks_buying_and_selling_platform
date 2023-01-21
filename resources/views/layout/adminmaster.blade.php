@@ -290,7 +290,7 @@
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="http://localhost/usedbooks/public/logout" class="nav-link">
+                            <a href="{{ route('logout')}}" class="nav-link">
                               <i class="fas fa-users"></i>
                               <p>
                                Logout

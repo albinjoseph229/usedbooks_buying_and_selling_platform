@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Hash;
@@ -27,10 +27,9 @@ class AdminRegistrationController extends Controller
      $user->utype=1;
      $user->save();
      
-
      if($user)
      {
-        return back()->with('status',"Administrator Added successfully"); 
+      return back()->with('status',"User Added successfully");
  
  
      }
@@ -57,7 +56,7 @@ class AdminRegistrationController extends Controller
                 
              }
              else{
-                 return redirect()->intended('dashboard')->withSuccess('You have Successfully loggedin');
+                 return redirect()->intended('adminhome')->withSuccess('You have Successfully loggedin');
              
              }
          }
@@ -66,10 +65,12 @@ class AdminRegistrationController extends Controller
          }
      }
      public function logout() {
-         Session::flush();
-         Auth::logout();
-   
-         return Redirect('login');
-     }
+        Session::flush();
+        Auth::logout();
+  
+        return Redirect('login');
+    }
+
+
  }
  
