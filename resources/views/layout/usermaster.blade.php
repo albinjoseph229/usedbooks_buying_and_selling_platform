@@ -863,7 +863,7 @@
                         <li id="menu-item-4"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4 dropdown ">
                             <a title="Blogs" href="#" data-toggle="dropdown" class="dropdown-toggle"
-                                data-hover="dropdown" aria-haspopup="true">Blogs </a>
+                                data-hover="dropdown" aria-haspopup="true">View Blogs </a>
                         </li>
                         <li id="menu-item-5"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5 dropdown ">

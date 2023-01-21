@@ -47,10 +47,10 @@
             <div class="leaflet-pane leaflet-shadow-pane"></div>
             <div class="leaflet-pane leaflet-overlay-pane"></div>
             <div class="leaflet-pane leaflet-marker-pane"><img
-                    src="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/marker.png"
+                    src="https://themes/adifier/wp-content/uploads/2018/02/marker.png"
                     class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0"
                     style="margin-left: -27.5px; margin-top: -27.5px; width: 55px; height: 55px; transform: translate3d(259px, 85px, 0px); z-index: 85;"><img
-                    src="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/marker.png"
+                    src="https://t/themes/adifier/wp-content/uploads/2018/02/marker.png"
                     class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0"
                     style="margin-left: -27.5px; margin-top: -27.5px; width: 55px; height: 55px; transform: translate3d(320px, 110px, 0px); z-index: 110;">
             </div>

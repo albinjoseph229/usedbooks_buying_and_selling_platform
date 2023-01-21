@@ -2374,7 +2374,7 @@ http://classified.bylancer.com/ -->
                         <!-- Breadcrumbs -->
                         <nav id="breadcrumbs">
                             <ul>
-                                <li><a href="https://classified.bylancer.com/">Home</a></li>
+                                <li><a href="{{ route('userhome')}}">Home</a></li>
                                 <li>Post An Advertise</li>
                             </ul>
                         </nav>
