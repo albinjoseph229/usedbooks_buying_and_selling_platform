@@ -117,7 +117,7 @@
         </ul>
 
         <div class="text-center">
-            <a href="{{ route('login')}}" class="register-acc" data-toggle="modal" data-target="#login"
+            <a href="{{route('login')}}" class="register-acc" data-toggle="modal" data-target="#login"
                 data-dismiss="modal">Already have
                 an account? Login here.</a>
         </div>

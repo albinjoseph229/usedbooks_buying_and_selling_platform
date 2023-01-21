@@ -49,9 +49,7 @@ Route::get('/user.buybooks', function () {
 })->name('user.buybooks');
 
 // admin routes
-Route::get('/adminhome', function () {
-    return view('admin/index');
-})->name('adminhome');
+Route::get('/adminhome',[App\Http\Controllers\AdminController::class,'index'])->name('adminhome');
 
 Route::get('/admin.adminlogin', function () {
     return view('admin/adminlogin');
@@ -104,5 +102,5 @@ Route::get('/admin.adminlogin', function () {
 Route::get('adminregistration', [App\Http\Controllers\AdminRegistrationController::class,'index']) ->name ('adminregistration');
 Route::post('postadminform', [App\Http\Controllers\AdminRegistrationController::class,'save']) ->name ('postadminform');
 Route::post('saveuser', [App\Http\Controllers\GuestController::class,'save']) ->name ('saveuser');
-Route::post('login',[App\Http\Controllers\AdminRegistrationController::class,'postLogin'])->name('postlogin');
-Route::get('logout',[App\Http\Controllers\AdminRegistrationController::class,'logout'])->name('logout');
+Route::post('login',[App\Http\Controllers\AdminController::class,'postLogin'])->name('postlogin');
+Route::get('logout',[App\Http\Controllers\AdminController::class,'logout'])->name('logout');

@@ -867,7 +867,7 @@
                         </li>
                         <li id="menu-item-5"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5 dropdown ">
-                            <a title="Blogs" href="#" data-toggle="dropdown" class="dropdown-toggle"
+                            <a title="Blogs" href="{{ route('user.postblogs')}}" data-toggle="dropdown" class="dropdown-toggle"
                                 data-hover="dropdown" aria-haspopup="true">Post Blogs </a>
                         </li>
                         <li id="menu-item-6"
