@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Session;
 use Hash;
 use Illuminate\Support\Facades\DB;
 
@@ -68,8 +69,9 @@ class AdminRegistrationController extends Controller
         Session::flush();
         Auth::logout();
   
-        return Redirect('login');
+        return Redirect('admin.adminlogin');
     }
+
 
 
  }
