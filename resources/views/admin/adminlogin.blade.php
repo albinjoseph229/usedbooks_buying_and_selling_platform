@@ -1,4 +1,4 @@
-@extends('layouts.adminmaster')
+@extends('layout.adminmaster')
 @section('content')
 <div class="all-title-box">
         <div class="container">
