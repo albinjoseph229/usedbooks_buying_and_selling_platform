@@ -1,4 +1,4 @@
-@extends('layout/master')
+@extends('layout/usermaster')
 @section('content')
 <div class="col-md-12">
     <div class="row">
@@ -34,7 +34,7 @@
             <div class="form-group">
                 <label>Password</label>
                 <input class="form-control" type="password" id="apassword" name="apassword" required />
-                @error('password')
+                @error('apassword')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
@@ -43,7 +43,7 @@
             <div class="form-group">
                 <label>Confirm Password</label>
                 <input class="form-control" type="password" id="cpassword" name="cpassword" required />
-                @error('password')
+                @error('cpassword')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>

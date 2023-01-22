@@ -876,7 +876,7 @@
                         </li>
                         <li id="menu-item-7"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7"><a
-                                title="Contact" href="{{ route('contactus')}}">Change Password</a>
+                                title="Contact" href="{{ route('user.changepassword')}}">Change Password</a>
                         </li>
 
                     </ul>

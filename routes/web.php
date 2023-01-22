@@ -48,6 +48,10 @@ Route::get('/user.buybooks', function () {
     return view('user/buybooks');
 })->name('user.buybooks');
 
+Route::get('/user.changepassword', function () {
+    return view('user/changepassword');
+})->name('user.changepassword');
+
 // admin routes
 Route::get('/adminhome',[App\Http\Controllers\AdminController::class,'index'])->name('adminhome');
 
