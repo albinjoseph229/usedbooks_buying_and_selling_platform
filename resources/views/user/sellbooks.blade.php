@@ -2228,8 +2228,6 @@ http://classified.bylancer.com/ -->
                         <div id="tg-dbcategoriesslider"
                             class="tg-dbcategoriesslider tg-categories owl-carousel select-category post-option owl-loaded owl-drag owl-hidden">
 
-
-
                             <div class="owl-stage-outer">
                                 <div class="owl-stage"
                                     style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1500px;">
