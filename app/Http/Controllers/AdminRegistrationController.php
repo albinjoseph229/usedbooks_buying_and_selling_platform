@@ -30,7 +30,7 @@ class AdminRegistrationController extends Controller
      
      if($user)
      {
-      return back()->with('status',"User Added successfully");
+      return back()->with('status',"Admin Added successfully");
  
  
      }

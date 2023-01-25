@@ -99,9 +99,6 @@ Route::get('/admin.viewuserdetails', function () {
     return view('admin/viewuserdetails');
 })->name('admin.viewuserdetails');
 
-Route::get('/admin.adminlogin', function () {
-    return view('admin/adminlogin');
-})->name('admin.adminlogin');
 
 Route::get('adminregistration', [App\Http\Controllers\AdminRegistrationController::class,'index']) ->name ('adminregistration');
 Route::post('postadminform', [App\Http\Controllers\AdminRegistrationController::class,'save']) ->name ('postadminform');
