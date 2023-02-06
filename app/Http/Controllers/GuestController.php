@@ -18,6 +18,7 @@ class GuestController extends Controller
             'reg_username' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'reg_password' => ['required'],
+            'phoneno' =>['required', 'unique:users'],
             
      ]);
      $user=new User();
@@ -25,8 +26,18 @@ class GuestController extends Controller
      $user->email=$request->email;
      $user->password=Hash::make($request->reg_password);
      $user->utype=2;
+     $user->phoneno=$request->phoneno;
      $user->save();
-
+     if($user)
+     {
+      return back()->with('status',"You are registered successfully,please signin to continue");
+ 
+ 
+     }
+     else
+         {
+             return back()->with('error',"Error! Something wrong Please try again");
+         }
     }
 }
 

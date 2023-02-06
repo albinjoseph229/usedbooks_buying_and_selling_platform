@@ -67,10 +67,6 @@ Route::get('/admin.viewbooks', function () {
     return view('admin/viewbooks');
 })->name('admin.viewbooks');
 
-Route::get('/admin.viewuser', function () {
-    return view('admin/viewuser');
-})->name('admin.viewuser');
-
 Route::get('/admin.viewtransactions', function () {
     return view('admin/viewtransactions');
 })->name('admin.viewtransactions');
@@ -105,3 +101,5 @@ Route::post('postadminform', [App\Http\Controllers\AdminRegistrationController::
 Route::post('saveuser', [App\Http\Controllers\GuestController::class,'save']) ->name ('saveuser');
 Route::post('login',[App\Http\Controllers\AdminController::class,'postLogin'])->name('postlogin');
 Route::get('logout',[App\Http\Controllers\AdminController::class,'logout'])->name('logout');
+
+Route::get('/admin.viewuser',[App\Http\Controllers\AdminController::class,'getusers'])->name('admin.viewuser');

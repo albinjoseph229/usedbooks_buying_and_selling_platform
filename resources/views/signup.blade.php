@@ -38,9 +38,21 @@
                     <div class="col-sm-10">
                         <div class="form-group has-feedback">
                             <label for="reg_email" class="bold">Email *</label>
-                            <input type="text" class="form-control" id="email" name="email"
+                            <input type="email" class="form-control" id="email" name="email"
                                 placeholder="It will be verified" required />
                             @error('reg_email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="form-group has-feedback">
+                            <label class="bold">Phone No*</label>
+                            <input type="text" class="form-control" id="phoneno" name="phoneno"
+                                placeholder="It will be verified" required />
+                            @error('phoneno')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>

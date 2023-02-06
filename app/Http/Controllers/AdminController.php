@@ -47,4 +47,9 @@ class AdminController extends Controller
   
         return Redirect('login');
     }
+    public function getusers()
+    {
+        $users=User::select('*')->get();
+        return view('admin/viewuser',['users'=> $users]);
+    }
 }

@@ -40,21 +40,20 @@
                                         <th>Email</th>
                                         <th>Phone Number</th>
                                         <th>Date</th>
-                                        <th>Last Activity</th>
                                         <th>Action</th>
 
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @php $i=1; @endphp
+                                    @foreach($users as $user)
                                     <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td>1122334455</td>
-                                        <td>X</td>
-                                        <td>X</td>
+                                        <td>{{$i}}</td>
+                                        <td>{{$user->name}}</td>
+                                        <td>{{$user->email}}</td>
+                                        <td>{{$user->phoneno}}</td>
+                                        <td>{{$user->created_at}}</td>
+                                      
                                         <td><button data-toggle="modal" data-target="#modal-primary" title="Delete"
                                                 type="button" class="btn btn-sm btn-danger"><i
                                                     class="fa fa-trash"></i></button>
@@ -63,23 +62,8 @@
 
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 5.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td>1122334455</td>
-                                        <td>C</td>
-                                        <td>X</td>
-                                        <td><button data-toggle="modal" data-target="#modal-primary" title="Delete"
-                                                type="button" class="btn btn-sm btn-danger"><i
-                                                    class="fa fa-trash"></i></button>
-                                            <a title="Status Of The USer" href="#" class="btn btn-sm btn-primary"><i
-                                                    class="fa fa-eye"></i></a>
-
-                                    </tr>
-
+                                    @php $i++; @endphp
+                                 @endforeach
                                 </tbody>
                                 <tfoot>
                                     <tr>
