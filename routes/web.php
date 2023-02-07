@@ -48,9 +48,23 @@ Route::get('/user.buybooks', function () {
     return view('user/buybooks');
 })->name('user.buybooks');
 
+Route::get('/user.viewcareer', function () {
+    return view('user/viewcareer');
+})->name('user.viewcareer');
+
+Route::get('/user.viewblogs', function () {
+    return view('user/viewblogs');
+})->name('user.viewblogs');
+
+Route::get('/user.usercontactus', function () {
+    return view('user/usercontactus');
+})->name('user.usercontactus');
+
 Route::get('/user.changepassword', function () {
     return view('user/changepassword');
 })->name('user.changepassword');
+
+
 
 // admin routes
 Route::get('/adminhome',[App\Http\Controllers\AdminController::class,'index'])->name('adminhome');

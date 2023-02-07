@@ -834,11 +834,10 @@
 
 <body
     class="home page-template page-template-page-tpl_home page-template-page-tpl_home-php page page-id-10 kingcomposer kc-css-system">
-
-
-    <header class="header-2 header-3 sticky-header">
+    <header class="header-2 header-3 sticky-header sticky-nav" style="top: 0px;">
         <div class="container">
             <div class="flex-wrap">
+    
                 <div class="show-on-414">
                     <a href="javascript:void(0);" class="small-sidebar-open navigation-trigger"
                         data-target=".navigation-wrap">

@@ -831,10 +831,10 @@
 <body
     class="home page-template page-template-page-tpl_home page-template-page-tpl_home-php page page-id-10 kingcomposer kc-css-system">
 
-
-    <header class="header-2 header-3 sticky-header">
+    <header class="header-2 header-3 sticky-header sticky-nav" style="top: 0px;">
         <div class="container">
             <div class="flex-wrap">
+    
                 <div class="show-on-414">
                 </div>
                 <a href="{{ route('/')}}" class="logo">
@@ -855,14 +855,14 @@
                         </li>
                         <li id="menu-item-3"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3 dropdown ">
-                            <a title="Career" href="news/index.html" data-toggle="dropdown" class="dropdown-toggle"
+                            <a title="Career" href="{{ route('user.viewcareer')}}" data-toggle="dropdown" class="dropdown-toggle"
                                 data-hover="dropdown" aria-haspopup="true">Career</a>
 
                         </li>
 
                         <li id="menu-item-4"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4 dropdown ">
-                            <a title="Blogs" href="#" data-toggle="dropdown" class="dropdown-toggle"
+                            <a title="Blogs" href="{{ route('user.viewblogs')}}" data-toggle="dropdown" class="dropdown-toggle"
                                 data-hover="dropdown" aria-haspopup="true">View Blogs </a>
                         </li>
                         <li id="menu-item-5"
@@ -872,7 +872,7 @@
                         </li>
                         <li id="menu-item-6"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6"><a
-                                title="Contact" href="{{ route('contactus')}}">Contact</a>
+                                title="Contact" href="{{ route('user.usercontactus')}}">Contact</a>
                         </li>
                         <li id="menu-item-7"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7"><a
