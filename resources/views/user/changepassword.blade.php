@@ -21,7 +21,6 @@
                             {{ session('message') }}
                         </div>
                         @endif
-
                         <h5 class="modal-title">Change Password</h5>
                         <a href="#" data-dismiss="modal"><i class="aficon-times"></i></a>
                 </div>
