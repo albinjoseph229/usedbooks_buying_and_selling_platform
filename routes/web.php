@@ -30,16 +30,14 @@ Route::get('/signup', function () {
 })->name('signup');
 
 
-
-
-
-
 Route::get('adminregistration', [App\Http\Controllers\AdminRegistrationController::class,'index']) ->name ('adminregistration');
 Route::post('login',[App\Http\Controllers\AdminController::class,'postLogin'])->name('postlogin');
 Route::post('postadminform', [App\Http\Controllers\AdminRegistrationController::class,'save']) ->name ('postadminform');
 Route::get('/admin.viewuser',[App\Http\Controllers\AdminController::class,'getusers'])->name('admin.viewuser');
 
-Route::group(['middleware' => ['auth','prevent-back-history']],function(){
+Route::group(['middleware' => ['auth','prevent-back-history']],function()
+
+{
    
 Route::post('saveuser', [App\Http\Controllers\GuestController::class,'save']) ->name ('saveuser');
 
