@@ -31,40 +31,19 @@ Route::get('/signup', function () {
 
 
 
-//user routes
-Route::get('/userhome', function () {
-    return view('user/index');
-})->name('userhome');
-
-Route::get('/user.sellbooks', function () {
-    return view('user/sellbooks');
-})->name('user.sellbooks');
-
-Route::get('/user.postblogs', function () {
-    return view('user/postblogs');
-})->name('user.postblogs');
-
-Route::get('/user.buybooks', function () {
-    return view('user/buybooks');
-})->name('user.buybooks');
-
-Route::get('/user.viewcareer', function () {
-    return view('user/viewcareer');
-})->name('user.viewcareer');
-
-Route::get('/user.viewblogs', function () {
-    return view('user/viewblogs');
-})->name('user.viewblogs');
-
-Route::get('/user.usercontactus', function () {
-    return view('user/usercontactus');
-})->name('user.usercontactus');
-
-Route::get('/user.changepassword', function () {
-    return view('user/changepassword');
-})->name('user.changepassword');
 
 
+
+Route::get('adminregistration', [App\Http\Controllers\AdminRegistrationController::class,'index']) ->name ('adminregistration');
+Route::post('login',[App\Http\Controllers\AdminController::class,'postLogin'])->name('postlogin');
+Route::post('postadminform', [App\Http\Controllers\AdminRegistrationController::class,'save']) ->name ('postadminform');
+Route::get('/admin.viewuser',[App\Http\Controllers\AdminController::class,'getusers'])->name('admin.viewuser');
+
+Route::group(['middleware' => ['auth','prevent-back-history']],function(){
+   
+Route::post('saveuser', [App\Http\Controllers\GuestController::class,'save']) ->name ('saveuser');
+
+Route::get('logout',[App\Http\Controllers\AdminController::class,'logout'])->name('logout');
 
 // admin routes
 Route::get('/adminhome',[App\Http\Controllers\AdminController::class,'index'])->name('adminhome');
@@ -109,11 +88,39 @@ Route::get('/admin.viewuserdetails', function () {
     return view('admin/viewuserdetails');
 })->name('admin.viewuserdetails');
 
+//user routes
+Route::get('/userhome', function () {
+    return view('user/index');
+})->name('userhome');
 
-Route::get('adminregistration', [App\Http\Controllers\AdminRegistrationController::class,'index']) ->name ('adminregistration');
-Route::post('postadminform', [App\Http\Controllers\AdminRegistrationController::class,'save']) ->name ('postadminform');
-Route::post('saveuser', [App\Http\Controllers\GuestController::class,'save']) ->name ('saveuser');
-Route::post('login',[App\Http\Controllers\AdminController::class,'postLogin'])->name('postlogin');
-Route::get('logout',[App\Http\Controllers\AdminController::class,'logout'])->name('logout');
+Route::get('/user.sellbooks', function () {
+    return view('user/sellbooks');
+})->name('user.sellbooks');
 
-Route::get('/admin.viewuser',[App\Http\Controllers\AdminController::class,'getusers'])->name('admin.viewuser');
+Route::get('/user.postblogs', function () {
+    return view('user/postblogs');
+})->name('user.postblogs');
+
+Route::get('/user.buybooks', function () {
+    return view('user/buybooks');
+})->name('user.buybooks');
+
+Route::get('/user.viewcareer', function () {
+    return view('user/viewcareer');
+})->name('user.viewcareer');
+
+Route::get('/user.viewblogs', function () {
+    return view('user/viewblogs');
+})->name('user.viewblogs');
+
+Route::get('/user.usercontactus', function () {
+    return view('user/usercontactus');
+})->name('user.usercontactus');
+
+Route::get('/user.changepassword', function () {
+    return view('user/changepassword');
+})->name('user.changepassword');
+
+
+
+});
