@@ -90,6 +90,10 @@ Route::get('/admin.viewuserdetails', function () {
     return view('admin/viewuserdetails');
 })->name('admin.viewuserdetails');
 
+
+Route::get('/admin.viewmessages', function () {
+    return view('admin/viewmessages');
+})->name('admin.viewmessages');
 //user routes
 Route::get('/userhome', function () {
     return view('user/index');

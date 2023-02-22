@@ -900,7 +900,7 @@
                         </li>
                         <li id="menu-item-14"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a
-                                title="Contact" href="{{ route('contactus')}}">Contact</a></li>
+                                title="Contact" href="{{ route('contactus')}}">Contact Us</a></li>
                         <li id="menu-item-14"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a
                                 title="login" href="{{ route('login')}}">login</a></li>

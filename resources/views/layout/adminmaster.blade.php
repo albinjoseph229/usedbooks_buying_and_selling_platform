@@ -282,6 +282,14 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ route('admin.viewcareer')}}" class="nav-link">
+                                <i class="fas fa-eye"></i>
+                                <p>
+                                    View Career
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ route('admin.changepassword')}}" class="nav-link">
                                 <i class="fas fa-user-lock"></i>
                                 <p>
@@ -294,6 +302,7 @@
                               <i class="fas fa-users"></i>
                               <p>
                                Logout
+                              </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
