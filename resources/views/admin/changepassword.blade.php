@@ -32,19 +32,35 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+
+   @if (session('status'))
+   <div class="alert alert-success" role="alert">
+        {{ session('status') }}
+  </div>
+  @elseif(session('error'))
+     <div class="alert alert-danger" role="alert">
+        {{ session('error') }}
+  </div>
+
+@elseif(session('failed'))
+     <div class="alert alert-danger" role="alert">
+        {{ session('failed') }}
+  </div>
+@endif
+              <form method="POST" action="{{route('admin.updatepassword')}}">
+                @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label>Password</label>
+                    <input type="password" class="form-control" id="cpassword" name="cpassword" required />
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">New Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label>New Password</label>
+                    <input type="password" class="form-control" id="new_password" name="new_password" required />
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Confirm Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label >Confirm Password</label>
+                    <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required />
                   </div>
                  
                 </div>

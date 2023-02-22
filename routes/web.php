@@ -58,6 +58,10 @@ Route::get('/admin.viewbooks', function () {
     return view('admin/viewbooks');
 })->name('admin.viewbooks');
 
+Route::get('/admin.viewcareer', function () {
+    return view('admin/viewcareer');
+})->name('admin.viewcareer');
+
 Route::get('/admin.viewtransactions', function () {
     return view('admin/viewtransactions');
 })->name('admin.viewtransactions');
@@ -118,7 +122,7 @@ Route::get('/user.usercontactus', function () {
 Route::get('/user.changepassword', function () {
     return view('user/changepassword');
 })->name('user.changepassword');
-
+Route::post('admin.updatepassword',[App\Http\Controllers\AdminController::class,'updatepassword'])->name('admin.updatepassword');
 
 
 });
