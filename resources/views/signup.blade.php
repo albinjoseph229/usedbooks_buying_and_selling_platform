@@ -35,7 +35,7 @@
                             @enderror
                         </div>
                     </div>
-                    <div class="col-sm-10">
+                    <div class="col-sm-12">
                         <div class="form-group has-feedback">
                             <label for="reg_email" class="bold">Email *</label>
                             <input type="email" class="form-control" id="email" name="email"
