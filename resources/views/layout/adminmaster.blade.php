@@ -290,6 +290,14 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ route('admin.viewmessages')}}" class="nav-link">
+                                <i class="fas fa-eye"></i>
+                                <p>
+                                    View Messages
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ route('admin.changepassword')}}" class="nav-link">
                                 <i class="fas fa-user-lock"></i>
                                 <p>

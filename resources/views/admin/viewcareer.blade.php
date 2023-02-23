@@ -26,7 +26,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">View Books</h3>
+                            <h3 class="card-title">View Career</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -36,8 +36,7 @@
                                         <th>S.No</th>
                                         <th>Title</th>
                                         <th>Description</th>
-                                        <th>User Name</th>
-                                        <th>Price</th>
+                                        <th>Date</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -49,15 +48,13 @@
                                         </td>
                                         <td>Win 95+</td>
                                         <td> 4</td>
-                                        <td>X</td>
+                                       
                                         <td>
                                             <button data-toggle="modal" data-target="#modal-primary" title="Delete"
                                                 type="button" class="btn btn-sm btn-danger"><i
                                                     class="fa fa-trash"></i></button>
                                             <a title="View more " href="{{ route('admin.viewblogcomments')}}"
                                                 class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
-                                            <a title="View complaints" href="{{ route('admin.viewblogcomments')}}"
-                                                class="btn btn-sm btn-warning"><i class=" 	fas fa-frown"></i></a>
                                         </td>
                                         </td>
                                     </tr>
@@ -68,8 +65,7 @@
                                         <th>S.No</th>
                                         <th>Title</th>
                                         <th>Description</th>
-                                        <th>User Name</th>
-                                        <th>Price</th>
+                                        <th>Date</th>
                                         <th>Action</th>
                                     </tr>
                                 </tfoot>

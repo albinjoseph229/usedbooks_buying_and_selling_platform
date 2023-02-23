@@ -72,7 +72,6 @@
                                         <th>Email</th>
                                         <th>Phone Number</th>
                                         <th>Date</th>
-                                        <th>Last Activity</th>
                                         <th>Action</th>
                                     </tr>
                                 </tfoot>
