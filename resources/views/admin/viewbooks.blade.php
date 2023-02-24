@@ -35,21 +35,23 @@
                                     <tr>
                                         <th>S.No</th>
                                         <th>Title</th>
-                                        <th>Description</th>
                                         <th>User Name</th>
                                         <th>Price</th>
+                                        <th>Date</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @php $i=1; @endphp
+                                    @foreach($book as $book)
                                     <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
+                                         <td>{{$i}}</td>
+                                        <td>{{$books->bname}}</td>
+                                        <td>{{$books->sellers_id}}</td>
+                                        <td>{{$books->price}}</td>
+                                        <td>{{$books->created_at}}</td>
+                                      
+                                    
                                         <td>
                                             <button data-toggle="modal" data-target="#modal-primary" title="Delete"
                                                 type="button" class="btn btn-sm btn-danger"><i
@@ -61,15 +63,16 @@
                                         </td>
                                         </td>
                                     </tr>
-
+                                    @php $i++; @endphp
+                                    @endforeach
                                 </tbody>
                                 <tfoot>
                                     <tr>
                                         <th>S.No</th>
                                         <th>Title</th>
-                                        <th>Description</th>
                                         <th>User Name</th>
                                         <th>Price</th>
+                                        <th>Date</th>
                                         <th>Action</th>
                                     </tr>
                                 </tfoot>

@@ -54,9 +54,7 @@ Route::get('/admin.changepassword', function () {
     return view('admin/changepassword');
 })->name('admin.changepassword');
 
-Route::get('/admin.viewbooks', function () {
-    return view('admin/viewbooks');
-})->name('admin.viewbooks');
+Route::get('/admin.viewbooks',[App\Http\Controllers\AdminController::class,'getbook'])->name('admin.viewbooks');
 
 Route::get('/admin.viewcareer', function () {
     return view('admin/viewcareer');

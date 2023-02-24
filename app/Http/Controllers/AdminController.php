@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Book;
 use Session;
 use Hash;
 
@@ -52,6 +54,13 @@ class AdminController extends Controller
         $users=User::select('*')->get();
         return view('admin/viewuser',['users'=> $users]);
     }
+
+    public function getbook()
+    {
+        $books=Book::select('*')->get();
+        return view('admin/viewbooks',['book'=> $books]);
+    }
+
     public function updatepassword(Request $request)
     {
 
