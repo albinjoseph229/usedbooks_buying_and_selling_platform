@@ -128,5 +128,5 @@ Route::get('/user.changepassword', function () {
 })->name('user.changepassword');
 Route::post('admin.updatepassword',[App\Http\Controllers\AdminController::class,'updatepassword'])->name('admin.updatepassword');
 
-
+Route::post('admin.updatepassword',[App\Http\Controllers\GuestController::class,'updatepassword'])->name('user.updatepassword');
 });

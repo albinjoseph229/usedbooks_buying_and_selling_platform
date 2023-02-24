@@ -10,34 +10,53 @@
                 <div class="modal-header">                
                         <h5 class="modal-title">Change Password</h5>
                         <a href="#" data-dismiss="modal"><i class="aficon-times"></i></a>
-                </div>
-                <div class="modal-body">
-                    <div class="ajax-form-result"></div>
-                    <div class="row">
+                    </div>
+                    <div class="modal-body">
+                        <div class="ajax-form-result"></div>
+                        <div class="row">
+                        @if (session('status'))
+   <div class="alert alert-success" role="alert">
+        {{ session('status') }}
+  </div>
+  @elseif(session('error'))
+     <div class="alert alert-danger" role="alert">
+        {{ session('error') }}
+  </div>
+
+@elseif(session('failed'))
+     <div class="alert alert-danger" role="alert">
+        {{ session('failed') }}
+  </div>
+@endif
+
+<form method="POST" action="{{route('user.updatepassword')}}">
+    @csrf
+               
                         <div class="col-sm-10">
                             <div class="form-group has-feedback">
                                 <label for="log_username" class="bold">Old Password*</label>
-                                <input type="text" class="form-control" id="old_password" name="old_password"
-        
-                            </div>
-                        </div>
-                        <div class="col-sm-10">
+                                <input type="text" class="form-control" id="cpassword" name="cpassword"
+         
+                          
+                  
+                       <div class="col-sm-10">
                             <div class="form-group has-feedback relative-wrap">
-                                <label for="reg_password" class="bold">New Password * <span
+                                <label for="new_password" class="bold">New Password * <span
                                         class="pw-strength"></span></label>
                                 <input type="password" class="form-control reveal-password pw-check-strength"
-                                    id="reg_password" name="reg_password" required
+                                    id="new_password" name="new_password" required
                                     placeholder="Use a strong password" />
-                                <a href="javascript:;" title="View Password" class="toggle-password"><i
-                                        class="gg-eye"></i></a>
+                                <a href="javascript:;" title="View Password" class="toggle-password">
+                                    <i class="gg-eye"></i></a>
                             
                             </div>
+                        
                         </div>
                         <div class="col-sm-10">
                             <div class="form-group has-feedback relative-wrap">
-                                <label for="reg_r_password" class="bold">Repeat New Password*</label>
-                                <input type="password" class="form-control reveal-password" id="reg_r_password"
-                                    name="reg_r_password" required placeholder="for making sure it's correct" />
+                                <label for="password_confirmation" class="bold">Repeat New Password*</label>
+                                <input type="password" class="form-control reveal-password" id="password_confirmation"
+                                    name="password_confirmation" required placeholder="for making sure it's correct" />
                                 <a href="javascript:;" title="View Password" class="toggle-password"><i
                                         class="gg-eye"></i></a>
                         
