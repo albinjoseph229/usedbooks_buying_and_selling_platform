@@ -86,7 +86,7 @@ class AdminController extends Controller
 
     public function getmessages()
     {
-        $messages=Message::join('users','users.id','message.user_id')->select('message.*','users.name','user.email')->get();
+        $messages=Message::join('users','users.id','messages.user_id')->select('messages.*','users.name','users.email')->get();
         return view('admin/viewmessages',['messages'=> $messages]);
     }
 

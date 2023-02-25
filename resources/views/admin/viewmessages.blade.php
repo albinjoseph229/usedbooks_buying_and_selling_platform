@@ -61,7 +61,6 @@
                                             <a title="View complaints" href="{{ route('admin.viewblogcomments')}}"
                                                 class="btn btn-sm btn-warning"><i class=" 	fas fa-frown"></i></a>
                                         </td>
-                                        
                                     </tr>
                                     @php $i++; @endphp
                                     @endforeach

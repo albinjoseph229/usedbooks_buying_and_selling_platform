@@ -69,6 +69,8 @@ Route::get('/admin.viewblogs',[App\Http\Controllers\AdminController::class,'getb
 
 Route::get('/admin.viewmessages',[App\Http\Controllers\AdminController::class,'getmessages'])->name('admin.viewmessages');
 
+
+
 Route::get('/admin.viewads', function () {
     return view('admin/viewads');
 })->name('admin.viewads');
@@ -81,14 +83,14 @@ Route::get('/admin.viewblogcomments', function () {
     return view('admin/viewblogcomments');
 })->name('admin.viewblogcomments');
 
+Route::get('/admin.viewmoreblogs', function () {
+    return view('admin/viewmoreblogs');
+})->name('admin.viewmoreblogs');
+
 Route::get('/admin.viewuserdetails', function () {
     return view('admin/viewuserdetails');
 })->name('admin.viewuserdetails');
 
-
-Route::get('/admin.viewmessages', function () {
-    return view('admin/viewmessages');
-})->name('admin.viewmessages');
 //user routes
 Route::get('/userhome', function () {
     return view('user/index');
