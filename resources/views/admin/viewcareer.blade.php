@@ -41,13 +41,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
+                                        @php $i=1; @endphp
+                                        @foreach($career as $career)
+                                        <tr>
+                                             <td>{{$i}}</td>
+                                            <td>{{$career->title}}</td>
+                                            <td>{{$career->description}}</td>
+                                            <td>{{$career->created_at}}</td>
+                                          
                                        
                                         <td>
                                             <button data-toggle="modal" data-target="#modal-primary" title="Delete"
@@ -56,9 +57,10 @@
                                             <a title="View more " href="{{ route('admin.viewblogcomments')}}"
                                                 class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
                                         </td>
-                                        </td>
+                                      
                                     </tr>
-
+                                    @php $i++; @endphp
+                                    @endforeach
                                 </tbody>
                                 <tfoot>
                                     <tr>

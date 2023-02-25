@@ -43,7 +43,7 @@
                                 </thead>
                                 <tbody>
                                     @php $i=1; @endphp
-                                    @foreach($book as $book)
+                                    @foreach($books as $books)
                                     <tr>
                                          <td>{{$i}}</td>
                                         <td>{{$books->bname}}</td>

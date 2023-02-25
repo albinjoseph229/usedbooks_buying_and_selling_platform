@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Book extends Model
+class Career extends Model
 {
     use HasFactory;
 
@@ -14,9 +14,9 @@ class Book extends Model
      *
      * @var array
      */
-    protected $table="book";
+    protected $table="career";
     protected $fillable = [
-        'bname', 'sellers_id', 'price',
+        'title', 'description', 'created_at','image'
     ];
 
     /**

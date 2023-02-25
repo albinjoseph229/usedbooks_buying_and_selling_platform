@@ -45,14 +45,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @php $i=1; @endphp
+                                    @foreach($blogs as $blogs)
                                     <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
+                                         <td>{{$i}}</td>
+                                        <td>{{$blogs->blog_title}}</td>
+                                        <td>{{$blogs->name}}</td>
+                                        <td>{{$blogs->blog_description}}</td>
+                                        <td>{{$blogs->created_at}}</td>
                                         <td><button data-toggle="modal" data-target="#modal-primary" title="Delete"
                                                 type="button" class="btn btn-sm btn-danger"><i
                                                     class="fa fa-trash"></i></button>
@@ -62,23 +62,8 @@
                                                 class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 5.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td>5</td>
-                                        <td>C</td>
-                                        <td><button data-toggle="modal" data-target="#modal-primary" title="Delete"
-                                                type="button" class="btn btn-sm btn-danger"><i
-                                                    class="fa fa-trash"></i></button>
-                                            <a title="View More" href="{{ route('admin.viewmoreblogs')}}"
-                                                class="btn btn-sm btn-primary"><i class="fas fa-folder"></i></a>
-                                            <a title="View Comments" href="{{ route('admin.viewblogcomments')}}"
-                                                class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
-                                        </td>
-                                    </tr>
+                                    @php $i++; @endphp
+                                    @endforeach
 
                                 </tbody>
                                 <tfoot>

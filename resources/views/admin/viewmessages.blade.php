@@ -36,20 +36,22 @@
                                         <th>S.No</th>
                                         <th>User Name</th>
                                         <th>Email</th>
-                                        <th>Message</th>
+                                        <th>Message Subject</th>
+                                        <th>Message Content</th>
                                         <th>Date</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @php $i=1; @endphp
+                                    @foreach($messages as $messages)
                                     <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
+                                         <td>{{$i}}</td>
+                                        <td>{{$messages->name}}</td>
+                                        <td>{{$messages->email}}</td>
+                                        <td>{{$messages->message_subject}}</td>
+                                        <td>{{$messages->message_content}}</td>
+                                        <td>{{$messages->created_at}}</td>
                                         <td>
                                             <button data-toggle="modal" data-target="#modal-primary" title="Delete"
                                                 type="button" class="btn btn-sm btn-danger"><i
@@ -59,16 +61,18 @@
                                             <a title="View complaints" href="{{ route('admin.viewblogcomments')}}"
                                                 class="btn btn-sm btn-warning"><i class=" 	fas fa-frown"></i></a>
                                         </td>
-                                        </td>
+                                        
                                     </tr>
-
+                                    @php $i++; @endphp
+                                    @endforeach
                                 </tbody>
                                 <tfoot>
                                     <tr>
                                         <th>S.No</th>
                                         <th>User Name</th>
                                         <th>Email</th>
-                                        <th>Message</th>
+                                        <th>Message Subject</th>
+                                        <th>Message Content</th>
                                         <th>Date</th>
                                         <th>Action</th>
                                     </tr>

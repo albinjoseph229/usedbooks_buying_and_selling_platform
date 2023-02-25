@@ -5,18 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Book extends Model
+class Message extends Model
 {
     use HasFactory;
-
+   
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $table="book";
+    protected $table="messages";
     protected $fillable = [
-        'bname', 'sellers_id', 'price',
+        'message_subject', 'message_content','created_at',
     ];
 
     /**
@@ -35,5 +35,5 @@ class Book extends Model
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-    ];
+    ]; 
 }

@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Book;
+use App\Models\Career;
+use App\Models\Transaction;
+use App\Models\Blog;
+use App\Models\Message;
 use Session;
 use Hash;
 
@@ -58,7 +62,32 @@ class AdminController extends Controller
     public function getbook()
     {
         $books=Book::select('*')->get();
-        return view('admin/viewbooks',['book'=> $books]);
+        return view('admin/viewbooks',['books'=> $books]);
+    }
+
+    public function getcareer()
+    {
+        $career=Career::select('*')->get();
+        return view('admin/viewcareer',['career'=> $career]);
+    }
+
+
+    public function gettransactions()
+    {
+        $transactions=Transaction::select('*')->get();
+        return view('admin/viewtransactions',['transactions'=> $transactions]);
+    }
+
+    public function getblogs()
+    {
+        $blogs=Blog::join('users','users.id','blogs.user_id')->select('blogs.*','users.name')->get();
+        return view('admin/viewblogs',['blogs'=> $blogs]);
+    }
+
+    public function getmessages()
+    {
+        $messages=Message::join('users','users.id','message.user_id')->select('message.*','users.name','user.email')->get();
+        return view('admin/viewmessages',['messages'=> $messages]);
     }
 
     public function updatepassword(Request $request)
@@ -86,5 +115,18 @@ class AdminController extends Controller
                 }
             }
             
+    }
+    public function deleteuser(Request $request)
+    {
+        $id=$request->dodelete;
+        $delete=User::where('id',$id)->delete();
+        if($delete)
+        {
+            return back()->with('status','user deleted successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
     }
 }

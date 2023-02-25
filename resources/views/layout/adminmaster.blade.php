@@ -274,14 +274,6 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.postcareer')}}" class="nav-link">
-                                <i class="fas fa-pen-fancy"></i>
-                                <p>
-                                    Post Career
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="{{ route('admin.viewcareer')}}" class="nav-link">
                                 <i class="fas fa-eye"></i>
                                 <p>
@@ -297,6 +289,15 @@
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin.postcareer')}}" class="nav-link">
+                                <i class="fas fa-pen-fancy"></i>
+                                <p>
+                                    Post Career
+                                </p>
+                            </a>
+                        </li>
+                     
                         <li class="nav-item">
                             <a href="{{ route('admin.changepassword')}}" class="nav-link">
                                 <i class="fas fa-user-lock"></i>
@@ -406,6 +407,15 @@
         });
     });
     </script>
+    <script>
+  
+        $(function () {
+      
+          $('.deleteme').click(function() {
+                 $('#dodelete').val($(this).data('value'));
+              });
+        });
+      </script>
 </body>
 
 </html>

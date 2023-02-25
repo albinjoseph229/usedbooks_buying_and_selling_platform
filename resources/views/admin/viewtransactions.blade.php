@@ -45,27 +45,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @php $i=1; @endphp
+                                    @foreach($transactions as $transactions)
                                     <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 4.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td> 4</td>
-                                        <td>X</td>
-                                        <td><span class="badge bg-danger">Pending</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Trident</td>
-                                        <td>Internet
-                                            Explorer 5.0
-                                        </td>
-                                        <td>Win 95+</td>
-                                        <td>5</td>
-                                        <td>C</td>
+                                         <td>{{$i}}</td>
+                                        <td>{{$transactions->bname}}</td>
+                                        <td>{{$transactions->buyer_id}}</td>
+                                        <td>{{$transactions->seller_id}}</td>
+                                        <td>{{$transactions->updated_at}}</td>
                                         <td><span class="badge bg-success">Completed</span></td>
                                     </tr>
-
+                                    @php $i++; @endphp
+                                    @endforeach
                                 </tbody>
                                 <tfoot>
                                     <tr>

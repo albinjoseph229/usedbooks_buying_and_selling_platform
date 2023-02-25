@@ -32,6 +32,16 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
+
+   @if (session('status'))
+   <div class="alert alert-success" role="alert">
+        {{ session('status') }}
+  </div>
+  @elseif(session('error'))
+     <div class="alert alert-danger" role="alert">
+        {{ session('error') }}
+  </div>
+  @endif
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
@@ -54,9 +64,8 @@
                                         <td>{{$user->phoneno}}</td>
                                         <td>{{$user->created_at}}</td>
                                       
-                                        <td><button data-toggle="modal" data-target="#modal-primary" title="Delete"
-                                                type="button" class="btn btn-sm btn-danger"><i
-                                                    class="fa fa-trash"></i></button>
+                                        <td><button title="Delete User" class="btn btn-danger btn-sm deleteme" data-value="{{$user->id}}"  data-toggle="modal" data-target="#modal-primary"><i class="fa fa-trash"></i></button>
+
                                             <a title="User details" href="{{ route('admin.viewuserdetails')}}"
                                                 class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></a>
 
@@ -99,13 +108,17 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
+            <form method="post" action="{{route('admin.deleteuser')}}">
+                @csrf
             <div class="modal-body">
+                <input type="hidden" id="dodelete" name="dodelete" />
                 <p>Are You Sure ?</p>
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-outline-light">OK</button>
+                <button type="submit" class="btn btn-outline-light">OK</button>
             </div>
+            </form>
         </div>
         <!-- /.modal-content -->
     </div>

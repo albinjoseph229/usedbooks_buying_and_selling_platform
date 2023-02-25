@@ -31,8 +31,13 @@ Route::get('/signup', function () {
 
 
 Route::get('adminregistration', [App\Http\Controllers\AdminRegistrationController::class,'index']) ->name ('adminregistration');
+
 Route::post('login',[App\Http\Controllers\AdminController::class,'postLogin'])->name('postlogin');
+
+Route::post('admin.deleteuser',[App\Http\Controllers\AdminController::class,'deleteuser'])->name('admin.deleteuser');
+
 Route::post('postadminform', [App\Http\Controllers\AdminRegistrationController::class,'save']) ->name ('postadminform');
+
 Route::get('/admin.viewuser',[App\Http\Controllers\AdminController::class,'getusers'])->name('admin.viewuser');
 
 Route::group(['middleware' => ['auth','prevent-back-history']],function()
@@ -56,17 +61,13 @@ Route::get('/admin.changepassword', function () {
 
 Route::get('/admin.viewbooks',[App\Http\Controllers\AdminController::class,'getbook'])->name('admin.viewbooks');
 
-Route::get('/admin.viewcareer', function () {
-    return view('admin/viewcareer');
-})->name('admin.viewcareer');
+Route::get('/admin.viewcareer',[App\Http\Controllers\AdminController::class,'getcareer'])->name('admin.viewcareer');
 
-Route::get('/admin.viewtransactions', function () {
-    return view('admin/viewtransactions');
-})->name('admin.viewtransactions');
+Route::get('/admin.viewtransactions',[App\Http\Controllers\AdminController::class,'gettransactions'])->name('admin.viewtransactions');
 
-Route::get('/admin.viewblogs', function () {
-    return view('admin/viewblogs');
-})->name('admin.viewblogs');
+Route::get('/admin.viewblogs',[App\Http\Controllers\AdminController::class,'getblogs'])->name('admin.viewblogs');
+
+Route::get('/admin.viewmessages',[App\Http\Controllers\AdminController::class,'getmessages'])->name('admin.viewmessages');
 
 Route::get('/admin.viewads', function () {
     return view('admin/viewads');
@@ -79,10 +80,6 @@ Route::get('/admin.postcareer', function () {
 Route::get('/admin.viewblogcomments', function () {
     return view('admin/viewblogcomments');
 })->name('admin.viewblogcomments');
-
-Route::get('/admin.viewmoreblogs', function () {
-    return view('admin/viewmoreblogs');
-})->name('admin.viewmoreblogs');
 
 Route::get('/admin.viewuserdetails', function () {
     return view('admin/viewuserdetails');
