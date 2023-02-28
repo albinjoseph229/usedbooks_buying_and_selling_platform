@@ -30,6 +30,15 @@
                         <div class="card-header">
                             <h3 class="card-title">View Blogs</h3>
                         </div>
+                        @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                        @elseif(session('failed'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ session('failed') }}
+                        </div>
+                        @endif
                         <!-- /.card-header -->
                         <div class="card-body">
                             @if (session('status'))

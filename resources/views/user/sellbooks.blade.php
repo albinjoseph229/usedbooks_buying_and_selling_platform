@@ -72,7 +72,7 @@
                 </div>
             </div>
                     <p class="form-submit"><input name="Post Ad" type="submit" id="submit" class="submit"
-                            value="Post Blog"> <input type="hidden" name="comment_post_ID" value="425"
+                            value="Post Ad"> <input type="hidden" name="comment_post_ID" value="425"
                             id="comment_post_ID">
                         <input type="hidden" name="comment_parent" id="comment_parent" value="0">
                     </p>

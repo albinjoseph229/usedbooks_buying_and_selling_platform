@@ -131,5 +131,9 @@ Route::get('/user.changepassword', function () {
 })->name('user.changepassword');
 Route::post('admin.updatepassword',[App\Http\Controllers\AdminController::class,'updatepassword'])->name('admin.updatepassword');
 
-Route::post('admin.updatepassword',[App\Http\Controllers\GuestController::class,'updatepassword'])->name('user.updatepassword');
+Route::post('user.updatepassword',[App\Http\Controllers\GuestController::class,'updatepassword'])->name('user.updatepassword');
+Route::post('admin.savecareer',[App\Http\Controllers\AdminController::class,'savecareer'])->name('admin.savecareer');
+Route::post('admin.deletecareer',[App\Http\Controllers\AdminController::class,'deletecareer'])->name('admin.deletecareer');
+
+
 });

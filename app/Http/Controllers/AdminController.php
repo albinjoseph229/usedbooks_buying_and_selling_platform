@@ -142,4 +142,42 @@ class AdminController extends Controller
             return back()->with('error','Some error occured please try again later..');
         }
     }
+    public function savecareer(Request $request)
+    {
+        $validate=$request->validate([
+            'ctitle'=>['required'],
+            'cdescr'=>['required'],
+            'file'=>['required'],
+        ]);
+
+        $fileName = time().'.'.$request->file->extension();  
+        $request->file->move(public_path('cimages'), $fileName);
+
+        $career=new Career();
+        $career->ctitle=$request->ctitle;
+        $career->description=$request->cdescr;
+        $career->image=$fileName;
+        $career->save();
+        if($career)
+        {
+            return back()->with('status','Career added successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
+    }
+    public function deletecareer(Request $request)
+    {
+        $id=$request->dodelete;
+        $delete=Career::where('id',$id)->delete();
+        if($delete)
+        {
+            return back()->with('status','Career deleted successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
+    }
 }
