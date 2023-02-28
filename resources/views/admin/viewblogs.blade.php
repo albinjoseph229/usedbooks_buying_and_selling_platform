@@ -32,6 +32,15 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
+                            @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                 {{ session('status') }}
+                           </div>
+                           @elseif(session('error'))
+                              <div class="alert alert-danger" role="alert">
+                                 {{ session('error') }}
+                           </div>
+                           @endif
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
@@ -53,9 +62,7 @@
                                         <td>{{$blogs->name}}</td>
                                         <td>{{$blogs->blog_description}}</td>
                                         <td>{{$blogs->created_at}}</td>
-                                        <td><button data-toggle="modal" data-target="#modal-primary" title="Delete"
-                                                type="button" class="btn btn-sm btn-danger"><i
-                                                    class="fa fa-trash"></i></button>
+                                        <td><button title="Delete Blogs" class="btn btn-danger btn-sm deleteme" data-value="{{$blogs->id}}"  data-toggle="modal" data-target="#modal-primary"><i class="fa fa-trash"></i></button>
                                             <a title="View More" href="{{ route('admin.viewmoreblogs')}}"
                                                 class="btn btn-sm btn-primary"><i class="fas fa-folder"></i></a>
                                             <a title="View Comments" href="{{ route('admin.viewblogcomments')}}"
@@ -100,13 +107,17 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
+            <form method="post" action="{{route('admin.deleteblogs')}}">
+                @csrf
             <div class="modal-body">
+                <input type="hidden" id="dodelete" name="dodelete" />
                 <p>Are You Sure ?</p>
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-outline-light">OK</button>
+                <button type="submit" class="btn btn-outline-light">OK</button>
             </div>
+        </form>
         </div>
         <!-- /.modal-content -->
     </div>

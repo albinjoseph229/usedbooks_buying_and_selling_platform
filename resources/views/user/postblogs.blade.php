@@ -8,10 +8,7 @@
     </div>
     <div class="white-block-content">
         <div id="respond" class="comment-respond">
-            <p id="reply-title" class="comment-reply-title">
-                <a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">or
-                    cancel reply</a>
-            </p>
+           
             <form action="https://themes/adifier/wp-comments-post.php" method="post" id="commentform"
                 class="comment-form" novalidate="">
                 <input type="hidden" value="1" name="aff-cpt"><label for="comment">Blog Content*</label>

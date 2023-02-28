@@ -61,7 +61,7 @@ class AdminController extends Controller
 
     public function getbook()
     {
-        $books=Book::select('*')->get();
+        $books=Book::join('users','users.id','book.sellers_id')->select('book.*','users.name')->get();
         return view('admin/viewbooks',['books'=> $books]);
     }
 
@@ -123,6 +123,19 @@ class AdminController extends Controller
         if($delete)
         {
             return back()->with('status','user deleted successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
+    }
+    public function deleteblogs(Request $request)
+    {
+        $id=$request->dodelete;
+        $delete=Blog::where('id',$id)->delete();
+        if($delete)
+        {
+            return back()->with('status','Blog deleted successfully..');
         }
         else
         {

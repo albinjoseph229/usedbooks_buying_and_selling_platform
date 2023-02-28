@@ -36,6 +36,8 @@ Route::post('login',[App\Http\Controllers\AdminController::class,'postLogin'])->
 
 Route::post('admin.deleteuser',[App\Http\Controllers\AdminController::class,'deleteuser'])->name('admin.deleteuser');
 
+Route::post('admin.deleteblogs',[App\Http\Controllers\AdminController::class,'deleteblogs'])->name('admin.deleteblogs');
+
 Route::post('postadminform', [App\Http\Controllers\AdminRegistrationController::class,'save']) ->name ('postadminform');
 
 Route::get('/admin.viewuser',[App\Http\Controllers\AdminController::class,'getusers'])->name('admin.viewuser');
@@ -99,6 +101,10 @@ Route::get('/userhome', function () {
 Route::get('/user.sellbooks', function () {
     return view('user/sellbooks');
 })->name('user.sellbooks');
+
+Route::get('/user.sellbooks1', function () {
+    return view('user/sellbooks1');
+})->name('user.sellbooks1');
 
 Route::get('/user.postblogs', function () {
     return view('user/postblogs');

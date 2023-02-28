@@ -47,7 +47,7 @@
                                     <tr>
                                          <td>{{$i}}</td>
                                         <td>{{$books->bname}}</td>
-                                        <td>{{$books->sellers_id}}</td>
+                                        <td>{{$books->name}}</td>
                                         <td>{{$books->price}}</td>
                                         <td>{{$books->created_at}}</td>
                                       
