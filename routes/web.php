@@ -81,6 +81,10 @@ Route::get('/admin.postcareer', function () {
     return view('admin/postcareer');
 })->name('admin.postcareer');
 
+Route::get('/admin.viewcareercomments', function () {
+    return view('admin/viewcareercomments');
+})->name('admin.viewcareercomments');
+
 Route::get('/admin.viewblogcomments', function () {
     return view('admin/viewblogcomments');
 })->name('admin.viewblogcomments');

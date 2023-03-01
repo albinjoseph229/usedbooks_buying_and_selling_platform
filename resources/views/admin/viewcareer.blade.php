@@ -58,13 +58,14 @@
                                             <td>{{$career->ctitle}}</td>
                                             <td>{{$career->description}}</td>
                                             <td>{{$career->created_at}}</td>
-                                          <td><img src="{{asset('cimages/'.$career->image.'')}}" height="150px" width="20s0px" /></td>
+                                          <td><img src="{{asset('cimages/'.$career->image.'')}}" height="150px" width="200px" /></td>
                                        
                                         <td>
                                             <button data-toggle="modal" data-target="#modal-primary" title="Delete"
                                                 type="button" class="btn btn-sm btn-danger deleteme" data-value="{{$career->id}}"><i
                                                     class="fa fa-trash"></i></button>
-                                           
+                                                    <a title="View Comments" href="{{ route('admin.viewcareercomments')}}"
+                                                    class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
                                         </td>
                                       
                                     </tr>

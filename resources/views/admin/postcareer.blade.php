@@ -53,6 +53,7 @@
                     <i class="fas fa-paperclip"></i> Attachment
                     <input type="file" id="file" name="file">
                   </div>
+                  
                   <p class="help-block">Max. 32MB</p>
                 </div>
               </div>
