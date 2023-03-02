@@ -45,7 +45,7 @@
                             <div class="col-xl-6 col-md-12">
                                 <div class="checkbox margin-top-12">
                                     <input type="checkbox" name="phonenumber" id="phonenumber" value="1">
-                                    <label for="phone"><span class="checkbox-icon"></span>
+                                    <label for="phonenumber"><span class="checkbox-icon"></span>
                                         Hide</label>
                                 </div>
                             </div>
@@ -79,7 +79,7 @@
                                                   <input type="file" id="file" name="file">
                                                 </div>
             </div>
-                    <p class="form-submit"><input name="Post Ad" type="submit" id="submit" class="submit"
+                    <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit"
                             value="Post Ad"> <input type="hidden" name="comment_post_ID" value="425"
                             id="comment_post_ID">
                         <input type="hidden" name="comment_parent" id="comment_parent" value="0">
