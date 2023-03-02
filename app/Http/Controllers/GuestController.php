@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Book;
+use App\Models\Blog;
 use Hash;
 use Illuminate\Support\Facades\DB;
 
@@ -69,6 +70,60 @@ class GuestController extends Controller
          
         
 
+    }
+    public function saveblogs(Request $request)
+    {
+        $validate=$request->validate([
+            'blogtitle'=>['required'],
+            'blogdescr'=>['required'],
+        ]);
+        $fileName="";
+        if($request->file!=""){
+                    $fileName = time().'.'.$request->file->extension();  
+                    $request->file->move(public_path('blogimages'), $fileName);
+        }
+        $blogs=new Blog();
+        $blogs->user_id=auth::user()->id;
+        $blogs->bdate=date('Y-m-d');
+        $blogs->blog_title=$request->blogtitle;
+        $blogs->blog_description=$request->blogdescr;
+        $blogs->bimage1=$fileName;
+        $blogs->save();
+        if($blogs)
+        {
+            return back()->with('status','Career added successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
+    }
+    public function savebooks(Request $request)
+    {
+        $validate=$request->validate([
+            'blogtitle'=>['required'],
+            'blogdescr'=>['required'],
+        ]);
+        $fileName="";
+        if($request->file!=""){
+                    $fileName = time().'.'.$request->file->extension();  
+                    $request->file->move(public_path('blogimages'), $fileName);
+        }
+        $blogs=new Blog();
+        $blogs->user_id=auth::user()->id;
+        $blogs->bdate=date('Y-m-d');
+        $blogs->blog_title=$request->blogtitle;
+        $blogs->blog_description=$request->blogdescr;
+        $blogs->bimage1=$fileName;
+        $blogs->save();
+        if($blogs)
+        {
+            return back()->with('status','Career added successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
     }
 }
 

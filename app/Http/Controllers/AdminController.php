@@ -180,4 +180,5 @@ class AdminController extends Controller
             return back()->with('error','Some error occured please try again later..');
         }
     }
+   
 }

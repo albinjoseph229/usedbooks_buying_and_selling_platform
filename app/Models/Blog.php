@@ -16,24 +16,6 @@ class Blog extends Model
      */
     protected $table="blogs";
     protected $fillable = [
-        'blog_title', 'id', 'blog_description','created_at','name'
+        'blog_title', 'id', 'blog_description','created_at','name','bimage1','bimage2','bdate'
     ];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ]; 
 }
