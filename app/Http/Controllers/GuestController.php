@@ -91,34 +91,34 @@ class GuestController extends Controller
         $blogs->save();
         if($blogs)
         {
-            return back()->with('status','Career added successfully..');
+            return back()->with('status','Blog added successfully..');
         }
         else
         {
             return back()->with('error','Some error occured please try again later..');
         }
     }
+   
     public function savebooks(Request $request)
     {
         $validate=$request->validate([
             'blogtitle'=>['required'],
             'blogdescr'=>['required'],
+            'file'=>['required'],
         ]);
-        $fileName="";
-        if($request->file!=""){
-                    $fileName = time().'.'.$request->file->extension();  
-                    $request->file->move(public_path('blogimages'), $fileName);
-        }
-        $blogs=new Blog();
-        $blogs->user_id=auth::user()->id;
-        $blogs->bdate=date('Y-m-d');
-        $blogs->blog_title=$request->blogtitle;
-        $blogs->blog_description=$request->blogdescr;
-        $blogs->bimage1=$fileName;
-        $blogs->save();
-        if($blogs)
+        $fileName = time().'.'.$request->file->extension();  
+        $request->file->move(public_path('bookimages'), $fileName);
+
+        $books=new Book();
+        $books->user_id=auth::user()->id;
+        $books->bookdate=date('Y-m-d');
+        $books->bookname=$request->blogtitle;
+        $books->bookdescription=$request->blogdescr;
+        $books->coverpage1=$fileName;
+        $books->save();
+        if($books)
         {
-            return back()->with('status','Career added successfully..');
+            return back()->with('status','Ad Posted successfully..');
         }
         else
         {

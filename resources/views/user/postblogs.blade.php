@@ -2,9 +2,10 @@
 @section('content')
 <h2>Post Your Blog</h2>
 <div class="white-block"> 
+    <div class="white-block-title">
     @if (session('status'))
     <div class="alert alert-success" role="alert">
-        {{ session('status') }}
+        {{ session('status') }}  
     </div>
     @elseif(session('failed'))
     <div class="alert alert-danger" role="alert">
@@ -13,7 +14,7 @@
     @endif
     <form method="POST" action="{{'user.saveblogs'}}" enctype="multipart/form-data" >
     @csrf
-    <div class="white-block-title">
+    
         <label for="name">Title *</label>
         <input type="text" id="blogtitle" name="blogtitle" class="form-control required" placeholder="Title of your blog">
     </div> <div class="card-body">

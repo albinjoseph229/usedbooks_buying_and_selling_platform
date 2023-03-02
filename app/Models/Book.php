@@ -16,6 +16,6 @@ class Book extends Model
      */
     protected $table="book";
     protected $fillable = [
-        'bname', 'sellers_id', 'price',
+        'bookname', 'sellers_id', 'price','sellers_id','sellers_id','sellers_id','sellers_id',
     ];
 }

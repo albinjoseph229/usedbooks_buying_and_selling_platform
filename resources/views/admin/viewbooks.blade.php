@@ -46,7 +46,7 @@
                                     @foreach($books as $books)
                                     <tr>
                                          <td>{{$i}}</td>
-                                        <td>{{$books->bname}}</td>
+                                        <td>{{$books->bookname}}</td>
                                         <td>{{$books->name}}</td>
                                         <td>{{$books->price}}</td>
                                         <td>{{$books->created_at}}</td>

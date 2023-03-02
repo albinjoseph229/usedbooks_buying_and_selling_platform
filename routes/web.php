@@ -133,13 +133,18 @@ Route::get('/user.usercontactus', function () {
 Route::get('/user.changepassword', function () {
     return view('user/changepassword');
 })->name('user.changepassword');
+
+Route::post('user.saveblogs',[App\Http\Controllers\GuestController::class,'saveblogs'])->name('user.saveblogs');
+
+Route::post('user.savebooks',[App\Http\Controllers\GuestController::class,'savebooks'])->name('user.savebooks');
+
 Route::post('admin.updatepassword',[App\Http\Controllers\AdminController::class,'updatepassword'])->name('admin.updatepassword');
 
 Route::post('user.updatepassword',[App\Http\Controllers\GuestController::class,'updatepassword'])->name('user.updatepassword');
 
 Route::post('admin.savecareer',[App\Http\Controllers\AdminController::class,'savecareer'])->name('admin.savecareer');
 
-Route::post('user.saveblogs',[App\Http\Controllers\GuestController::class,'saveblogs'])->name('user.saveblogs');
+
 
 Route::post('admin.deletecareer',[App\Http\Controllers\AdminController::class,'deletecareer'])->name('admin.deletecareer');
 
