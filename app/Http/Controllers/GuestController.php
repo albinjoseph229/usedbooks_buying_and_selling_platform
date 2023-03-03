@@ -102,8 +102,11 @@ class GuestController extends Controller
     public function savebooks(Request $request)
     {
         $validate=$request->validate([
-            'blogtitle'=>['required'],
-            'blogdescr'=>['required'],
+            'bookname'=>['required'],
+            'bookdescription'=>['required'],
+            'price'=>['required'],
+            'address'=>['required'],
+            'phonenumber'=>['required'],
             'file'=>['required'],
         ]);
         $fileName = time().'.'.$request->file->extension();  
@@ -112,8 +115,11 @@ class GuestController extends Controller
         $books=new Book();
         $books->user_id=auth::user()->id;
         $books->bookdate=date('Y-m-d');
-        $books->bookname=$request->blogtitle;
-        $books->bookdescription=$request->blogdescr;
+        $books->bookname=$request->bookname;
+        $books->bookdescription=$request->bookdescription;
+        $books->phonenumber=$request->phonenumber;
+        $books->address=$request->address;
+        $books->price=$request->price;
         $books->coverpage1=$fileName;
         $books->save();
         if($books)

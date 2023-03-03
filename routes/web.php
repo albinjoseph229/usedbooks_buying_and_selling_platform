@@ -61,7 +61,7 @@ Route::get('/admin.changepassword', function () {
     return view('admin/changepassword');
 })->name('admin.changepassword');
 
-Route::get('/admin.viewbooks',[App\Http\Controllers\AdminController::class,'getbook'])->name('admin.viewbooks');
+Route::get('/admin.viewbooks',[App\Http\Controllers\AdminController::class,'getbooks'])->name('admin.viewbooks');
 
 Route::get('/admin.viewcareer',[App\Http\Controllers\AdminController::class,'getcareer'])->name('admin.viewcareer');
 
@@ -143,8 +143,6 @@ Route::post('admin.updatepassword',[App\Http\Controllers\AdminController::class,
 Route::post('user.updatepassword',[App\Http\Controllers\GuestController::class,'updatepassword'])->name('user.updatepassword');
 
 Route::post('admin.savecareer',[App\Http\Controllers\AdminController::class,'savecareer'])->name('admin.savecareer');
-
-
 
 Route::post('admin.deletecareer',[App\Http\Controllers\AdminController::class,'deletecareer'])->name('admin.deletecareer');
 

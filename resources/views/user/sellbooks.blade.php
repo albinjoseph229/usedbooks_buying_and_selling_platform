@@ -21,8 +21,6 @@
     </div>
     <div class="white-block-content">
         
-            <form action="https://themes/adifier/wp-comments-post.php" method="post" id="commentform"
-                class="comment-form" novalidate="">
                 <input type="hidden" value="1" name="aff-cpt">
                 <h5>Description</h5>
                 <textarea rows="12" cols="100" id="bookdescription" name="bookdescription" class="form-control required"
@@ -93,10 +91,11 @@
                         </div>
                     </div>
     
-            </form>
+          
             
         </div><!-- #respond -->
 
     </div>
+</form>
 </div>
 @endsection

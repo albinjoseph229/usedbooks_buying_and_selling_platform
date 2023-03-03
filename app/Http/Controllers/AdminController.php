@@ -59,7 +59,7 @@ class AdminController extends Controller
         return view('admin/viewuser',['users'=> $users]);
     }
 
-    public function getbook()
+    public function getbooks()
     {
         $books=Book::join('users','users.id','book.sellers_id')->select('book.*','users.name')->get();
         return view('admin/viewbooks',['books'=> $books]);
