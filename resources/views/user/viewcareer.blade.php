@@ -1,5 +1,20 @@
 @extends('layout/usermaster')
 @section('content')
+
+<div class="page-title quick-search">
+    <div class="container">
+        <div class="flex-wrap">
+            <div class="flex-left">
+                <h1 class="h4-size">View Career</h1>
+                <ul class="list-unstyled list-inline breadcrumbs">
+                    <li><a href="http://localhost/usedbooks/public">Home</a></li>
+                    <li>View Career</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</div>
 <main>
 @if (session('status'))
                         <div class="alert alert-success" role="alert">

@@ -149,6 +149,12 @@ class GuestController extends Controller
         $careers=Career::select('*')->get();
         return view('user/viewcareer',['careers'=> $careers]);
     }
+
+    public function getbooks()
+    {
+        $books=Book::select('*')->get();
+        return view('user/buybooks',['books'=> $books]);
+    }
 }
 
 

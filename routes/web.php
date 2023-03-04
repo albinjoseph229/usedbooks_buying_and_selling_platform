@@ -115,9 +115,8 @@ Route::get('/user.postblogs', function () {
     return view('user/postblogs');
 })->name('user.postblogs');
 
-Route::get('/user.buybooks', function () {
-    return view('user/buybooks');
-})->name('user.buybooks');
+Route::get('/user.buybooks',[App\Http\Controllers\GuestController::class,'getbooks'])->name('user.buybooks');
+
 
 Route::get('/user.viewcareer',[App\Http\Controllers\GuestController::class,'getcareers'])->name('user.viewcareer');
 

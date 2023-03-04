@@ -6,8 +6,8 @@
             <div class="flex-left">
                 <h1 class="h4-size">Browse Ads</h1>
                 <ul class="list-unstyled list-inline breadcrumbs">
-                    <li><a href="index.html">Home</a></li>
-                    <li>Browse Ads</li>
+                    <li><a href="{{ route('/')}}">Home</a></li>
+                    <li>Buy Book</li>
                 </ul>
             </div>
             <div class="flex-right">
@@ -21,6 +21,15 @@
 
 <main>
     <div class="container">
+    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                        @elseif(session('failed'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ session('failed') }}
+                        </div>
+                        @endif
         <div class="row">
             <div class="col-sm-3">
                 <div class="white-block filters-toggle">
@@ -278,114 +287,7 @@
                                     <input type="text" name="price[1]" value="" placeholder="max" />
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="form-group">
-                                    <div class="styled-select">
-                                        <label for="currency">Currency</label>
-                                        <select name="currency" id="currency" class="currency-swap">
-                                            <option value="USD">USD ($)</option>
-                                            <option value="EUR">EUR (€)</option>
-                                            <option value="RUB">RUB (₽)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="label-bottom-margin">Type</label>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <div class="styled-radio">
-                                            <input type="radio" name="type" value="" id="type-0" checked="checked">
-                                            <label for="type-0">All</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="styled-radio">
-                                            <input type="radio" name="type" value="1" id="type-1">
-                                            <label for="type-1">Sell</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="styled-radio">
-                                            <input type="radio" name="type" value="2" id="type-2">
-                                            <label for="type-2">Auction</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="styled-radio">
-                                            <input type="radio" name="type" value="3" id="type-3">
-                                            <label for="type-3">Buy</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="styled-radio">
-                                            <input type="radio" name="type" value="4" id="type-4">
-                                            <label for="type-4">Exchange</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="styled-radio">
-                                            <input type="radio" name="type" value="5" id="type-5">
-                                            <label for="type-5">Gift</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="styled-radio">
-                                            <input type="radio" name="type" value="6" id="type-6">
-                                            <label for="type-6">Rent</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="styled-radio">
-                                            <input type="radio" name="type" value="7" id="type-7">
-                                            <label for="type-7">Job - Offer</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="styled-radio">
-                                            <input type="radio" name="type" value="8" id="type-8">
-                                            <label for="type-8">Job - Wanted</label>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="label-bottom-margin">Condition</label>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <div class="styled-radio">
-                                            <input type="radio" name="cond" value="" id="cond-0" checked="checked">
-                                            <label for="cond-0">All</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="styled-radio">
-                                            <input type="radio" name="cond" value="1" id="cond-1">
-                                            <label for="cond-1">New</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="styled-radio">
-                                            <input type="radio" name="cond" value="2" id="cond-2">
-                                            <label for="cond-2">Manufacturer Refurbished</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="styled-radio">
-                                            <input type="radio" name="cond" value="3" id="cond-3">
-                                            <label for="cond-3">Used</label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="styled-radio">
-                                            <input type="radio" name="cond" value="4" id="cond-4">
-                                            <label for="cond-4">For Parts Or Not Working</label>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                            
 
                             <div class="form-group">
                                 <div class="styled-checkbox hidden show-sale-filter">
@@ -400,10 +302,7 @@
                                     <input type="checkbox" name="negotiable-only" value="1" id="negotiable-only">
                                     <label for="negotiable-only">Show negotiable ads only</label>
                                 </div>
-                                <div class="styled-checkbox">
-                                    <input type="checkbox" name="urgent-only" value="1" id="urgent-only">
-                                    <label for="urgent-only">Show only urgent ads</label>
-                                </div>
+                               
                             </div>
                             <div class="submit-search-form">
                                 <a href="javascript:void(0);" class="af-button filter-adverts">Apply Filters</a>
@@ -446,69 +345,16 @@
                             </div>
                         </div>
                     </div>
-
+                    @php $i=1; @endphp
+                                        @foreach($books as $books)
                     <div class="af-items-3 af-listing-grid">
-                        <div class="af-item-wrap">
-                            <div class="white-block hover-shadow advert-item advert-grid ">
-
-                                <div class="advert-tags">
-                                    <div class="ribbon featured">
-                                        Featured </div>
-                                </div>
-
-                                <a href="advert/handy-mechanic-for-ford-vehicles/index.html" class="advert-media">
-                                    <img width="355" height="250" src="wp-content/uploads/2018/02/adr-5-355x250.jpg"
-                                        class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
-                                        decoding="async" /> </a>
-
-                                <div class="white-block-content">
-
-                                    <div class="top-advert-meta flex-wrap">
-                                        <div class="advert-cat text-overflow">
-                                            <i class="aficon-dot-circle-o"></i>
-                                            <a href="advert-category/services/index.html">Services</a>
-                                        </div>
-                                        <div class="advert-city text-overflow">
-                                            <i class="aficon-map-marker-alt-o"></i>
-                                            <a href="advert-location/washington/index.html">Washington</a>
-                                        </div>
-                                    </div>
-                                    <h5 class="adv-title">
-                                        <a href="advert/handy-mechanic-for-ford-vehicles/index.html"
-                                            class="text-overflow" title="Handy Mechanic For FORD Vehicles">
-                                            Handy Mechanic For FORD Vehicles </a>
-                                    </h5>
-                                    <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price"><span class="text-price">Exchange</span></div>
-                                        <div class="flex-right">
-                                            <a href="javascript:void(0);" class="compare-add " data-id="81"
-                                                title="Add This To Compare">
-                                                <i class="aficon-repeat"></i>
-                                            </a>
-
-                                            <a title="Favorite" href="#" class="af-favs " data-toggle="modal"
-                                                data-target="#login">
-                                                <i class="aficon-heart-o"></i>
-                                                <span>Favorite</span>
-                                                <span class="small-icon">Favorite</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="search-map-la-long hidden" data-id="81" data-longitude="-77.03687070"
-                                    data-latitude="38.90719230"
-                                    data-icon="https://wp-content/uploads/2018/02/services.png" data-iconwidth="110"
-                                    data-iconheight="110"></div>
-                            </div>
-                        </div>
                         <div class="af-item-wrap">
                             <div class="white-block hover-shadow advert-item advert-grid advert-hightlight">
 
 
                                 <a href="advert/scania-r-srs-l-class-r450-la-streamline-highline-diesel/index.html"
                                     class="advert-media">
-                                    <img width="355" height="250" src="wp-content/uploads/2018/02/adr-9-355x250.jpg"
+                                    <img width="355" height="250" src="{{asset('bookimages/'.$books->coverpage1.'')}}"
                                         class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
                                         decoding="async" loading="lazy" /> </a>
 
@@ -521,17 +367,17 @@
                                         </div>
                                         <div class="advert-city text-overflow">
                                             <i class="aficon-map-marker-alt-o"></i>
-                                            <a href="advert-location/amsterdam/index.html">Amsterdam</a>
+                                            <a href="advert-location/amsterdam/index.html"> {{$books->address}}</a>
                                         </div>
                                     </div>
                                     <h5 class="adv-title">
                                         <a href="advert/scania-r-srs-l-class-r450-la-streamline-highline-diesel/index.html"
                                             class="text-overflow"
                                             title="Scania R-SRS L-CLASS R450 LA Streamline Highline Diesel">
-                                            Scania R-SRS L-CLASS R450 LA Streamline Highline Diesel </a>
+                                            {{$books->bookname}}</a>
                                     </h5>
                                     <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price">300,000.00<span class="price-symbol">€</span></div>
+                                        <div class="price">{{$books->price}}<span class="price-symbol"₹>€</span></div>
                                         <div class="flex-right">
                                             <a href="javascript:void(0);" class="compare-add " data-id="88"
                                                 title="Add This To Compare">
@@ -551,14 +397,14 @@
                                 <div class="search-map-la-long hidden" data-id="88" data-longitude="4.89516790"
                                     data-latitude="52.37021570" data-icon="https://wp-content/uploads/2018/02/cars.png"
                                     data-iconwidth="110" data-iconheight="110"></div>
-                            </div>
                         </div>
+                        </div> 
                         <div class="af-item-wrap">
                             <div class="white-block hover-shadow advert-item advert-grid ">
 
 
                                 <a href="advert/move-quickly-with-high-load-trailer/index.html" class="advert-media">
-                                    <img width="355" height="250" src="wp-content/uploads/2018/02/adr-8-355x250.jpg"
+                                    <img width="355" height="250" src="{{asset('bookimages/'.$books->coverpage1.'')}}"
                                         class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
                                         decoding="async" loading="lazy" /> </a>
 
@@ -571,17 +417,17 @@
                                         </div>
                                         <div class="advert-city text-overflow">
                                             <i class="aficon-map-marker-alt-o"></i>
-                                            <a href="advert-location/dortmund/index.html">Dortmund</a>
+                                            <a href="advert-location/dortmund/index.html">{{$books->address}}</a>
                                         </div>
                                     </div>
                                     <h5 class="adv-title">
                                         <a href="advert/move-quickly-with-high-load-trailer/index.html"
                                             class="text-overflow" title="Move Quickly With High Load Trailer">
-                                            Move Quickly With High Load Trailer </a>
+                                            {{$books->bookname}}</a>
                                     </h5>
                                     <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price"><span class="price-symbol">$</span>26,099.00<div
-                                                class="price-bids"><span>6 Bids</span></div>
+                                        <div class="price"><span class="price-symbol"></span><div
+                                                class="price-bids">₹{{$books->price}}</div>
                                         </div>
                                         <div class="flex-right">
                                             <a href="javascript:void(0);" class="compare-add " data-id="87"
@@ -615,7 +461,7 @@
 
                                 <a href="advert/indoor-furniture-pe-wicker-sofa-lounge-couch/index.html"
                                     class="advert-media">
-                                    <img width="355" height="250" src="wp-content/uploads/2018/02/adr-22-355x250.jpg"
+                                    <img width="355" height="250" src="{{asset('bookimages/'.$books->coverpage1.'')}}"
                                         class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
                                         decoding="async" loading="lazy" /> </a>
 
@@ -628,16 +474,16 @@
                                         </div>
                                         <div class="advert-city text-overflow">
                                             <i class="aficon-map-marker-alt-o"></i>
-                                            <a href="advert-location/ostend/index.html">Ostend</a>
+                                            <a href="advert-location/ostend/index.html"> {{$books->address}}</a>
                                         </div>
                                     </div>
                                     <h5 class="adv-title">
                                         <a href="advert/indoor-furniture-pe-wicker-sofa-lounge-couch/index.html"
                                             class="text-overflow" title="Indoor Furniture PE Wicker Sofa Lounge Couch">
-                                            Indoor Furniture PE Wicker Sofa Lounge Couch </a>
+                                            {{$books->bookname}} </a>
                                     </h5>
                                     <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price">90,00<span class="price-symbol">₽</span><span
+                                        <div class="price"> {{$books->price}}<span class="price-symbol">₹</span><span
                                                 class="no-strike">/ week</span></div>
                                         <div class="flex-right">
                                             <a href="javascript:void(0);" class="compare-add " data-id="127"
@@ -661,436 +507,17 @@
                                     data-iconheight="110"></div>
                             </div>
                         </div>
-                        <div class="af-item-wrap">
-                            <div class="white-block hover-shadow advert-item advert-grid ">
-
-
-                                <a href="advert/trained-ballet-dancer-is-required-for-the-show/index.html"
-                                    class="advert-media">
-                                    <img width="355" height="250" src="wp-content/uploads/2018/02/adr-20-355x250.jpg"
-                                        class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
-                                        decoding="async" loading="lazy" /> </a>
-
-                                <div class="white-block-content">
-
-                                    <div class="top-advert-meta flex-wrap">
-                                        <div class="advert-cat text-overflow">
-                                            <i class="aficon-dot-circle-o"></i>
-                                            <a href="advert-category/jobs/index.html">Jobs</a>
-                                        </div>
-                                        <div class="advert-city text-overflow">
-                                            <i class="aficon-map-marker-alt-o"></i>
-                                            <a href="advert-location/london/index.html">London</a>
-                                        </div>
-                                    </div>
-                                    <h5 class="adv-title">
-                                        <a href="advert/trained-ballet-dancer-is-required-for-the-show/index.html"
-                                            class="text-overflow"
-                                            title="Trained Ballet Dancer Is Required For The Show">
-                                            Trained Ballet Dancer Is Required For The Show </a>
-                                    </h5>
-                                    <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price"><span class="text-price">Job - Wanted</span></div>
-                                        <div class="flex-right">
-                                            <a href="javascript:void(0);" class="compare-add " data-id="125"
-                                                title="Add This To Compare">
-                                                <i class="aficon-repeat"></i>
-                                            </a>
-
-                                            <a title="Favorite" href="#" class="af-favs " data-toggle="modal"
-                                                data-target="#login">
-                                                <i class="aficon-heart-o"></i>
-                                                <span>Favorite</span>
-                                                <span class="small-icon">Favorite</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="search-map-la-long hidden" data-id="125" data-longitude="-0.12775830"
-                                    data-latitude="51.50735090" data-icon="https://wp-content/uploads/2018/02/jobs.png"
-                                    data-iconwidth="110" data-iconheight="110"></div>
-                            </div>
-                        </div>
-                        <div class="af-item-wrap">
-                            <div class="white-block hover-shadow advert-item advert-grid ">
-
-                                <div class="advert-tags">
-                                    <div class="ribbon urgent">
-                                        Urgent </div>
-                                </div>
-
-                                <a href="advert/polaris-600-assault-144-snowmobile-2017-with-warranty/index.html"
-                                    class="advert-media">
-                                    <img width="355" height="250" src="wp-content/uploads/2018/02/adr-11-355x250.jpg"
-                                        class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
-                                        decoding="async" loading="lazy" /> </a>
-
-                                <div class="white-block-content">
-
-                                    <div class="top-advert-meta flex-wrap">
-                                        <div class="advert-cat text-overflow">
-                                            <i class="aficon-dot-circle-o"></i>
-                                            <a href="advert-category/vehicles/index.html">Vehicles</a>
-                                        </div>
-                                        <div class="advert-city text-overflow">
-                                            <i class="aficon-map-marker-alt-o"></i>
-                                            <a href="advert-location/sundsvall/index.html">Sundsvall</a>
-                                        </div>
-                                    </div>
-                                    <h5 class="adv-title">
-                                        <a href="advert/polaris-600-assault-144-snowmobile-2017-with-warranty/index.html"
-                                            class="text-overflow"
-                                            title="Polaris 600 Assault 144 Snowmobile 2017 With Warranty">
-                                            Polaris 600 Assault 144 Snowmobile 2017 With Warranty </a>
-                                    </h5>
-                                    <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price"><span class="">450.00<span
-                                                    class="price-symbol">€</span></span>400.00<span
-                                                class="price-symbol">€</span></div>
-                                        <div class="flex-right">
-                                            <a href="javascript:void(0);" class="compare-add " data-id="86"
-                                                title="Add This To Compare">
-                                                <i class="aficon-repeat"></i>
-                                            </a>
-
-                                            <a title="Favorite" href="#" class="af-favs " data-toggle="modal"
-                                                data-target="#login">
-                                                <i class="aficon-heart-o"></i>
-                                                <span>Favorite</span>
-                                                <span class="small-icon">Favorite</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="search-map-la-long hidden" data-id="86" data-longitude="17.30692700"
-                                    data-latitude="62.39081100" data-icon="https://wp-content/uploads/2018/02/cars.png"
-                                    data-iconwidth="110" data-iconheight="110"></div>
-                            </div>
-                        </div>
-                        <div class="af-item-wrap">
-                            <div class="white-block hover-shadow advert-item advert-grid ">
-
-
-                                <a href="advert/apartment-in-spain-for-sale-at-panoramica-golf-country-club/index.html"
-                                    class="advert-media">
-                                    <img width="355" height="250" src="wp-content/uploads/2018/02/adr-18-355x250.jpg"
-                                        class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
-                                        decoding="async" loading="lazy" /> </a>
-
-                                <div class="white-block-content">
-
-                                    <div class="top-advert-meta flex-wrap">
-                                        <div class="advert-cat text-overflow">
-                                            <i class="aficon-dot-circle-o"></i>
-                                            <a href="advert-category/real-estate/index.html">Real Estate</a>
-                                        </div>
-                                        <div class="advert-city text-overflow">
-                                            <i class="aficon-map-marker-alt-o"></i>
-                                            <a href="advert-location/paris/index.html">Paris</a>
-                                        </div>
-                                    </div>
-                                    <h5 class="adv-title">
-                                        <a href="advert/apartment-in-spain-for-sale-at-panoramica-golf-country-club/index.html"
-                                            class="text-overflow"
-                                            title="Apartment In Spain For Sale At Panoramica Golf &#038; Country Club">
-                                            Apartment In Spain For Sale At Panoramica Golf &#038; Country Club </a>
-                                    </h5>
-                                    <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price">Call for price</div>
-                                        <div class="flex-right">
-                                            <a href="javascript:void(0);" class="compare-add " data-id="118"
-                                                title="Add This To Compare">
-                                                <i class="aficon-repeat"></i>
-                                            </a>
-
-                                            <a title="Favorite" href="#" class="af-favs " data-toggle="modal"
-                                                data-target="#login">
-                                                <i class="aficon-heart-o"></i>
-                                                <span>Favorite</span>
-                                                <span class="small-icon">Favorite</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="search-map-la-long hidden" data-id="118" data-longitude="2.35222190"
-                                    data-latitude="48.85661400"
-                                    data-icon="https://wp-content/uploads/2018/02/real-estate.png" data-iconwidth="110"
-                                    data-iconheight="110"></div>
-                            </div>
-                        </div>
-                        <div class="af-item-wrap">
-                            <div class="white-block hover-shadow advert-item advert-grid ">
-
-
-                                <a href="advert/fashion-luxury-men-date-stainless-steel-leather-analog-quartz/index.html"
-                                    class="advert-media">
-                                    <img width="355" height="250" src="wp-content/uploads/2018/02/adr-17-355x250.jpg"
-                                        class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
-                                        decoding="async" loading="lazy" /> </a>
-
-                                <div class="white-block-content">
-
-                                    <div class="top-advert-meta flex-wrap">
-                                        <div class="advert-cat text-overflow">
-                                            <i class="aficon-dot-circle-o"></i>
-                                            <a href="advert-category/electronics/index.html">Electronics</a>
-                                        </div>
-                                        <div class="advert-city text-overflow">
-                                            <i class="aficon-map-marker-alt-o"></i>
-                                            <a href="advert-location/berlin/index.html">Berlin</a>
-                                        </div>
-                                    </div>
-                                    <h5 class="adv-title">
-                                        <a href="advert/fashion-luxury-men-date-stainless-steel-leather-analog-quartz/index.html"
-                                            class="text-overflow"
-                                            title="Fashion Luxury Men Date Stainless Steel Leather Analog Quartz">
-                                            Fashion Luxury Men Date Stainless Steel Leather Analog Quartz </a>
-                                    </h5>
-                                    <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price"><span class="price-symbol">$</span>65.00<div
-                                                class="price-bids"><span>1 Bid</span></div>
-                                        </div>
-                                        <div class="flex-right">
-                                            <a href="javascript:void(0);" class="compare-add " data-id="114"
-                                                title="Add This To Compare">
-                                                <i class="aficon-repeat"></i>
-                                            </a>
-
-                                            <a title="Favorite" href="#" class="af-favs " data-toggle="modal"
-                                                data-target="#login">
-                                                <i class="aficon-heart-o"></i>
-                                                <span>Favorite</span>
-                                                <span class="small-icon">Favorite</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="search-map-la-long hidden" data-id="114" data-longitude="13.40495400"
-                                    data-latitude="52.52000660"
-                                    data-icon="https://wp-content/uploads/2018/02/electronics.png" data-iconwidth="110"
-                                    data-iconheight="110"></div>
-                            </div>
-                        </div>
-                        <div class="af-item-wrap">
-                            <div class="white-block hover-shadow advert-item advert-grid ">
-
-
-                                <a href="advert/customized-apple-imac-21-5-all-in-one-desktop-computer/index.html"
-                                    class="advert-media">
-                                    <img width="355" height="250" src="wp-content/uploads/2018/02/adr-13-355x250.jpg"
-                                        class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
-                                        decoding="async" loading="lazy" /> </a>
-
-                                <div class="white-block-content">
-
-                                    <div class="top-advert-meta flex-wrap">
-                                        <div class="advert-cat text-overflow">
-                                            <i class="aficon-dot-circle-o"></i>
-                                            <a href="advert-category/electronics/index.html">Electronics</a>
-                                        </div>
-                                        <div class="advert-city text-overflow">
-                                            <i class="aficon-map-marker-alt-o"></i>
-                                            <a href="advert-location/vienna/index.html">Vienna</a>
-                                        </div>
-                                    </div>
-                                    <h5 class="adv-title">
-                                        <a href="advert/customized-apple-imac-21-5-all-in-one-desktop-computer/index.html"
-                                            class="text-overflow"
-                                            title="Customized Apple iMac 21.5&#8243; All-In-One Desktop Computer">
-                                            Customized Apple iMac 21.5&#8243; All-In-One Desktop Computer </a>
-                                    </h5>
-                                    <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price"><span class="text-price">Buying</span></div>
-                                        <div class="flex-right">
-                                            <a href="javascript:void(0);" class="compare-add " data-id="111"
-                                                title="Add This To Compare">
-                                                <i class="aficon-repeat"></i>
-                                            </a>
-
-                                            <a title="Favorite" href="#" class="af-favs " data-toggle="modal"
-                                                data-target="#login">
-                                                <i class="aficon-heart-o"></i>
-                                                <span>Favorite</span>
-                                                <span class="small-icon">Favorite</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="search-map-la-long hidden" data-id="111" data-longitude="16.37381890"
-                                    data-latitude="48.20817430"
-                                    data-icon="https://wp-content/uploads/2018/02/electronics.png" data-iconwidth="110"
-                                    data-iconheight="110"></div>
-                            </div>
-                        </div>
-                        <div class="af-item-wrap">
-                            <div class="white-block hover-shadow advert-item advert-grid ">
-
-
-                                <a href="advert/new-x5sw-1-2-4ghz-4ch-6-axis-rc-quadcopter-drone/index.html"
-                                    class="advert-media">
-                                    <img width="355" height="250" src="wp-content/uploads/2018/02/adr-12-355x250.jpg"
-                                        class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
-                                        decoding="async" loading="lazy" /> </a>
-
-                                <div class="white-block-content">
-
-                                    <div class="top-advert-meta flex-wrap">
-                                        <div class="advert-cat text-overflow">
-                                            <i class="aficon-dot-circle-o"></i>
-                                            <a href="advert-category/electronics/index.html">Electronics</a>
-                                        </div>
-                                        <div class="advert-city text-overflow">
-                                            <i class="aficon-map-marker-alt-o"></i>
-                                            <a href="advert-location/british-columbia/index.html">British
-                                                Columbia</a>
-                                        </div>
-                                    </div>
-                                    <h5 class="adv-title">
-                                        <a href="advert/new-x5sw-1-2-4ghz-4ch-6-axis-rc-quadcopter-drone/index.html"
-                                            class="text-overflow"
-                                            title="New X5SW-1 2.4GHz 4CH 6 Axis RC Quadcopter Drone">
-                                            New X5SW-1 2.4GHz 4CH 6 Axis RC Quadcopter Drone </a>
-                                    </h5>
-                                    <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price"><span class="text-price">Exchange</span></div>
-                                        <div class="flex-right">
-                                            <a href="javascript:void(0);" class="compare-add " data-id="105"
-                                                title="Add This To Compare">
-                                                <i class="aficon-repeat"></i>
-                                            </a>
-
-                                            <a title="Favorite" href="#" class="af-favs " data-toggle="modal"
-                                                data-target="#login">
-                                                <i class="aficon-heart-o"></i>
-                                                <span>Favorite</span>
-                                                <span class="small-icon">Favorite</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="search-map-la-long hidden" data-id="105" data-longitude="-123.12073750"
-                                    data-latitude="49.28272910"
-                                    data-icon="wp-content/uploads/2018/02/electronics.png" data-iconwidth="110"
-                                    data-iconheight="110"></div>
-                            </div>
-                        </div>
-                        <div class="af-item-wrap">
-                            <div class="white-block hover-shadow advert-item advert-grid ">
-
-
-                                <a href="advert/2012-audi-r8-gt-spyder-convertible-2-door/index.html"
-                                    class="advert-media">
-                                    <img width="355" height="250" src="wp-content/uploads/2018/02/adr-23-355x250.jpg"
-                                        class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
-                                        decoding="async" loading="lazy" /> </a>
-
-                                <div class="white-block-content">
-
-                                    <div class="top-advert-meta flex-wrap">
-                                        <div class="advert-cat text-overflow">
-                                            <i class="aficon-dot-circle-o"></i>
-                                            <a href="advert-category/vehicles/index.html">Vehicles</a>
-                                        </div>
-                                        <div class="advert-city text-overflow">
-                                            <i class="aficon-map-marker-alt-o"></i>
-                                            <a href="advert-location/paris/index.html">Paris</a>
-                                        </div>
-                                    </div>
-                                    <h5 class="adv-title">
-                                        <a href="advert/2012-audi-r8-gt-spyder-convertible-2-door/index.html"
-                                            class="text-overflow" title="2012 Audi R8 GT Spyder Convertible 2-Door">
-                                            2012 Audi R8 GT Spyder Convertible 2-Door </a>
-                                    </h5>
-                                    <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price"><span class="text-price">Gift</span></div>
-                                        <div class="flex-right">
-                                            <a href="javascript:void(0);" class="compare-add " data-id="131"
-                                                title="Add This To Compare">
-                                                <i class="aficon-repeat"></i>
-                                            </a>
-
-                                            <a title="Favorite" href="#" class="af-favs " data-toggle="modal"
-                                                data-target="#login">
-                                                <i class="aficon-heart-o"></i>
-                                                <span>Favorite</span>
-                                                <span class="small-icon">Favorite</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="search-map-la-long hidden" data-id="131" data-longitude="2.35222190"
-                                    data-latitude="48.85661400" data-icon="wp-content/uploads/2018/02/cars.png"
-                                    data-iconwidth="110" data-iconheight="110"></div>
-                            </div>
-                        </div>
-                        <div class="af-item-wrap">
-                            <div class="white-block hover-shadow advert-item advert-grid ">
-
-
-                                <a href="advert/apple-iphone-6-16gb-4g-lte-factory-unlocked/index.html"
-                                    class="advert-media">
-                                    <img width="355" height="250" src="wp-content/uploads/2018/02/adr-16-355x250.jpg"
-                                        class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
-                                        decoding="async" loading="lazy" /> </a>
-
-                                <div class="white-block-content">
-
-                                    <div class="top-advert-meta flex-wrap">
-                                        <div class="advert-cat text-overflow">
-                                            <i class="aficon-dot-circle-o"></i>
-                                            <a href="advert-category/electronics/index.html">Electronics</a>
-                                        </div>
-                                        <div class="advert-city text-overflow">
-                                            <i class="aficon-map-marker-alt-o"></i>
-                                            <a href="advert-location/belgrade/index.html">Belgrade</a>
-                                        </div>
-                                    </div>
-                                    <h5 class="adv-title">
-                                        <a href="advert/apple-iphone-6-16gb-4g-lte-factory-unlocked/index.html"
-                                            class="text-overflow" title="Apple iPhone 6 16GB 4G LTE Factory Unlocked">
-                                            Apple iPhone 6 16GB 4G LTE Factory Unlocked </a>
-                                    </h5>
-                                    <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price"><span class="">800.00<span
-                                                    class="price-symbol">€</span></span>700.00<span
-                                                class="price-symbol">€</span></div>
-                                        <div class="flex-right">
-                                            <a href="javascript:void(0);" class="compare-add " data-id="113"
-                                                title="Add This To Compare">
-                                                <i class="aficon-repeat"></i>
-                                            </a>
-
-                                            <a title="Favorite" href="#" class="af-favs " data-toggle="modal"
-                                                data-target="#login">
-                                                <i class="aficon-heart-o"></i>
-                                                <span>Favorite</span>
-                                                <span class="small-icon">Favorite</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="search-map-la-long hidden" data-id="113" data-longitude="20.44892160"
-                                    data-latitude="44.78656800"
-                                    data-icon="wp-content/uploads/2018/02/electronics.png" data-iconwidth="110"
-                                    data-iconheight="110"></div>
-                            </div>
-                        </div>
+                        
+                       
+                    
+                    @php $i++; @endphp
+                    @endforeach
                     </div>
-
-
                     <div class="pagination">
                         <span aria-current="page" class="page-numbers current">1</span>
                         <a class="page-numbers" href="index5f6c.html?af_page=2">2</a>
                     </div>
-
+                   
                 </div>
             </div>
         </div>

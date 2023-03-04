@@ -856,7 +856,7 @@
                         <li id="menu-item-3"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3 ">
                             <a title="Career" href="{{ route('user.viewcareer')}}" data-toggle="dropdown" class="dropdown-toggle"
-                                data-hover="dropdown" aria-haspopup="true">Career</a>
+                                data-hover="dropdown" aria-haspopup="true">View Career</a>
 
                         </li>
 
@@ -882,6 +882,7 @@
                             <a href="{{ route('logout')}}" class="nav-link">
                                Logout
                               </li>
+                              
 
                     </ul>
                 </div>

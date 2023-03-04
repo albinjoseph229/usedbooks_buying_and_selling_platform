@@ -1,7 +1,9 @@
 @extends('layout/usermaster')
 @section('content')
 <main>
+	
 	<div class="container">
+	<h2>View Blogs</h2>
 		<div class="row">
 		@if (session('status'))
                         <div class="alert alert-success" role="alert">
