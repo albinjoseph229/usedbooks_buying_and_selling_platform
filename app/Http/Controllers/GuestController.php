@@ -113,7 +113,7 @@ class GuestController extends Controller
         $request->file->move(public_path('bookimages'), $fileName);
 
         $books=new Book();
-        $books->user_id=auth::user()->id;
+        $books->sellers_id=auth::user()->id;
         $books->bookdate=date('Y-m-d');
         $books->bookname=$request->bookname;
         $books->bookdescription=$request->bookdescription;

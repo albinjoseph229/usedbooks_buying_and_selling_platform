@@ -34,9 +34,6 @@ Route::get('adminregistration', [App\Http\Controllers\AdminRegistrationControlle
 
 Route::post('login',[App\Http\Controllers\AdminController::class,'postLogin'])->name('postlogin');
 
-Route::post('admin.deleteuser',[App\Http\Controllers\AdminController::class,'deleteuser'])->name('admin.deleteuser');
-
-Route::post('admin.deleteblogs',[App\Http\Controllers\AdminController::class,'deleteblogs'])->name('admin.deleteblogs');
 
 Route::post('postadminform', [App\Http\Controllers\AdminRegistrationController::class,'save']) ->name ('postadminform');
 
@@ -71,7 +68,11 @@ Route::get('/admin.viewblogs',[App\Http\Controllers\AdminController::class,'getb
 
 Route::get('/admin.viewmessages',[App\Http\Controllers\AdminController::class,'getmessages'])->name('admin.viewmessages');
 
+Route::post('admin.deleteuser',[App\Http\Controllers\AdminController::class,'deleteuser'])->name('admin.deleteuser');
 
+Route::post('admin.deleteblogs',[App\Http\Controllers\AdminController::class,'deleteblogs'])->name('admin.deleteblogs');
+
+Route::post('admin.deletebooks',[App\Http\Controllers\AdminController::class,'deletebooks'])->name('admin.deletebooks');
 
 Route::get('/admin.viewads', function () {
     return view('admin/viewads');
@@ -145,6 +146,8 @@ Route::post('user.updatepassword',[App\Http\Controllers\GuestController::class,'
 Route::post('admin.savecareer',[App\Http\Controllers\AdminController::class,'savecareer'])->name('admin.savecareer');
 
 Route::post('admin.deletecareer',[App\Http\Controllers\AdminController::class,'deletecareer'])->name('admin.deletecareer');
+
+
 
 
 });

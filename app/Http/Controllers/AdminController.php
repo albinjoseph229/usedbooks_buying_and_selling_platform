@@ -142,6 +142,21 @@ class AdminController extends Controller
             return back()->with('error','Some error occured please try again later..');
         }
     }
+
+    public function deletebooks(Request $request)
+    {
+        $id=$request->dodelete;
+        $delete=Book::where('id',$id)->delete();
+        if($delete)
+        {
+            return back()->with('status','Book deleted successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
+    }
+
     public function savecareer(Request $request)
     {
         $validate=$request->validate([

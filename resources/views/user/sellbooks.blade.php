@@ -14,7 +14,7 @@
             {{ session('failed') }}
         </div>
         @endif
-        <form method="POST" action="{{'user.savebooks'}}" enctype="multipart/form-data" >
+  <form method="POST" action="{{'user.savebooks'}}" enctype="multipart/form-data" >
         @csrf
      <h5>Book Name</h5>
         <input type="text" id="bookname" name="bookname" class="form-control required" placeholder="Name of your book">
@@ -37,14 +37,7 @@
                             <div class="col-xl-6 col-md-12">
                                 <div class="input-with-icon-left">
                                     <i class="flag-img"><img src="https://classified.bylancer.com/includes/assets/plugins/flags/images/in.png"></i>
-                                    <input type="text" class="with-border" name="phone">
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-md-12">
-                                <div class="checkbox margin-top-12">
-                                    <input type="checkbox" name="phonenumber" id="phonenumber" value="1">
-                                    <label for="phonenumber"><span class="checkbox-icon"></span>
-                                        Hide</label>
+                                    <input type="text" id="phonenumber" name="phonenumber" class="form-control required" placeholder="Enter Your Phone Number">
                                 </div>
                             </div>
                         </div>
@@ -55,18 +48,11 @@
                                                 <div class="row">
                                                     <div class="col-xl-6 col-md-12">
                                                         <div class="input-with-icon">
-                                                            <input class="with-border" type="text" placeholder="Price"
-                                                                name="price">
-                                                            <i class="currency">₹</i>
+                                                        <input type="text" id="price" name="price" class="form-control required" placeholder="Enter Your price ">
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-6 col-md-12 margin-top-12">
-                                                        <div class="checkbox">
-                                                            <input type="checkbox" id="negotiable" name="negotiable"
-                                                                value="1">
-                                                            <label for="negotiable"><span class="checkbox-icon"></span>
-                                                                negotiate</label>
-                                                        </div>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -96,6 +82,6 @@
         </div><!-- #respond -->
 
     </div>
-</form>
+  </form>
 </div>
 @endsection

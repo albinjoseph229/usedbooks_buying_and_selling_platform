@@ -71,7 +71,8 @@
                                         <td>{{$blogs->name}}</td>
                                         <td>{{$blogs->blog_description}}</td>
                                         <td>{{$blogs->created_at}}</td>
-                                        <td><button title="Delete Blogs" class="btn btn-danger btn-sm deleteme" data-value="{{$blogs->id}}"  data-toggle="modal" data-target="#modal-primary"><i class="fa fa-trash"></i></button>
+                                        <td>
+                                            <button title="Delete Blogs" class="btn btn-danger btn-sm deleteme" data-value="{{$blogs->id}}"  data-toggle="modal" data-target="#modal-primary"><i class="fa fa-trash"></i></button>
                                             <a title="View More" href="{{ route('admin.viewmoreblogs')}}"
                                                 class="btn btn-sm btn-primary"><i class="fas fa-folder"></i></a>
                                             <a title="View Comments" href="{{ route('admin.viewblogcomments')}}"
