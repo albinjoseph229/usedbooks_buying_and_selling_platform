@@ -16,24 +16,6 @@ class Message extends Model
      */
     protected $table="messages";
     protected $fillable = [
-        'message_subject', 'message_content','created_at',
+        'message_subject', 'message_content'
     ];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ]; 
 }

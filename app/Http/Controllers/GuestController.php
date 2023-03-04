@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\pagination\Paginator;
 use App\Models\User;
 use App\Models\Book;
 use App\Models\Blog;
 use App\Models\Career;
+use App\Models\Message;
 use Hash;
 use Illuminate\Support\Facades\DB;
 
@@ -154,6 +156,29 @@ class GuestController extends Controller
     {
         $books=Book::select('*')->get();
         return view('user/buybooks',['books'=> $books]);
+        $data=books::paginate(2);
+        $books=Book::count();
+    }
+    public function savemessages(Request $request)
+    {
+        $validate=$request->validate([
+            'blogtitle'=>['required'],
+            'blogdescr'=>['required'],
+        ]);
+        
+        $messages=new Message();
+        $messages->user_id=auth::user()->id;
+        $messages->message_subject=$request->message_subject;
+        $messages->message_content=$request->message_content;
+        $messages->save();
+        if($messages)
+        {
+            return back()->with('status','Message send successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
     }
 }
 

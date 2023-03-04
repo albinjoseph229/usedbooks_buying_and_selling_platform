@@ -316,13 +316,16 @@
                     <div class="white-block">
                         <div class="white-block-content">
                             <div class="flex-wrap search-order">
-                                <h6>
-                                    Showing <strong>1</strong>
-                                    -
-                                    <strong>12</strong>
-                                    of <strong>21</strong>
+                            
+                            <h6>
+                            
+                                    Showing
+                                    @foreach($books as $bookcount)
+                                    <strong>{{$bookcount->count()}}</strong>
+                                    @endforeach
                                     ads found
                                 </h6>
+                                
                                 <div class="flex-right flex-wrap">
                                     <div class="styled-select styled-select-no-label">
                                         <select name="af_orderby" class="orderby">
@@ -345,14 +348,15 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="af-items-3 af-listing-grid">
                     @php $i=1; @endphp
                                         @foreach($books as $books)
-                    <div class="af-items-3 af-listing-grid">
                         <div class="af-item-wrap">
                             <div class="white-block hover-shadow advert-item advert-grid advert-hightlight">
 
 
-                                <a href="advert/scania-r-srs-l-class-r450-la-streamline-highline-diesel/index.html"
+                                <a href="{{url('user.buybooks/'.$books->slug.'/'.$books->slug)}}"
                                     class="advert-media">
                                     <img width="355" height="250" src="{{asset('bookimages/'.$books->coverpage1.'')}}"
                                         class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
@@ -363,7 +367,7 @@
                                     <div class="top-advert-meta flex-wrap">
                                         <div class="advert-cat text-overflow">
                                             <i class="aficon-dot-circle-o"></i>
-                                            <a href="advert-category/vehicles/index.html">Vehicles</a>
+                                            <a href="{{ route('user.viewbuybooks')}}">Vehicles</a>
                                         </div>
                                         <div class="advert-city text-overflow">
                                             <i class="aficon-map-marker-alt-o"></i>
@@ -371,13 +375,13 @@
                                         </div>
                                     </div>
                                     <h5 class="adv-title">
-                                        <a href="advert/scania-r-srs-l-class-r450-la-streamline-highline-diesel/index.html"
+                                        <a href="{{ route('user.viewbuybooks')}}"
                                             class="text-overflow"
                                             title="Scania R-SRS L-CLASS R450 LA Streamline Highline Diesel">
                                             {{$books->bookname}}</a>
                                     </h5>
                                     <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price">{{$books->price}}<span class="price-symbol"₹>€</span></div>
+                                        <div class="price">₹{{$books->price}}</div>
                                         <div class="flex-right">
                                             <a href="javascript:void(0);" class="compare-add " data-id="88"
                                                 title="Add This To Compare">
@@ -399,114 +403,7 @@
                                     data-iconwidth="110" data-iconheight="110"></div>
                         </div>
                         </div> 
-                        <div class="af-item-wrap">
-                            <div class="white-block hover-shadow advert-item advert-grid ">
-
-
-                                <a href="advert/move-quickly-with-high-load-trailer/index.html" class="advert-media">
-                                    <img width="355" height="250" src="{{asset('bookimages/'.$books->coverpage1.'')}}"
-                                        class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
-                                        decoding="async" loading="lazy" /> </a>
-
-                                <div class="white-block-content">
-
-                                    <div class="top-advert-meta flex-wrap">
-                                        <div class="advert-cat text-overflow">
-                                            <i class="aficon-dot-circle-o"></i>
-                                            <a href="advert-category/services/index.html">Services</a>
-                                        </div>
-                                        <div class="advert-city text-overflow">
-                                            <i class="aficon-map-marker-alt-o"></i>
-                                            <a href="advert-location/dortmund/index.html">{{$books->address}}</a>
-                                        </div>
-                                    </div>
-                                    <h5 class="adv-title">
-                                        <a href="advert/move-quickly-with-high-load-trailer/index.html"
-                                            class="text-overflow" title="Move Quickly With High Load Trailer">
-                                            {{$books->bookname}}</a>
-                                    </h5>
-                                    <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price"><span class="price-symbol"></span><div
-                                                class="price-bids">₹{{$books->price}}</div>
-                                        </div>
-                                        <div class="flex-right">
-                                            <a href="javascript:void(0);" class="compare-add " data-id="87"
-                                                title="Add This To Compare">
-                                                <i class="aficon-repeat"></i>
-                                            </a>
-
-                                            <a title="Favorite" href="#" class="af-favs " data-toggle="modal"
-                                                data-target="#login">
-                                                <i class="aficon-heart-o"></i>
-                                                <span>Favorite</span>
-                                                <span class="small-icon">Favorite</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="search-map-la-long hidden" data-id="87" data-longitude="7.46529810"
-                                    data-latitude="51.51358720"
-                                    data-icon="https://wp-content/uploads/2018/02/services.png" data-iconwidth="110"
-                                    data-iconheight="110"></div>
-                            </div>
-                        </div>
-                        <div class="af-item-wrap">
-                            <div class="white-block hover-shadow advert-item advert-grid ">
-
-                                <div class="advert-tags">
-                                    <div class="ribbon negotiable">
-                                        Negotiable </div>
-                                </div>
-
-                                <a href="advert/indoor-furniture-pe-wicker-sofa-lounge-couch/index.html"
-                                    class="advert-media">
-                                    <img width="355" height="250" src="{{asset('bookimages/'.$books->coverpage1.'')}}"
-                                        class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
-                                        decoding="async" loading="lazy" /> </a>
-
-                                <div class="white-block-content">
-
-                                    <div class="top-advert-meta flex-wrap">
-                                        <div class="advert-cat text-overflow">
-                                            <i class="aficon-dot-circle-o"></i>
-                                            <a href="advert-category/furniture/index.html">Furniture</a>
-                                        </div>
-                                        <div class="advert-city text-overflow">
-                                            <i class="aficon-map-marker-alt-o"></i>
-                                            <a href="advert-location/ostend/index.html"> {{$books->address}}</a>
-                                        </div>
-                                    </div>
-                                    <h5 class="adv-title">
-                                        <a href="advert/indoor-furniture-pe-wicker-sofa-lounge-couch/index.html"
-                                            class="text-overflow" title="Indoor Furniture PE Wicker Sofa Lounge Couch">
-                                            {{$books->bookname}} </a>
-                                    </h5>
-                                    <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price"> {{$books->price}}<span class="price-symbol">₹</span><span
-                                                class="no-strike">/ week</span></div>
-                                        <div class="flex-right">
-                                            <a href="javascript:void(0);" class="compare-add " data-id="127"
-                                                title="Add This To Compare">
-                                                <i class="aficon-repeat"></i>
-                                            </a>
-
-                                            <a title="Favorite" href="#" class="af-favs " data-toggle="modal"
-                                                data-target="#login">
-                                                <i class="aficon-heart-o"></i>
-                                                <span>Favorite</span>
-                                                <span class="small-icon">Favorite</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="search-map-la-long hidden" data-id="127" data-longitude="2.92865600"
-                                    data-latitude="51.21543000"
-                                    data-icon="https://wp-content/uploads/2018/02/furniture.png" data-iconwidth="110"
-                                    data-iconheight="110"></div>
-                            </div>
-                        </div>
+                      
                         
                        
                     

@@ -30,6 +30,7 @@
                 <h5>Address</h5>
                 <textarea rows="12" cols="100" id="address" name="address" class="form-control required"
                     placeholder="Write Your Address Here........"></textarea>
+                    
 
                     <div class="submit-field">
                         <h5>Phone Number</h5>

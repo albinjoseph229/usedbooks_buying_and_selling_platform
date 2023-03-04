@@ -872,7 +872,7 @@
                         </li>
                         <li id="menu-item-6"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6"><a
-                                title="Contact" href="{{ route('user.usercontactus')}}">Contact</a>
+                                title="Contact" href="{{ route('user.usercontactus')}}">Contact Us</a>
                         </li>
                         <li id="menu-item-7"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7"><a

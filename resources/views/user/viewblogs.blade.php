@@ -2,9 +2,7 @@
 @section('content')
 <main>
 	
-	<div class="container">
-	<h2>View Blogs</h2>
-		<div class="row">
+	
 		@if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -14,11 +12,16 @@
                             {{ session('failed') }}
                         </div>
                         @endif
+						<div class="container">
+	<h2>View Blogs</h2>
+		<div class="row">
+						
 			<div class="col-sm-12">
 									
-									@php $i=1; @endphp
-                                        @foreach($blog as $blog)
+			
 										<div class="row">
+										@php $i=1; @endphp
+                                        @foreach($blog as $blog)
 								
 							<div class="col-sm-6">
 								<article id="post-425" class="hover-shadow white-block post-425 post type-post status-publish format-standard has-post-thumbnail hentry category-tips-tricks tag-cite tag-dollor tag-ipsum tag-laudantium tag-lorem">
