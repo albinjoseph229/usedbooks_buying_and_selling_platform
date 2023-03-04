@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Book;
 use App\Models\Blog;
+use App\Models\Career;
 use Hash;
 use Illuminate\Support\Facades\DB;
 
@@ -130,6 +131,23 @@ class GuestController extends Controller
         {
             return back()->with('error','Some error occured please try again later..');
         }
+    }
+    public function getbook()
+    {
+        $career=Book::select('*')->get();
+        return view('user/viewbooks',['book'=> $book]);
+    }
+
+    public function getblog()
+    {
+        $blog=Blog::select('*')->get();
+        return view('user/viewblogs',['blog'=> $blog]);
+    }
+
+    public function getcareers()
+    {
+        $careers=Career::select('*')->get();
+        return view('user/viewcareer',['careers'=> $careers]);
     }
 }
 

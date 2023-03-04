@@ -119,13 +119,10 @@ Route::get('/user.buybooks', function () {
     return view('user/buybooks');
 })->name('user.buybooks');
 
-Route::get('/user.viewcareer', function () {
-    return view('user/viewcareer');
-})->name('user.viewcareer');
+Route::get('/user.viewcareer',[App\Http\Controllers\GuestController::class,'getcareers'])->name('user.viewcareer');
 
-Route::get('/user.viewblogs', function () {
-    return view('user/viewblogs');
-})->name('user.viewblogs');
+
+Route::get('/user.viewblogs',[App\Http\Controllers\GuestController::class,'getblog'])->name('user.viewblogs');
 
 Route::get('/user.usercontactus', function () {
     return view('user/usercontactus');
