@@ -122,15 +122,6 @@ Route::get('/user.usercontactus', function () {
     return view('user/usercontactus');
 })->name('user.usercontactus');
 
-Route::get('/user.buybooks',[App\Http\Controllers\GuestController::class,'getbooks'])->name('user.buybooks');
-
-
-Route::get('/user.viewcareer',[App\Http\Controllers\GuestController::class,'getcareers'])->name('user.viewcareer');
-
-
-Route::get('/user.viewblogs',[App\Http\Controllers\GuestController::class,'getblog'])->name('user.viewblogs');
-
-
 Route::get('/user.viewbuybooks', function () {
     return view('user/viewbuybooks');
 })->name('user.viewbuybooks');
@@ -138,6 +129,12 @@ Route::get('/user.viewbuybooks', function () {
 Route::get('/user.changepassword', function () {
     return view('user/changepassword');
 })->name('user.changepassword');
+
+Route::get('/user.buybooks',[App\Http\Controllers\GuestController::class,'getbooks'])->name('user.buybooks');
+
+Route::get('/user.viewcareer',[App\Http\Controllers\GuestController::class,'getcareers'])->name('user.viewcareer');
+
+Route::get('/user.viewblogs',[App\Http\Controllers\GuestController::class,'getblog'])->name('user.viewblogs');
 
 Route::post('user.savecontactus',[App\Http\Controllers\GuestController::class,'savecontactus'])->name('user.savecontactus');
 
