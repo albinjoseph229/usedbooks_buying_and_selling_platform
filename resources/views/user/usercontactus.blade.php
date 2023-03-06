@@ -15,7 +15,7 @@
         {{ session('failed') }}
     </div>
     @endif
-    <form method="POST" action="{{'user.savemessages'}}" enctype="multipart/form-data" >
+    <form method="POST" action="{{'user.savecontactus'}}" enctype="multipart/form-data" >
     @csrf
             <h5>Send Us A Message</h5>
         </div>
@@ -25,8 +25,11 @@
                     <div class="col-sm-4">
                         <label for="subject">Message Subject *</label>
                         <input type="text" id="message_subject" name="message_subject" class="form-control">
-                    </div>
-                <div class="submit-field"
+                
+                </div>
+                <div class="form-group">
+                    
+                  
                 <label for="message">Your Message *</label>
                 <textarea rows="10" cols="100" id="message__content" name="message_content" class="form-control">
 

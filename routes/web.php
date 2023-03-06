@@ -139,7 +139,7 @@ Route::get('/user.changepassword', function () {
     return view('user/changepassword');
 })->name('user.changepassword');
 
-Route::post('user.savemessages',[App\Http\Controllers\GuestController::class,'savemessages'])->name('user.savemessages');
+Route::post('user.savecontactus',[App\Http\Controllers\GuestController::class,'savecontactus'])->name('user.savecontactus');
 
 Route::post('user.saveblogs',[App\Http\Controllers\GuestController::class,'saveblogs'])->name('user.saveblogs');
 

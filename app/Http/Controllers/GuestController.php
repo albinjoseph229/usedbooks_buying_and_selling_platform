@@ -159,11 +159,11 @@ class GuestController extends Controller
         $data=books::paginate(2);
         $books=Book::count();
     }
-    public function savemessages(Request $request)
+    public function savecontactus(Request $request)
     {
         $validate=$request->validate([
-            'blogtitle'=>['required'],
-            'blogdescr'=>['required'],
+            'messages'=>['required'],
+            'messages'=>['required'],
         ]);
         
         $messages=new Message();
