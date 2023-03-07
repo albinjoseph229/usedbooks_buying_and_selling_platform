@@ -89,7 +89,7 @@ class AdminController extends Controller
 
     public function getmessages()
     {
-        $messages=Message::join('users','users.id','messages.message_id')->select('messages.*','users.name','users.email')->get();
+        $messages=Message::join('users','users.id','messages.user_id')->select('messages.*','users.name','users.email')->get();
         return view('admin/viewmessages',['messages'=> $messages]);
     }
 
@@ -153,6 +153,20 @@ class AdminController extends Controller
         if($delete)
         {
             return back()->with('status','Book deleted successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
+    }
+
+    public function deletemessages(Request $request)
+    {
+        $id=$request->dodelete;
+        $delete=Message::where('id',$id)->delete();
+        if($delete)
+        {
+            return back()->with('status','Message deleted successfully..');
         }
         else
         {

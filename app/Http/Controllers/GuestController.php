@@ -180,6 +180,13 @@ class GuestController extends Controller
             return back()->with('error','Some error occured please try again later..');
         }
     }
+    public function getindexbooks()
+    {
+        $books=Book::select('*')->get();
+        return view('user/index',['books'=> $books]);
+        $data=books::paginate(2);
+        $books=Book::count();
+    }
 }
 
 

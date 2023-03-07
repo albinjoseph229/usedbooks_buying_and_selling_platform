@@ -102,9 +102,9 @@ Route::get('/admin.viewuserdetails', function () {
 })->name('admin.viewuserdetails');
 
 //user routes
-Route::get('/userhome', function () {
+/*Route::get('/userhome', function () {
     return view('user/index');
-})->name('userhome');
+})->name('userhome');*/
 
 Route::get('/user.sellbooks', function () {
     return view('user/sellbooks');
@@ -130,6 +130,8 @@ Route::get('/user.changepassword', function () {
     return view('user/changepassword');
 })->name('user.changepassword');
 
+Route::get('/userhome',[App\Http\Controllers\GuestController::class,'getindexbooks'])->name('userhome');
+
 Route::get('/user.buybooks',[App\Http\Controllers\GuestController::class,'getbooks'])->name('user.buybooks');
 
 Route::get('/user.viewcareer',[App\Http\Controllers\GuestController::class,'getcareers'])->name('user.viewcareer');
@@ -150,7 +152,7 @@ Route::post('admin.savecareer',[App\Http\Controllers\AdminController::class,'sav
 
 Route::post('admin.deletecareer',[App\Http\Controllers\AdminController::class,'deletecareer'])->name('admin.deletecareer');
 
-
+Route::post('admin.deletemessages',[App\Http\Controllers\AdminController::class,'deletemessages'])->name('admin.deletemessages');
 
 
 });

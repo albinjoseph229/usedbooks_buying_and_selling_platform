@@ -15,45 +15,6 @@
                     <div class="kc-elm kc-css-997839" style="height: 35px; clear: both; width:100%;"></div>
                     <div class="kc-search ">
 
-                        <form action="https://browse-ads/" class="header-search flex-wrap">
-                            <div class="keyword-wrap">
-                                <input type="text" class="form-control" name="keyword" placeholder="Search for...">
-                            </div>
-
-
-
-
-                            <div class="styled-select">
-                                <select name="category">
-                                    <option value="">In Category</option>
-                                    <option value="38">Electronics</option>
-                                    <option value="13">&nbsp;&nbsp;Computers</option>
-                                    <option value="37">&nbsp;&nbsp;Drones</option>
-                                    <option value="15">&nbsp;&nbsp;Notebooks</option>
-                                    <option value="39">&nbsp;&nbsp;Phones</option>
-                                    <option value="36">&nbsp;&nbsp;Watches</option>
-                                    <option value="81">Furniture</option>
-                                    <option value="42">Jobs</option>
-                                    <option value="46">&nbsp;&nbsp;Dancers</option>
-                                    <option value="51">&nbsp;&nbsp;Drivers</option>
-                                    <option value="43">&nbsp;&nbsp;Film Stunts</option>
-                                    <option value="9">Real Estate</option>
-                                    <option value="11">&nbsp;&nbsp;Appartments</option>
-                                    <option value="29">&nbsp;&nbsp;Houses</option>
-                                    <option value="17">Services</option>
-                                    <option value="57">&nbsp;&nbsp;Builders</option>
-                                    <option value="18">&nbsp;&nbsp;Car Mechanic</option>
-                                    <option value="59">&nbsp;&nbsp;Moving &amp; Storage</option>
-                                    <option value="2">Vehicles</option>
-                                    <option value="25">&nbsp;&nbsp;Boats &amp; Watercrafts</option>
-                                    <option value="24">&nbsp;&nbsp;Campers</option>
-                                    <option value="5">&nbsp;&nbsp;Cars</option>
-                                    <option value="22">&nbsp;&nbsp;Motocycles</option>
-                                    <option value="23">&nbsp;&nbsp;Snowmobiles</option>
-                                    <option value="6">&nbsp;&nbsp;Trucks</option>
-                                </select>
-                            </div> <a href="javascript:void(0);" class="af-button submit-form">Search</a>
-                        </form>
 
                     </div>
                     <div class="kc-elm kc-css-880530" style="height: 25px; clear: both; width:100%;"></div>
@@ -80,90 +41,77 @@
 </section>
 
 
-<section class="kc-elm kc-css-195631 kc_row"><div class="kc-row-container  kc-container"><div class="kc-wrap-columns"><div class="kc-elm kc-css-939935 kc_col-sm-12 kc_column kc_col-sm-12"><div class="kc-col-container"><div data-open-on-mouseover="" data-tab-active="1" data-effect-option="" class="kc-elm kc-css-62492 kc_tabs group">
-	<div class="kc_wrapper ui-tabs kc_clearfix">
-		<ul class="kc_tabs_nav ui-tabs-nav kc_clearfix">
-			<li class="ui-tabs-active"><a href="#latest-ads" data-prevent="scroll">Buy Books</a></li><li class=""></li>		</ul>
-		<div id="latest-ads" class="kc-elm kc-css-933909 kc_tab ui-tabs-panel kc_ui-tabs-hide kc_clearfix ui-tabs-body-active kc-section-active"><div class="kc_tab_content">		<div class="adverts-list clearfix adverts-slider owl-carousel owl-marked owl-loaded owl-drag" data-visibleitems="4" data-autoplay="">
-			
-		<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1467px; padding-left: 10px; padding-right: 10px;"><div class="owl-item active" style="width: 264.35px; margin-right: 25px;"><div class="af-item-wrap">
-			<div class="white-block hover-shadow advert-item advert-grid advert-hightlight">
+<section class="kc-elm kc-css-195631 kc_row"><div class="kc-row-container  kc-container">
+    <ul class="kc_tabs_nav ui-tabs-nav kc_clearfix">
+        <li class="ui-tabs-active"><a href="#latest-ads" data-prevent="scroll">Buy Books</a></li><li class=""></li>		</ul>
+     
+    <div class="kc-wrap-columns">
+        
+        <div class="kc-elm kc-css-939935 kc_col-sm-12 kc_column kc_col-sm-12">
+            
+       <div class="af-items-3 af-listing-grid">
+        
+                    @php $i=1; @endphp
+                                        @foreach($books as $books)
+                        <div class="af-item-wrap">
+                            <div class="white-block hover-shadow advert-item advert-grid advert-hightlight">
 
-	
-	<a href="advert/scania-r-srs-l-class-r450-la-streamline-highline-diesel/index.html" class="advert-media">
-		<img width="355" height="250" src="wp-content/uploads/2018/02/adr-9-355x250.jpg" class="attachment-adifier-grid size-adifier-grid wp-post-image" alt="" decoding="async" loading="eager">	</a>
 
-	<div class="white-block-content">
+                                <a href="{{url('user.buybooks/'.$books->slug.'/'.$books->slug)}}"
+                                    class="advert-media">
+                                    <img width="355" height="250" src="{{asset('bookimages/'.$books->coverpage1.'')}}"
+                                        class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
+                                        decoding="async" loading="lazy" /> </a>
 
-		<div class="top-advert-meta flex-wrap">
-	<div class="advert-cat text-overflow">
-					<i class="aficon-dot-circle-o"></i>
-			<a href="advert-category/vehicles/index.html">Vehicles</a>			
-			</div>			
-	<div class="advert-city text-overflow">
-					<i class="aficon-map-marker-alt-o"></i>
-			<a href="advert-location/amsterdam/index.html">Amsterdam</a>			</div>
-</div>
-		<h5 class="adv-title">
-	<a href="advert/scania-r-srs-l-class-r450-la-streamline-highline-diesel/index.html" class="text-overflow" title="Scania R-SRS L-CLASS R450 LA Streamline Highline Diesel">
-		Scania R-SRS L-CLASS R450 LA Streamline Highline Diesel	</a>
-</h5>
-		<div class="bottom-advert-meta flex-wrap">
-	<div class="price">300,000.00<span class="price-symbol">€</span></div>	<div class="flex-right">
-					<a href="javascript:void(0);" class="compare-add " data-id="88" title="Add This To Compare">
-				<i class="aficon-repeat"></i>
-			</a>
-			
-			<a title="Favorite" href="#" class="af-favs " data-toggle="modal" data-target="#login">
-		<i class="aficon-heart-o"></i>
-		<span>Favorite</span>
-		<span class="small-icon">Favorite</span>
-	</a>
-		</div>
-</div>
-	</div>
+                                <div class="white-block-content">
 
-		<div class="search-map-la-long hidden" data-id="88" data-longitude="4.89516790" data-latitude="52.37021570" data-icon="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/cars.png" data-iconwidth="110" data-iconheight="110"></div>
-	</div><div class="white-block hover-shadow advert-item advert-grid ">
+                                    <div class="top-advert-meta flex-wrap">
+                                        <div class="advert-cat text-overflow">
+                                            <i class="aficon-dot-circle-o"></i>
+                                            <a href="{{ route('user.viewbuybooks')}}">Vehicles</a>
+                                        </div>
+                                        <div class="advert-city text-overflow">
+                                            <i class="aficon-map-marker-alt-o"></i>
+                                            <a href="advert-location/amsterdam/index.html"> </a>
+                                        </div>
+                                    </div>
+                                    <h5 class="adv-title">
+                                        <a href="{{ route('user.viewbuybooks')}}"
+                                            class="text-overflow"
+                                            title="Scania R-SRS L-CLASS R450 LA Streamline Highline Diesel">
+                                            {{$books->bookname}}</a>
+                                    </h5>
+                                    <div class="bottom-advert-meta flex-wrap">
+                                        <div class="price">₹{{$books->price}}</div>
+                                        <div class="flex-right">
+                                            <a href="javascript:void(0);" class="compare-add " data-id="88"
+                                                title="Add This To Compare">
+                                                <i class="aficon-repeat"></i>
+                                            </a>
 
-	
-	<a href="advert/move-quickly-with-high-load-trailer/index.html" class="advert-media">
-		<img width="355" height="250" src="wp-content/uploads/2018/02/adr-8-355x250.jpg" class="attachment-adifier-grid size-adifier-grid wp-post-image" alt="" decoding="async" loading="eager">	</a>
+                                            <a title="Favorite" href="#" class="af-favs " data-toggle="modal"
+                                                data-target="#login">
+                                                <i class="aficon-heart-o"></i>
+                                                <span>Favorite</span>
+                                                <span class="small-icon">Favorite</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
 
-	<div class="white-block-content">
-
-		<div class="top-advert-meta flex-wrap">
-	<div class="advert-cat text-overflow">
-					<i class="aficon-dot-circle-o"></i>
-			<a href="advert-category/services/index.html">Services</a>			
-			</div>			
-	<div class="advert-city text-overflow">
-					<i class="aficon-map-marker-alt-o"></i>
-			<a href="advert-location/dortmund/index.html">Dortmund</a>			</div>
-</div>
-		<h5 class="adv-title">
-	<a href="advert/move-quickly-with-high-load-trailer/index.html" class="text-overflow" title="Move Quickly With High Load Trailer">
-		Move Quickly With High Load Trailer	</a>
-</h5>
-		<div class="bottom-advert-meta flex-wrap">
-	<div class="price"><span class="price-symbol">$</span>26,099.00<div class="price-bids"><span>6 Bids</span></div></div>	<div class="flex-right">
-					<a href="javascript:void(0);" class="compare-add " data-id="87" title="Add This To Compare">
-				<i class="aficon-repeat"></i>
-			</a>
-			
-			<a title="Favorite" href="#" class="af-favs " data-toggle="modal" data-target="#login">
-		<i class="aficon-heart-o"></i>
-		<span>Favorite</span>
-		<span class="small-icon">Favorite</span>
-	</a>
-		</div>
-</div>
-	</div>
-
-		<div class="search-map-la-long hidden" data-id="87" data-longitude="7.46529810" data-latitude="51.51358720" data-icon="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/services.png" data-iconwidth="110" data-iconheight="110"></div>
-	</div>					</div></div><div class="owl-item active" style="width: 264.35px; margin-right: 25px;"><div class="af-item-wrap">
-					
-	</div></div>	</div>
+                                <div class="search-map-la-long hidden" data-id="88" data-longitude="4.89516790"
+                                    data-latitude="52.37021570" data-icon="https://wp-content/uploads/2018/02/cars.png"
+                                    data-iconwidth="110" data-iconheight="110"></div>
+                        </div>
+                        </div> 
+                      
+                        
+                       
+                    
+                    @php $i++; @endphp
+                    @endforeach
+                    </div></div>	</div>
+    
 </div>
 
 

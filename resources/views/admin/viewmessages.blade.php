@@ -53,13 +53,9 @@
                                         <td>{{$messages->message_content}}</td>
                                         <td>{{$messages->created_at}}</td>
                                         <td>
-                                            <button data-toggle="modal" data-target="#modal-primary" title="Delete"
-                                                type="button" class="btn btn-sm btn-danger"><i
-                                                    class="fa fa-trash"></i></button>
-                                            <a title="View more " href="{{ route('admin.viewblogcomments')}}"
-                                                class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
-                                            <a title="View complaints" href="{{ route('admin.viewblogcomments')}}"
-                                                class="btn btn-sm btn-warning"><i class=" 	fas fa-frown"></i></a>
+                                            <button title="Delete Message" class="btn btn-danger btn-sm deleteme" data-value="{{$messages->id}}"  data-toggle="modal" data-target="#modal-primary">
+                                                <i class="fa fa-trash"></i></button>
+                                            
                                         </td>
                                     </tr>
                                     @php $i++; @endphp
@@ -90,6 +86,7 @@
     </section>
     <!-- /.content -->
 </div>
+
 <!-- /.content-wrapper -->
 <div class="modal fade" id="modal-primary" style="display: none;" aria-hidden="true">
     <div class="modal-dialog">
@@ -100,13 +97,17 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
+            <form method="post" action="{{route('admin.deletemessages')}}">
+                @csrf
             <div class="modal-body">
+                <input type="hidden" id="dodelete" name="dodelete" />
                 <p>Are You Sure ?</p>
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-outline-light">OK</button>
+                <button type="submit" class="btn btn-outline-light">OK</button>
             </div>
+        </form>
         </div>
         <!-- /.modal-content -->
     </div>
