@@ -162,14 +162,14 @@ class GuestController extends Controller
     public function savecontactus(Request $request)
     {
         $validate=$request->validate([
-            'messages'=>['required'],
-            'messages'=>['required'],
+            'message_subject'=>['required'],
+            'message_description'=>['required'],
         ]);
         
         $messages=new Message();
         $messages->user_id=auth::user()->id;
         $messages->message_subject=$request->message_subject;
-        $messages->message_content=$request->message_content;
+                $messages->message_content=$request->message_description;
         $messages->save();
         if($messages)
         {

@@ -1,5 +1,6 @@
 @extends('layout/usermaster')
 @section('content')
+<div class="container" style="margin-top: 35px;">
 <h2>Post Your Blog</h2>
 <div class="white-block"> 
     <div class="white-block-title">
@@ -57,5 +58,9 @@
 
     </div>
 </form>
+</div>
+        </div>
+        </div>
+</div>
 </div>
 @endsection

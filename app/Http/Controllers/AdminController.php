@@ -68,7 +68,7 @@ class AdminController extends Controller
     public function getcareer()
     {
         $career=Career::select('*')->get();
-        return view('admin/viewcareer','admin\index',['career'=> $career]);
+        return view('admin/viewcareer',['career'=> $career]);
         $career=Career::count();
     }
 
@@ -83,7 +83,7 @@ class AdminController extends Controller
     public function getblogs()
     {
         $blogs=Blog::join('users','users.id','blogs.user_id')->select('blogs.*','users.name')->get();
-        return view('admin/viewblogs','admin\index',['blogs'=> $blogs]);
+        return view('admin/viewblogs',['blogs'=> $blogs]);
         $blogs=Blog::count();
     }
 

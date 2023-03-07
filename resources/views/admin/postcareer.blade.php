@@ -66,6 +66,7 @@
                 <button type="reset" class="btn btn-default"><i class="fas fa-times"></i> Discard</button>
               </div>
               <!-- /.card-footer -->
+            </form>
             </div>
             <!-- /.card -->
           </div>
