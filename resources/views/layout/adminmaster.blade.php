@@ -297,7 +297,7 @@
                                 </p>
                             </a>
                         </li>
-                     
+
                         <li class="nav-item">
                             <a href="{{ route('admin.changepassword')}}" class="nav-link">
                                 <i class="fas fa-user-lock"></i>
@@ -308,10 +308,10 @@
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="{{ route('logout')}}" class="nav-link">
-                              <i class="fas fa-users"></i>
-                              <p>
-                               Logout
-                              </li>
+                                <i class="fas fa-users"></i>
+                                <p>
+                                    Logout
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -408,14 +408,13 @@
     });
     </script>
     <script>
-  
-        $(function () {
-      
-          $('.deleteme').click(function() {
-                 $('#dodelete').val($(this).data('value'));
-              });
+    $(function() {
+
+        $('.deleteme').click(function() {
+            $('#dodelete').val($(this).data('value'));
         });
-      </script>
+    });
+    </script>
 </body>
 
 </html>

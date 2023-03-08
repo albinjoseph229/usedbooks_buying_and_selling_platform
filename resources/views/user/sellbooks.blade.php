@@ -61,12 +61,21 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <div class="btn btn-default btn-file">
-
-                    <input type="file" id="file" name="file">
+            <div class="submit-field">
+                <h5>Cover Image !</h5>
+                <div class="row">
+                    <div class="col-xl-6 col-md-12">
+                        <div class="input-with-icon-left">
+                            <input type="file" id="file" name="file" placeholder="Select Your First Cover Image">
+                        </div>
+                        <div class="input-with-icon-left">
+                            <input type="file" id="file1" name="file1" placeholder="Select Your First Cover Image">
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
             <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Ad">
                 <input type="hidden" name="comment_post_ID" value="425" id="comment_post_ID">
                 <input type="hidden" name="comment_parent" id="comment_parent" value="0">

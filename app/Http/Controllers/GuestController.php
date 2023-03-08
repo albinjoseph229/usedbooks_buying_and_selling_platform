@@ -112,9 +112,17 @@ class GuestController extends Controller
             'address'=>['required'],
             'phonenumber'=>['required'],
             'file'=>['required'],
+            
         ]);
+       $fileName1="";
+        if($request->file1!=""){
+                    $fileName1 = time().'.'.$request->file1->extension();  
+                    $request->file1->move(public_path('blogimages'), $fileName1);
+        }
+        
         $fileName = time().'.'.$request->file->extension();  
         $request->file->move(public_path('bookimages'), $fileName);
+     
 
         $books=new Book();
         $books->sellers_id=auth::user()->id;
@@ -191,7 +199,7 @@ class GuestController extends Controller
     public function bookdetails($id)
     {
        // $book=Book::where('id',$id)->select('*')->first();
-        $book=Book::join('users','users.id','book.sellers_id')->select('book.*','users.name','users.email','users.phoneno')->where('book.id',$id)->first();
+        $book=Book::join('users','users.id','book.sellers_id')->select('book.*','users.name','users.email',)->where('book.id',$id)->first();
         return view('user/viewbuybooks',['book'=>$book]);
 
     }

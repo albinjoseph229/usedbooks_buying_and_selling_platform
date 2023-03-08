@@ -1,5 +1,19 @@
 @extends('layout/usermaster')
 @section('content')
+<div class="page-title quick-search">
+    <div class="container">
+        <div class="flex-wrap">
+            <div class="flex-left">
+                <h1 class="h4-size">{{$book->bookname}}</h1>
+                <ul class="list-unstyled list-inline breadcrumbs">
+                    <li><a href="{{ route('userhome')}}">Home</a></li>
+                    <li><a href="{{ route('user.buybooks')}}">Buy Books</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
 <main>
     <div class="container">
         <div class="row">
@@ -18,14 +32,14 @@
                                             class="attachment-adifier-single-slider size-adifier-single-slider" alt=""
                                             decoding="async" loading="eager"></a></div>
                                 <div class="owl-item" style="width: 616.662px;"><a
-                                        href="../../wp-content/uploads/2018/02/adr-22.jpg"
+                                        href="{{asset('bookimages/'.$book->coverpage2.'')}}"
                                         class="single-slider-href"><img width="750" height="450"
-                                            src="../../wp-content/uploads/2018/02/adr-22-750x450.jpg"
+                                            src="{{asset('bookimages/'.$book->coverpage2.'')}}"
                                             class="attachment-adifier-single-slider size-adifier-single-slider" alt=""
                                             decoding="async" loading="eager"
-                                            srcset="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-22-750x450.jpg 750w, https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-22-300x179.jpg 300w"
+                                            srcset="{{asset('bookimages/'.$book->coverpage2.'')}}"
                                             sizes="(max-width: 750px) 100vw, 750px"></a></div>
-                                
+
                             </div>
                         </div>
                         <div class="owl-nav">
@@ -51,19 +65,17 @@
                                     <div class="single-thumb-item animation active" data-item="0"><img width="150"
                                             height="150" src="{{asset('bookimages/'.$book->coverpage1.'')}}"
                                             class="attachment-thumbnail size-thumbnail" alt="" decoding="async"
-                                            loading="eager"
-                                            srcset="{{asset('bookimages/'.$book->coverpage1.'')}}"
+                                            loading="eager" srcset="{{asset('bookimages/'.$book->coverpage1.'')}}"
                                             sizes="(max-width: 150px) 100vw, 150px"></div>
                                 </div>
                                 <div class="owl-item active" style="width: 72.708px; margin-right: 5px;">
                                     <div class="single-thumb-item animation " data-item="1"><img width="150"
-                                            height="150" src="{{asset('bookimages/'.$book->coverpage1.'')}}"
+                                            height="150" src="{{asset('bookimages/'.$book->coverpage2.'')}}"
                                             class="attachment-thumbnail size-thumbnail" alt="" decoding="async"
-                                            loading="eager"
-                                            srcset="{{asset('bookimages/'.$book->coverpage1.'')}}"
+                                            loading="eager" srcset="{{asset('bookimages/'.$book->coverpage2.'')}}"
                                             sizes="(max-width: 150px) 100vw, 150px"></div>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <div class="owl-nav disabled">
@@ -87,21 +99,21 @@
                     </div>
                 </div>
 
-             
+
 
                 <div class="white-block">
                     <div class="white-block-content">
                         <h4 class="blog-item-title h4-size">{{$book->bookname}}</h4>
                         <div class="post-content clearfix">
                             <p>{{$book->bookdescription}}</p>
-                        
+
                         </div>
 
                         <ul class="list-inline list-unstyled single-meta top-advert-meta">
                             <li>
                                 <i class="aficon-map-marker-alt-o"></i>
                                 <a href="../../advert-location/netherlands/index.html">{{$book->address}}</a>
-    
+
                             </li>
 
                             <li>
@@ -112,45 +124,45 @@
                     </div>
                 </div>
                 <div class="white-block">
-                        <div class="white-block-title">
-                            <h5>
-                                1 Comment </h5>
-                        </div>
-                        <div class="white-block-content">
-                            <div class="comment-content comments">
-                                <!-- comment -->
-                                <div class="comment " id="comment-2">
-                                    <div class="flex-wrap flex-start-h">
-                                        <div class="flex-left">
-                                            <div class="flex-wrap flex-start-h">
-                                                <div class="comment-avatar">
-                                                    <i class="icon-user aficon-user-alt" title="Author"></i>
-                                                    <img width="100" height="100"
-                                                        src="../../wp-content/uploads/2018/03/user-4.png"
-                                                        class="attachment-thumbnail size-thumbnail" alt=""
-                                                        decoding="async" loading="lazy"
-                                                        srcset="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/03/user-4.png 100w, https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/03/user-4-70x70.png 70w"
-                                                        sizes="(max-width: 100px) 100vw, 100px">
-                                                </div>
-                                                <div class="comment-info">
-                                                    <h5>Sally Doe</h5>
-                                                    <p>March 12, 2018 at 2:47 pm </p>
-                                                </div>
+                    <div class="white-block-title">
+                        <h5>
+                            1 Comment </h5>
+                    </div>
+                    <div class="white-block-content">
+                        <div class="comment-content comments">
+                            <!-- comment -->
+                            <div class="comment " id="comment-2">
+                                <div class="flex-wrap flex-start-h">
+                                    <div class="flex-left">
+                                        <div class="flex-wrap flex-start-h">
+                                            <div class="comment-avatar">
+                                                <i class="icon-user aficon-user-alt" title="Author"></i>
+                                                <img width="100" height="100"
+                                                    src="../../wp-content/uploads/2018/03/user-4.png"
+                                                    class="attachment-thumbnail size-thumbnail" alt="" decoding="async"
+                                                    loading="lazy"
+                                                    srcset="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/03/user-4.png 100w, https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/03/user-4-70x70.png 70w"
+                                                    sizes="(max-width: 100px) 100vw, 100px">
+                                            </div>
+                                            <div class="comment-info">
+                                                <h5>Sally Doe</h5>
+                                                <p>March 12, 2018 at 2:47 pm </p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="comment-content-wrap">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                            consequa</p>
+                                </div>
+                                <div class="comment-content-wrap">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequa</p>
 
-                                    </div>
-                                </div><!-- #comment-## -->
-                            </div>
+                                </div>
+                            </div><!-- #comment-## -->
                         </div>
                     </div>
-                
+                </div>
+
 
             </div>
             <div class="col-sm-4">
@@ -160,7 +172,8 @@
                     <div class="white-block single-price">
                         <i class="aficon-dollar-sign"></i>
                         <div class="white-block-content">
-                            <div class="price">{{$book->price}}<span class="price-symbol">€</span></div>
+                            <h5>Price</h5>
+                            <div class="price">₹{{$book->price}}</div>
                         </div>
                     </div>
                 </div>
@@ -169,7 +182,7 @@
 
                 <div class="white-block contact-scroll-details">
                     <div class="white-block-title">
-                        <h5>Ad Owner</h5>
+                        <h5>Book Seller</h5>
                     </div>
                     <div class="white-block-content">
                         <div class="seller-details flex-wrap flex-start-h">
@@ -182,10 +195,10 @@
                             <div class="seller-name">
                                 <h5>
                                     <a href="../../author/admin/index.html">
-                                    {{$book->name}}</a>
+                                        {{$book->name}}</a>
                                 </h5>
                                 <div class="user-rating">
-                                {{$book->email}}
+                                    {{$book->email}}
                                 </div>
                                 <div class="online-status offline flex-wrap flex-start-h"><span></span>Offline</div>
                             </div>
@@ -194,15 +207,17 @@
                         <a href="javascript:void(0);" class="reveal-phone flex-wrap flex-start-h" data-last="751">
                             <i class="aficon-phone"></i>
                             <span class="flex-right">
-                                <em>+91 {{$book->phoneno}}</em>
-                                
+                                <em>+91 {{$book->phonenumber}}</em>
+
                             </span>
                         </a>
+                        <h6>Address</h6>
+                        <p>{{$book->address}}</p>
 
                     </div>
                 </div>
 
-             
+
 
                 <div class="white-block hide-print">
                     <div class="white-block-title">
@@ -242,7 +257,7 @@
                     </div>
                 </div>
                 <div class="hide-print small-screen-last">
-                   
+
 
 
                     <div class="white-block">
@@ -262,7 +277,7 @@
                                         placeholder="Your comment goes here..."></textarea>
                                     <div class="alert-error hidden comment-required-fields">Fields marked with * are
                                         required</div>
-                                   
+
                                     <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit"
                                             value="Send Comment"> <input type="hidden" name="comment_post_ID" value="88"
                                             id="comment_post_ID">

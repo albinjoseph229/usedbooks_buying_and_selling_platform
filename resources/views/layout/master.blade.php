@@ -837,7 +837,7 @@
     <header class="header-2 header-3 sticky-header sticky-nav" style="top: 0px;">
         <div class="container">
             <div class="flex-wrap">
-    
+
                 <div class="show-on-414">
                     <a href="javascript:void(0);" class="small-sidebar-open navigation-trigger"
                         data-target=".navigation-wrap">

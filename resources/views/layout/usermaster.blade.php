@@ -8,7 +8,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link media="all" href="{{asset('wp-content/cache/autoptimize/css/autoptimize_d978956e96477633e69416150ecd9253.css')}}"
+    <link media="all"
+        href="{{asset('wp-content/cache/autoptimize/css/autoptimize_d978956e96477633e69416150ecd9253.css')}}"
         rel="stylesheet" />
     <title>BookBuddy &#8211; Classified Ads Marketplace</title>
     <meta name='robots' content='max-image-preview:large' />
@@ -834,7 +835,7 @@
     <header class="header-2 header-3 sticky-header sticky-nav" style="top: 0px;">
         <div class="container">
             <div class="flex-wrap">
-    
+
                 <div class="show-on-414">
                 </div>
                 <a href="{{ route('/')}}" class="logo">
@@ -855,20 +856,20 @@
                         </li>
                         <li id="menu-item-3"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3 ">
-                            <a title="Career" href="{{ route('user.viewcareer')}}" data-toggle="dropdown" class="dropdown-toggle"
-                                data-hover="dropdown" aria-haspopup="true">View Career</a>
+                            <a title="Career" href="{{ route('user.viewcareer')}}" data-toggle="dropdown"
+                                class="dropdown-toggle" data-hover="dropdown" aria-haspopup="true">View Career</a>
 
                         </li>
 
                         <li id="menu-item-4"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4">
-                            <a title="Blogs" href="{{ route('user.viewblogs')}}" data-toggle="dropdown" class="dropdown-toggle"
-                                data-hover="dropdown" aria-haspopup="true">View Blogs </a>
+                            <a title="Blogs" href="{{ route('user.viewblogs')}}" data-toggle="dropdown"
+                                class="dropdown-toggle" data-hover="dropdown" aria-haspopup="true">View Blogs </a>
                         </li>
                         <li id="menu-item-5"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5">
-                            <a title="Blogs" href="{{ route('user.postblogs')}}" data-toggle="dropdown" class="dropdown-toggle"
-                                data-hover="dropdown" aria-haspopup="true">Post Blogs </a>
+                            <a title="Blogs" href="{{ route('user.postblogs')}}" data-toggle="dropdown"
+                                class="dropdown-toggle" data-hover="dropdown" aria-haspopup="true">Post Blogs </a>
                         </li>
                         <li id="menu-item-6"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6"><a
@@ -877,12 +878,12 @@
                         <li id="menu-item-7"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7"><a
                                 title="Contact" href="{{ route('user.changepassword')}}">Change Password</a>
-                        </li> 
+                        </li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8">
                             <a href="{{ route('logout')}}" class="nav-link">
-                               Logout
-                              </li>
-                              
+                                Logout
+                        </li>
+
 
                     </ul>
                 </div>
@@ -939,7 +940,7 @@
 
 
 
-  
+
 
     @yield('content')
 
@@ -1040,5 +1041,5 @@
                 </div>
             </div>
         </div>
-       
+
     </footer>
