@@ -51,23 +51,24 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                        @php $i=1; @endphp
-                                        @foreach($career as $career)
-                                        <tr>
-                                             <td>{{$i}}</td>
-                                            <td>{{$career->ctitle}}</td>
-                                            <td>{{$career->description}}</td>
-                                            <td>{{$career->created_at}}</td>
-                                          <td><img src="{{asset('cimages/'.$career->image.'')}}" height="150px" width="200px" /></td>
-                                       
+                                    @php $i=1; @endphp
+                                    @foreach($career as $career)
+                                    <tr>
+                                        <td>{{$i}}</td>
+                                        <td>{{$career->ctitle}}</td>
+                                        <td>{{$career->description}}</td>
+                                        <td>{{$career->created_at}}</td>
+                                        <td><img src="{{asset('cimages/'.$career->image.'')}}" height="150px"
+                                                width="200px" /></td>
+
                                         <td>
                                             <button data-toggle="modal" data-target="#modal-primary" title="Delete"
-                                                type="button" class="btn btn-sm btn-danger deleteme" data-value="{{$career->id}}"><i
-                                                    class="fa fa-trash"></i></button>
-                                                    <a title="View Comments" href="{{ route('admin.viewcareercomments')}}"
-                                                    class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
+                                                type="button" class="btn btn-sm btn-danger deleteme"
+                                                data-value="{{$career->id}}"><i class="fa fa-trash"></i></button>
+                                            <a title="View Comments" href="{{ route('admin.viewcareercomments')}}"
+                                                class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
                                         </td>
-                                      
+
                                     </tr>
                                     @php $i++; @endphp
                                     @endforeach
@@ -108,15 +109,15 @@
             </div>
             <form method="post" action="{{route('admin.deletecareer')}}">
                 @csrf
-            <div class="modal-body">
-                <input type="hidden" id="dodelete" name="dodelete" />
-                <p>Are You Sure ?</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-outline-light">OK</button>
-            </div>
-        </form>
+                <div class="modal-body">
+                    <input type="hidden" id="dodelete" name="dodelete" />
+                    <p>Are You Sure ?</p>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-outline-light">OK</button>
+                </div>
+            </form>
         </div>
         <!-- /.modal-content -->
     </div>

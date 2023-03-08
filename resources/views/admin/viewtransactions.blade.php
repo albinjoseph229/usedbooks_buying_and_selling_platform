@@ -48,7 +48,7 @@
                                     @php $i=1; @endphp
                                     @foreach($transactions as $transactions)
                                     <tr>
-                                         <td>{{$i}}</td>
+                                        <td>{{$i}}</td>
                                         <td>{{$transactions->bname}}</td>
                                         <td>{{$transactions->buyer_id}}</td>
                                         <td>{{$transactions->seller_id}}</td>

@@ -20,19 +20,20 @@ class GuestController extends Controller
     public function save(Request $request)
     {
         $validated = $request->validate([
-            'reg_username' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'reg_password' => ['required'],
             'phoneno' =>['required', 'unique:users'],
             
      ]);
      $user=new User();
-     $user->name=$request->reg_username;
+     $user->name=$request->name;
      $user->email=$request->email;
      $user->password=Hash::make($request->reg_password);
-     $user->utype=2;
      $user->phoneno=$request->phoneno;
+     $user->utype=2;
      $user->save();
+     
      if($user)
      {
       return back()->with('status',"You are registered successfully,please signin to continue");
@@ -43,7 +44,7 @@ class GuestController extends Controller
          {
              return back()->with('error',"Error! Something wrong Please try again");
          }
-        }
+    }
      
     
     
@@ -51,11 +52,11 @@ class GuestController extends Controller
     {
          
                  $validate=$request->validate([
-                         'cpassword' => ['required'],
+                         'reg_password' => ['required'],
                          'new_password' => ['required'],
                          'password_confirmation' => ['same:new_password'],
                      ]);
-                     if (!(Hash::check($request->get('cpassword'), Auth::user()->password))) {
+                     if (!(Hash::check($request->get('reg_password'), Auth::user()->password))) {
                          // The passwords matches
                          return redirect()->back()->with("error","Your current password does not matches with the password.");
                      }
@@ -190,7 +191,7 @@ class GuestController extends Controller
     public function bookdetails($id)
     {
        // $book=Book::where('id',$id)->select('*')->first();
-        $book=Book::join('users','users.id','book.sellers_id')->select('book.*','users.name')->where('book.id',$id)->first();
+        $book=Book::join('users','users.id','book.sellers_id')->select('book.*','users.name','users.email','users.phoneno')->where('book.id',$id)->first();
         return view('user/viewbuybooks',['book'=>$book]);
 
     }

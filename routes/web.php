@@ -37,13 +37,16 @@ Route::post('login',[App\Http\Controllers\AdminController::class,'postLogin'])->
 
 Route::post('postadminform', [App\Http\Controllers\AdminRegistrationController::class,'save']) ->name ('postadminform');
 
-Route::get('/admin.viewuser',[App\Http\Controllers\AdminController::class,'getusers'])->name('admin.viewuser');
+Route::post('saveuser', [App\Http\Controllers\GuestController::class,'save']) ->name ('saveuser');
+
+Route::get('/admin.adminlogin', function () {
+    return view('admin/adminlogin');
+})->name('admin.adminlogin');
 
 Route::group(['middleware' => ['auth','prevent-back-history']],function()
 
 {
    
-Route::post('saveuser', [App\Http\Controllers\GuestController::class,'save']) ->name ('saveuser');
 
 Route::get('logout',[App\Http\Controllers\AdminController::class,'logout'])->name('logout');
 
@@ -52,14 +55,7 @@ Route::get('logout',[App\Http\Controllers\AdminController::class,'logout'])->nam
 
 Route::get('/adminhome',[App\Http\Controllers\AdminController::class,'index',])->name('adminhome');
 
-
-Route::get('/admin.adminlogin', function () {
-    return view('admin/adminlogin');
-})->name('admin.adminlogin');
-
-Route::get('/admin.changepassword', function () {
-    return view('admin/changepassword');
-})->name('admin.changepassword');
+Route::get('/admin.viewuser',[App\Http\Controllers\AdminController::class,'getusers'])->name('admin.viewuser');
 
 Route::get('/admin.viewbooks',[App\Http\Controllers\AdminController::class,'getbooks'])->name('admin.viewbooks');
 
@@ -76,6 +72,10 @@ Route::post('admin.deleteuser',[App\Http\Controllers\AdminController::class,'del
 Route::post('admin.deleteblogs',[App\Http\Controllers\AdminController::class,'deleteblogs'])->name('admin.deleteblogs');
 
 Route::post('admin.deletebooks',[App\Http\Controllers\AdminController::class,'deletebooks'])->name('admin.deletebooks');
+
+Route::get('/admin.changepassword', function () {
+    return view('admin/changepassword');
+})->name('admin.changepassword');
 
 Route::get('/admin.viewads', function () {
     return view('admin/viewads');
@@ -121,16 +121,18 @@ Route::get('/user.postblogs', function () {
 Route::get('/user.usercontactus', function () {
     return view('user/usercontactus');
 })->name('user.usercontactus');
+
 Route::get('user.buybooks/{id}',[App\Http\Controllers\GuestController::class,'bookdetails'])->name('user.buybooks');
-/*Route::get('/user.viewbuybooks', function () {
+Route::get('/user.viewbuybooks', function () {
     return view('user/viewbuybooks');
 })->name('user.viewbuybooks');
-*/
+
 Route::get('/user.changepassword', function () {
     return view('user/changepassword');
 })->name('user.changepassword');
 
-Route::get('/userhome',[App\Http\Controllers\GuestController::class,'getindexbooks'])->name('userhome');
+Route::get('/userhome',[App\Http\Controllers\GuestController::class,'getindexbooks'
+,App\Http\Controllers\GuestController::class,'index'])->name('userhome');
 
 Route::get('/user.buybooks',[App\Http\Controllers\GuestController::class,'getbooks'])->name('user.buybooks');
 

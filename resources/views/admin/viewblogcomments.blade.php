@@ -23,7 +23,7 @@
             <div class="card-header p-2">
                 <ul class="nav nav-pills">
                     <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Activity</a></li>
-             
+
                 </ul>
             </div><!-- /.card-header -->
             <div class="card-body">
@@ -145,10 +145,10 @@
                         <!-- /.post -->
                     </div>
 
-                   
-            </div><!-- /.card-body -->
-        </div>
-        <!-- /.card -->
-    </div>
 
-    @endsection
+                </div><!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+
+        @endsection

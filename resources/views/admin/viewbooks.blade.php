@@ -40,61 +40,63 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-hover">
-                            @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                 {{ session('status') }}
-                           </div>
-                           @elseif(session('error'))
-                              <div class="alert alert-danger" role="alert">
-                                 {{ session('error') }}
-                           </div>
-                           @endif
-                           <table id="example1" class="table table-bordered table-striped">
-                                <thead>
-                                <thead>
-                                    <tr>
-                                        <th>S.No</th>
-                                        <th>Title</th>
-                                        <th>User Name</th>
-                                        <th>Price</th>
-                                        <th>Date</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @php $i=1; @endphp
-                                    @foreach($books as $books)
-                                    <tr>
-                                         <td>{{$i}}</td>
-                                        <td>{{$books->bookname}}</td>
-                                        <td>{{$books->name}}</td>
-                                        <td>{{$books->price}}</td>
-                                        <td>{{$books->created_at}}</td>
-                                      
-                                    
-                                        <td>
-                                        <button title="Delete Book" class="btn btn-danger btn-sm deleteme" data-value="{{$books->id}}"  data-toggle="modal" data-target="#modal-primary"><i class="fa fa-trash"></i></button>
-                                            <a title="View more " href="{{ route('admin.viewblogcomments')}}"
-                                                class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
-                                            <a title="View complaints" href="{{ route('admin.viewblogcomments')}}"
-                                                class="btn btn-sm btn-warning"><i class=" 	fas fa-frown"></i></a>
-                                        </td>
-                                        </td>
-                                    </tr>
-                                    @php $i++; @endphp
-                                    @endforeach
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>S.No</th>
-                                        <th>Title</th>
-                                        <th>User Name</th>
-                                        <th>Price</th>
-                                        <th>Date</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
+                                @if (session('status'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('status') }}
+                                </div>
+                                @elseif(session('error'))
+                                <div class="alert alert-danger" role="alert">
+                                    {{ session('error') }}
+                                </div>
+                                @endif
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <thead>
+                                            <tr>
+                                                <th>S.No</th>
+                                                <th>Title</th>
+                                                <th>User Name</th>
+                                                <th>Price</th>
+                                                <th>Date</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                    <tbody>
+                                        @php $i=1; @endphp
+                                        @foreach($books as $books)
+                                        <tr>
+                                            <td>{{$i}}</td>
+                                            <td>{{$books->bookname}}</td>
+                                            <td>{{$books->name}}</td>
+                                            <td>{{$books->price}}</td>
+                                            <td>{{$books->created_at}}</td>
+
+
+                                            <td>
+                                                <button title="Delete Book" class="btn btn-danger btn-sm deleteme"
+                                                    data-value="{{$books->id}}" data-toggle="modal"
+                                                    data-target="#modal-primary"><i class="fa fa-trash"></i></button>
+                                                <a title="View more " href="{{ route('admin.viewblogcomments')}}"
+                                                    class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
+                                                <a title="View complaints" href="{{ route('admin.viewblogcomments')}}"
+                                                    class="btn btn-sm btn-warning"><i class=" 	fas fa-frown"></i></a>
+                                            </td>
+                                            </td>
+                                        </tr>
+                                        @php $i++; @endphp
+                                        @endforeach
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>S.No</th>
+                                            <th>Title</th>
+                                            <th>User Name</th>
+                                            <th>Price</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
                         </div>
                         <!-- /.card-body -->
                     </div>
@@ -120,15 +122,15 @@
             </div>
             <form method="post" action="{{route('admin.deletebooks')}}">
                 @csrf
-            <div class="modal-body">
-                <input type="hidden" id="dodelete" name="dodelete" />
-                <p>Are You Sure ?</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-outline-light">OK</button>
-            </div>
-        </form>
+                <div class="modal-body">
+                    <input type="hidden" id="dodelete" name="dodelete" />
+                    <p>Are You Sure ?</p>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-outline-light">OK</button>
+                </div>
+            </form>
         </div>
         <!-- /.modal-content -->
     </div>

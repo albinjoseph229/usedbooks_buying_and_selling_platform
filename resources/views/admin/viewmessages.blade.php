@@ -46,16 +46,18 @@
                                     @php $i=1; @endphp
                                     @foreach($messages as $messages)
                                     <tr>
-                                         <td>{{$i}}</td>
+                                        <td>{{$i}}</td>
                                         <td>{{$messages->name}}</td>
                                         <td>{{$messages->email}}</td>
                                         <td>{{$messages->message_subject}}</td>
                                         <td>{{$messages->message_content}}</td>
                                         <td>{{$messages->created_at}}</td>
                                         <td>
-                                            <button title="Delete Message" class="btn btn-danger btn-sm deleteme" data-value="{{$messages->id}}"  data-toggle="modal" data-target="#modal-primary">
+                                            <button title="Delete Message" class="btn btn-danger btn-sm deleteme"
+                                                data-value="{{$messages->id}}" data-toggle="modal"
+                                                data-target="#modal-primary">
                                                 <i class="fa fa-trash"></i></button>
-                                            
+
                                         </td>
                                     </tr>
                                     @php $i++; @endphp
@@ -99,15 +101,15 @@
             </div>
             <form method="post" action="{{route('admin.deletemessages')}}">
                 @csrf
-            <div class="modal-body">
-                <input type="hidden" id="dodelete" name="dodelete" />
-                <p>Are You Sure ?</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-outline-light">OK</button>
-            </div>
-        </form>
+                <div class="modal-body">
+                    <input type="hidden" id="dodelete" name="dodelete" />
+                    <p>Are You Sure ?</p>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-outline-light">OK</button>
+                </div>
+            </form>
         </div>
         <!-- /.modal-content -->
     </div>

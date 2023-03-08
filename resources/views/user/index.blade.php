@@ -32,7 +32,7 @@
             <div class="kc-elm kc-css-132113 kc_col-sm-1 kc_column kc_col-sm-1">
                 <div class="kc-col-container"></div>
             </div>
-            
+
             <div class="kc-elm kc-css-874828 kc_col-sm-1 kc_column kc_col-sm-1">
                 <div class="kc-col-container"></div>
             </div>
@@ -44,83 +44,94 @@
 <section class="kc-elm kc-css-195631 kc_row">
     <div class="kc-row-container kc-container">
         <div class="kc-wrap-columns">
-            <div class="kc-elm
+            <div
+                class="kc-elm
                                                                                                                                                 kc-css-939935 kc_col-sm-12 kc_column
                                                                                                                                                 kc_col-sm-12">
                 <div class="kc-col-container">
-                    <div data-open-on-mouseover="" data-tab-active="1" data-effect-option="" class="kc-elm
+                    <div data-open-on-mouseover="" data-tab-active="1" data-effect-option=""
+                        class="kc-elm
                                                                                                                                                         kc-css-62492 kc_tabs group">
-                        <div class="kc_wrapper ui-tabs
+                        <div
+                            class="kc_wrapper ui-tabs
                                                                                                                                                             kc_clearfix">
-                            <ul class="kc_tabs_nav ui-tabs-nav
+                            <ul
+                                class="kc_tabs_nav ui-tabs-nav
                                                                                                                                                                 kc_clearfix">
-                                <li class="ui-tabs-active"><a href="#latest-ads" data-prevent="scroll">Latest Ads</a></li>
-             
+                                <li class="ui-tabs-active"><a href="#latest-ads" data-prevent="scroll">Latest Ads</a>
+                                </li>
+
                             </ul>
                             <div class="af-items-3 af-listing-grid">
-                            @php $i=1; @endphp
-                            @foreach($books as $books)
-                                             
-                                                <div class="af-item-wrap">
-                                                    <div class="white-block hover-shadow advert-item advert-grid advert-hightlight">
-                        
-                        
-                                                        <a href="{{url('user.buybooks/'.$books->slug.'/'.$books->slug)}}"
-                                                            class="advert-media">
-                                                            <img width="355" height="250" src="{{asset('bookimages/'.$books->coverpage1.'')}}"
-                                                                class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
-                                                                decoding="async" loading="lazy" /> </a>
-                        
-                                                        <div class="white-block-content">
-                        
-                                                            <div class="top-advert-meta flex-wrap">
-                                                                <div class="advert-cat text-overflow">
-                                                                    <i class="aficon-dot-circle-o"></i>
-                                                                    <a href="{{ route('user.viewbuybooks')}}">Vehicles</a>
-                                                                </div>
-                                                                <div class="advert-city text-overflow">
-                                                                    <i class="aficon-map-marker-alt-o"></i>
-                                                                    <a href="advert-location/amsterdam/index.html"> {{$books->address}}</a>
-                                                                </div>
-                                                            </div>
-                                                            <h5 class="adv-title">
-                                                                <a href="{{ route('user.viewbuybooks')}}"
-                                                                    class="text-overflow"
-                                                                    title="Scania R-SRS L-CLASS R450 LA Streamline Highline Diesel">
-                                                                    {{$books->bookname}}</a>
-                                                            </h5>
-                                                            <div class="bottom-advert-meta flex-wrap">
-                                                                <div class="price">₹{{$books->price}}</div>
-                                                                <div class="flex-right">
-                                                                    <a href="javascript:void(0);" class="compare-add " data-id="88"
-                                                                        title="Add This To Compare">
-                                                                        <i class="aficon-repeat"></i>
-                                                                    </a>
-                        
-                                                                    <a title="Favorite" href="#" class="af-favs " data-toggle="modal"
-                                                                        data-target="#login">
-                                                                        <i class="aficon-heart-o"></i>
-                                                                        <span>Favorite</span>
-                                                                        <span class="small-icon">Favorite</span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                        
-                                                        <div class="search-map-la-long hidden" data-id="88" data-longitude="4.89516790"
-                                                            data-latitude="52.37021570" data-icon="https://wp-content/uploads/2018/02/cars.png"
-                                                            data-iconwidth="110" data-iconheight="110"></div>
+                                @php $i=1; @endphp
+                                @foreach($books as $books)
+
+                                <div class="af-item-wrap">
+                                    <div class="white-block hover-shadow advert-item advert-grid advert-hightlight">
+
+
+                                        <a href="{{url('user.buybooks/'.$books->slug.'/'.$books->slug)}}"
+                                            class="advert-media">
+                                            <img width="355" height="250"
+                                                src="{{asset('bookimages/'.$books->coverpage1.'')}}"
+                                                class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
+                                                decoding="async" loading="lazy" /> </a>
+
+                                        <div class="white-block-content">
+
+                                            <div class="top-advert-meta flex-wrap">
+                                                <div class="advert-cat text-overflow">
+                                                    <i class="aficon-dot-circle-o"></i>
+                                                    <a href="{{ route('user.viewbuybooks')}}">Vehicles</a>
                                                 </div>
+                                                <div class="advert-city text-overflow">
+                                                    <i class="aficon-map-marker-alt-o"></i>
+                                                    <a href="advert-location/amsterdam/index.html">
+                                                        {{$books->address}}</a>
                                                 </div>
-                                       
-@php $i++; @endphp
-@endforeach
+                                            </div>
+                                            <h5 class="adv-title">
+                                                <a href="{{ route('user.viewbuybooks')}}" class="text-overflow"
+                                                    title="Scania R-SRS L-CLASS R450 LA Streamline Highline Diesel">
+                                                    {{$books->bookname}}</a>
+                                            </h5>
+                                            <div class="bottom-advert-meta flex-wrap">
+                                                <div class="price">₹{{$books->price}}</div>
+                                                <div class="flex-right">
+                                                    <a href="javascript:void(0);" class="compare-add " data-id="88"
+                                                        title="Add This To Compare">
+                                                        <i class="aficon-repeat"></i>
+                                                    </a>
+
+                                                    <a title="Favorite" href="#" class="af-favs " data-toggle="modal"
+                                                        data-target="#login">
+                                                        <i class="aficon-heart-o"></i>
+                                                        <span>Favorite</span>
+                                                        <span class="small-icon">Favorite</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="search-map-la-long hidden" data-id="88" data-longitude="4.89516790"
+                                            data-latitude="52.37021570"
+                                            data-icon="https://wp-content/uploads/2018/02/cars.png" data-iconwidth="110"
+                                            data-iconheight="110"></div>
+                                    </div>
+                                </div>
+
+                                @php $i++; @endphp
+                                @endforeach
                             </div>
                         </div>
-                                            </section>
+</section>
 
 
-</div></div></div></div></section>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section data-kc-equalheight="true" data-kc-equalheight-align="middle" class="kc-elm kc-css-662149 kc_row">
     <div class="kc-row-container  kc-container">
         <div class="kc-wrap-columns">

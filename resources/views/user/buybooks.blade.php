@@ -21,15 +21,15 @@
 
 <main>
     <div class="container">
-    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                        @elseif(session('failed'))
-                        <div class="alert alert-danger" role="alert">
-                            {{ session('failed') }}
-                        </div>
-                        @endif
+        @if (session('status'))
+        <div class="alert alert-success" role="alert">
+            {{ session('status') }}
+        </div>
+        @elseif(session('failed'))
+        <div class="alert alert-danger" role="alert">
+            {{ session('failed') }}
+        </div>
+        @endif
         <div class="row">
             <div class="col-sm-3">
                 <div class="white-block filters-toggle">
@@ -287,7 +287,7 @@
                                     <input type="text" name="price[1]" value="" placeholder="max" />
                                 </div>
                             </div>
-                            
+
 
                             <div class="form-group">
                                 <div class="styled-checkbox hidden show-sale-filter">
@@ -302,7 +302,7 @@
                                     <input type="checkbox" name="negotiable-only" value="1" id="negotiable-only">
                                     <label for="negotiable-only">Show negotiable ads only</label>
                                 </div>
-                               
+
                             </div>
                             <div class="submit-search-form">
                                 <a href="javascript:void(0);" class="af-button filter-adverts">Apply Filters</a>
@@ -316,16 +316,16 @@
                     <div class="white-block">
                         <div class="white-block-content">
                             <div class="flex-wrap search-order">
-                            
-                            <h6>
-                            
+
+                                <h6>
+
                                     Showing
-                                 
+
                                     <strong>{{count($books)}}</strong>
-                                 
+
                                     ads found
                                 </h6>
-                                
+
                                 <div class="flex-right flex-wrap">
                                     <div class="styled-select styled-select-no-label">
                                         <select name="af_orderby" class="orderby">
@@ -348,76 +348,75 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="af-items-3 af-listing-grid">
-                    @php $i=1; @endphp
-                                        @foreach($books as $book)
+                        @php $i=1; @endphp
+                        @foreach($books as $book)
                         <div class="af-item-wrap">
                             <div class="white-block hover-shadow advert-item advert-grid advert-hightlight">
 
 
-                                <a href="{{url('user.buybooks/'.$book->id.'')}}"
-                                    class="advert-media">
+                                <a href="{{url('user.buybooks/'.$book->id.'')}}" class="advert-media">
                                     <img width="355" height="250" src="{{asset('bookimages/'.$book->coverpage1.'')}}"
                                         class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
-                                        decoding="async" loading="lazy" /> </a>
+                                        decoding="async" loading="lazy" />
+                                    <div class="white-block-content">
 
-                                <div class="white-block-content">
-
-                                    <div class="top-advert-meta flex-wrap">
-                                        <div class="advert-cat text-overflow">
-                                            <i class="aficon-dot-circle-o"></i>
-                                            <a href="#">Vehicles</a>
+                                        <div class="top-advert-meta flex-wrap">
+                                            <div class="advert-cat text-overflow">
+                                                <i class="aficon-dot-circle-o"></i>
+                                                <a href="{{url('user.buybooks/'.$book->id.'')}}">Vehicles</a>
+                                            </div>
+                                            <div class="advert-city text-overflow">
+                                                <i class="aficon-map-marker-alt-o"></i>
+                                                <a href="{{url('user.buybooks/'.$book->id.'')}}"> {{$book->address}}</a>
+                                            </div>
                                         </div>
-                                        <div class="advert-city text-overflow">
-                                            <i class="aficon-map-marker-alt-o"></i>
-                                            <a href=""> {{$book->address}}</a>
-                                        </div>
-                                    </div>
-                                    <h5 class="adv-title">
-                                        <a href="#"
-                                            class="text-overflow"
-                                            title="Scania R-SRS L-CLASS R450 LA Streamline Highline Diesel">
-                                            {{$book->bookname}}</a>
-                                    </h5>
-                                    <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price">₹{{$book->price}}</div>
-                                        <div class="flex-right">
-                                            <a href="javascript:void(0);" class="compare-add " data-id="88"
-                                                title="Add This To Compare">
-                                                <i class="aficon-repeat"></i>
-                                            </a>
+                                        <h5 class="adv-title">
+                                            <a href="{{url('user.buybooks/'.$book->id.'')}}" class="text-overflow"
+                                                title="{{$book->bookname}}">
+                                                {{$book->bookname}}</a>
 
-                                            <a title="Favorite" href="#" class="af-favs " data-toggle="modal"
-                                                data-target="#login">
-                                                <i class="aficon-heart-o"></i>
-                                                <span>Favorite</span>
-                                                <span class="small-icon">Favorite</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                        </h5>
+                                        <div class="bottom-advert-meta flex-wrap">
+                                            <div class="price">₹{{$book->price}}</div>
+                                            <div class="flex-right">
+                                                <a href="javascript:void(0);" class="compare-add " data-id="88"
+                                                    title="Add This To Compare">
+                                                    <i class="aficon-repeat"></i>
+                                                </a>
 
-                                <div class="search-map-la-long hidden" data-id="88" data-longitude="4.89516790"
-                                    data-latitude="52.37021570" data-icon="https://wp-content/uploads/2018/02/cars.png"
-                                    data-iconwidth="110" data-iconheight="110"></div>
+                                                <a title="Favorite" href="{{url('user.buybooks/'.$book->id.'')}}"
+                                                    class="af-favs " data-toggle="modal" data-target="#login">
+                                                    <i class="aficon-heart-o"></i>
+                                                    <span>Favorite</span>
+                                                    <span class="small-icon">Favorite</span>
+                                                </a>
+                                </a>
+                            </div>
                         </div>
-                        </div> 
-                      
-                        
-                       
-                    
-                    @php $i++; @endphp
-                    @endforeach
                     </div>
-                    <div class="pagination">
-                        <span aria-current="page" class="page-numbers current">1</span>
-                        <a class="page-numbers" href="index5f6c.html?af_page=2">2</a>
-                    </div>
-                   
+
+                    <div class="search-map-la-long hidden" data-id="88" data-longitude="4.89516790"
+                        data-latitude="52.37021570" data-icon="https://wp-content/uploads/2018/02/cars.png"
+                        data-iconwidth="110" data-iconheight="110"></div>
                 </div>
             </div>
+
+
+
+
+            @php $i++; @endphp
+            @endforeach
         </div>
+        <div class="pagination">
+            <span aria-current="page" class="page-numbers current">1</span>
+            <a class="page-numbers" href="index5f6c.html?af_page=2">2</a>
+        </div>
+
+    </div>
+    </div>
+    </div>
     </div>
 </main>
 <a href="javascript:;" class="to_top af-button">
