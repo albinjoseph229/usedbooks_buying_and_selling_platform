@@ -1,6 +1,6 @@
 @extends('layout/usermaster')
 @section('content')
-
+<div class="container" style="margin-top: 35px;">
 <h2>Sell Book</h2>
 
 <div class="white-block">
@@ -37,7 +37,7 @@
                         <div class="row">
                             <div class="col-xl-6 col-md-12">
                                 <div class="input-with-icon-left">
-                                    <i class="flag-img"><img src="https://classified.bylancer.com/includes/assets/plugins/flags/images/in.png"></i>
+                                   
                                     <input type="text" id="phonenumber" name="phonenumber" class="form-control required" placeholder="Enter Your Phone Number">
                                 </div>
                             </div>
@@ -81,7 +81,9 @@
           
             
         </div><!-- #respond -->
-
+                    </div>
+    </div>
+</div>
     </div>
   </form>
 </div>
