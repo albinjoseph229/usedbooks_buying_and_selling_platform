@@ -187,6 +187,13 @@ class GuestController extends Controller
         $data=books::paginate(2);
         $books=Book::count();
     }
+    public function bookdetails($id)
+    {
+       // $book=Book::where('id',$id)->select('*')->first();
+        $book=Book::join('users','users.id','book.sellers_id')->select('book.*','users.name')->where('book.id',$id)->first();
+        return view('user/viewbuybooks',['book'=>$book]);
+
+    }
 }
 
 

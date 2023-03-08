@@ -129,9 +129,9 @@
                     <div class="kc-elm kc-css-466926 kc_text_block">
                         <h2><span style="color: #ffffff;">Register &#038; Benefit</span></h2>
                         <ul style="color: #fff;">
-                            <li><span style="color: #ffffff;">Participate in auctions</span></li>
-                            <li><span style="color: #ffffff;">Submit your ads</span></li>
-                            <li><span style="color: #ffffff;">Promote your ads</span></li>
+                            <li><span style="color: #ffffff;">Sell Your Old Books</span></li>
+                            <li><span style="color: #ffffff;">Post Your Blogs</span></li>
+                            <li><span style="color: #ffffff;">View Career Options</span></li>
                             <li><span style="color: #ffffff;">Get reviewed to become noticeable</span></li>
                             <li><span style="color: #ffffff;">Save favorite ads</span></li>
                             <li><span style="color: #ffffff;">And more</span></li>

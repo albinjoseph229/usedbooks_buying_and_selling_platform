@@ -320,9 +320,9 @@
                             <h6>
                             
                                     Showing
-                                    @foreach($books as $bookcount)
-                                    <strong>{{$bookcount->count()}}</strong>
-                                    @endforeach
+                                 
+                                    <strong>{{count($books)}}</strong>
+                                 
                                     ads found
                                 </h6>
                                 
@@ -351,14 +351,14 @@
                     
                     <div class="af-items-3 af-listing-grid">
                     @php $i=1; @endphp
-                                        @foreach($books as $books)
+                                        @foreach($books as $book)
                         <div class="af-item-wrap">
                             <div class="white-block hover-shadow advert-item advert-grid advert-hightlight">
 
 
-                                <a href="{{url('user.buybooks/'.$books->slug.'/'.$books->slug)}}"
+                                <a href="{{url('user.buybooks/'.$book->id.'')}}"
                                     class="advert-media">
-                                    <img width="355" height="250" src="{{asset('bookimages/'.$books->coverpage1.'')}}"
+                                    <img width="355" height="250" src="{{asset('bookimages/'.$book->coverpage1.'')}}"
                                         class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
                                         decoding="async" loading="lazy" /> </a>
 
@@ -367,21 +367,21 @@
                                     <div class="top-advert-meta flex-wrap">
                                         <div class="advert-cat text-overflow">
                                             <i class="aficon-dot-circle-o"></i>
-                                            <a href="{{ route('user.viewbuybooks')}}">Vehicles</a>
+                                            <a href="#">Vehicles</a>
                                         </div>
                                         <div class="advert-city text-overflow">
                                             <i class="aficon-map-marker-alt-o"></i>
-                                            <a href="advert-location/amsterdam/index.html"> {{$books->address}}</a>
+                                            <a href=""> {{$book->address}}</a>
                                         </div>
                                     </div>
                                     <h5 class="adv-title">
-                                        <a href="{{ route('user.viewbuybooks')}}"
+                                        <a href="#"
                                             class="text-overflow"
                                             title="Scania R-SRS L-CLASS R450 LA Streamline Highline Diesel">
-                                            {{$books->bookname}}</a>
+                                            {{$book->bookname}}</a>
                                     </h5>
                                     <div class="bottom-advert-meta flex-wrap">
-                                        <div class="price">₹{{$books->price}}</div>
+                                        <div class="price">₹{{$book->price}}</div>
                                         <div class="flex-right">
                                             <a href="javascript:void(0);" class="compare-add " data-id="88"
                                                 title="Add This To Compare">

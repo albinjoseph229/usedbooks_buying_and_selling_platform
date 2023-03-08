@@ -121,11 +121,11 @@ Route::get('/user.postblogs', function () {
 Route::get('/user.usercontactus', function () {
     return view('user/usercontactus');
 })->name('user.usercontactus');
-
-Route::get('/user.viewbuybooks', function () {
+Route::get('user.buybooks/{id}',[App\Http\Controllers\GuestController::class,'bookdetails'])->name('user.buybooks');
+/*Route::get('/user.viewbuybooks', function () {
     return view('user/viewbuybooks');
 })->name('user.viewbuybooks');
-
+*/
 Route::get('/user.changepassword', function () {
     return view('user/changepassword');
 })->name('user.changepassword');

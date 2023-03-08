@@ -1,5 +1,19 @@
 @extends('layout/usermaster')
 @section('content')
+<div class="page-title quick-search">
+    <div class="container">
+        <div class="flex-wrap">
+            <div class="flex-left">
+                <h1 class="h4-size">View Blogs</h1>
+                <ul class="list-unstyled list-inline breadcrumbs">
+                    <li><a href="http://localhost/usedbooks/public">Home</a></li>
+                    <li>View Blogs</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</div>
 <main>
 	
 	
@@ -13,7 +27,7 @@
                         </div>
                         @endif
 						<div class="container">
-	<h2>View Blogs</h2>
+	
 		<div class="row">
 						
 			<div class="col-sm-12">

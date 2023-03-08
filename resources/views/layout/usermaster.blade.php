@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link media="all" href="wp-content/cache/autoptimize/css/autoptimize_d978956e96477633e69416150ecd9253.css"
+    <link media="all" href="{{asset('wp-content/cache/autoptimize/css/autoptimize_d978956e96477633e69416150ecd9253.css')}}"
         rel="stylesheet" />
     <title>BookBuddy &#8211; Classified Ads Marketplace</title>
     <meta name='robots' content='max-image-preview:large' />

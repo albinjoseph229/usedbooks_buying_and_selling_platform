@@ -10,7 +10,49 @@
 				Featured			</div>
 				</div>
 					</div>				
-				<div class="single-advert-media"><div class="owl-carousel single-slider owl-marked owl-loaded owl-drag" style=""><div class="owl-stage-outer owl-height" style="height: 369.987px;"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 4934px;"><div class="owl-item active" style="width: 616.662px;"><a href="../../wp-content/uploads/2018/02/adr-5.jpg" class="single-slider-href"><img width="750" height="450" src="../../wp-content/uploads/2018/02/adr-5-750x450.jpg" class="attachment-adifier-single-slider size-adifier-single-slider" alt="" decoding="async" loading="eager"></a></div><div class="owl-item" style="width: 616.662px;"><a href="../../wp-content/uploads/2018/02/adr-16.jpg" class="single-slider-href"><img width="750" height="450" src="../../wp-content/uploads/2018/02/adr-16-750x450.jpg" class="attachment-adifier-single-slider size-adifier-single-slider" alt="" decoding="async" loading="eager"></a></div><div class="owl-item" style="width: 616.662px;"><a href="../../wp-content/uploads/2018/02/adr-10.jpg" class="single-slider-href"><img width="750" height="450" src="../../wp-content/uploads/2018/02/adr-10-750x450.jpg" class="attachment-adifier-single-slider size-adifier-single-slider" alt="" decoding="async" loading="eager"></a></div><div class="owl-item" style="width: 616.662px;"><a href="../../wp-content/uploads/2018/02/adr-22.jpg" class="single-slider-href"><img width="750" height="450" src="../../wp-content/uploads/2018/02/adr-22-750x450.jpg" class="attachment-adifier-single-slider size-adifier-single-slider" alt="" decoding="async" loading="eager" srcset="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-22-750x450.jpg 750w, https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-22-300x179.jpg 300w" sizes="(max-width: 750px) 100vw, 750px"></a></div><div class="owl-item" style="width: 616.662px;"><a href="../../wp-content/uploads/2018/02/adr-8.jpg" class="single-slider-href"><img width="750" height="450" src="../../wp-content/uploads/2018/02/adr-8-750x450.jpg" class="attachment-adifier-single-slider size-adifier-single-slider" alt="" decoding="async" loading="eager"></a></div><div class="owl-item" style="width: 616.662px;"><a href="../../wp-content/uploads/2018/02/adr-9.jpg" class="single-slider-href"><img width="750" height="450" src="../../wp-content/uploads/2018/02/adr-9-750x450.jpg" class="attachment-adifier-single-slider size-adifier-single-slider" alt="" decoding="async" loading="eager"></a></div><div class="owl-item" style="width: 616.662px;"><a href="../../wp-content/uploads/2018/02/adr-11.jpg" class="single-slider-href"><img width="750" height="450" src="../../wp-content/uploads/2018/02/adr-11-750x450.jpg" class="attachment-adifier-single-slider size-adifier-single-slider" alt="" decoding="async" loading="eager"></a></div><div class="owl-item" data-video="https://www.youtube.com/watch?v=7It3vly11m0" style="width: 616.662px;"><div class="owl-video-wrapper" style="width:750px;height:450px;"><a href="https://www.youtube.com/watch?v=7It3vly11m0" class="single-slider-href owl-video" style="display: none;"></a><div class="owl-video-play-icon"></div><div class="owl-video-tn" style="opacity:1;background-image:url(//img.youtube.com/vi/7It3vly11m0/hqdefault.jpg)"></div></div></div></div></div><div class="owl-nav"><div class="owl-prev disabled"><i class="aficon-angle-left"></i></div><div class="owl-next"><i class="aficon-angle-right"></i></div></div><div class="owl-dots"><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div></div><div class="owl-carousel single-slider-thumbs hide-print owl-marked owl-loaded owl-drag"><div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 623px;"><div class="owl-item active" style="width: 72.708px; margin-right: 5px;"><div class="single-thumb-item animation active" data-item="0"><img width="150" height="150" src="../../wp-content/uploads/2018/02/adr-5-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" decoding="async" loading="eager" srcset="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-5-150x150.jpg 150w, https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-5-70x70.jpg 70w" sizes="(max-width: 150px) 100vw, 150px"></div></div><div class="owl-item active" style="width: 72.708px; margin-right: 5px;"><div class="single-thumb-item animation" data-item="1"><img width="150" height="150" src="../../wp-content/uploads/2018/02/adr-16-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" decoding="async" loading="eager" srcset="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-16-150x150.jpg 150w, https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-16-70x70.jpg 70w" sizes="(max-width: 150px) 100vw, 150px"></div></div><div class="owl-item active" style="width: 72.708px; margin-right: 5px;"><div class="single-thumb-item animation" data-item="2"><img width="150" height="150" src="../../wp-content/uploads/2018/02/adr-10-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" decoding="async" loading="eager" srcset="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-10-150x150.jpg 150w, https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-10-70x70.jpg 70w" sizes="(max-width: 150px) 100vw, 150px"></div></div><div class="owl-item active" style="width: 72.708px; margin-right: 5px;"><div class="single-thumb-item animation" data-item="3"><img width="150" height="150" src="../../wp-content/uploads/2018/02/adr-22-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" decoding="async" loading="eager" srcset="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-22-150x150.jpg 150w, https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-22-70x70.jpg 70w" sizes="(max-width: 150px) 100vw, 150px"></div></div><div class="owl-item active" style="width: 72.708px; margin-right: 5px;"><div class="single-thumb-item animation" data-item="4"><img width="150" height="150" src="../../wp-content/uploads/2018/02/adr-8-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" decoding="async" loading="eager" srcset="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-8-150x150.jpg 150w, https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-8-70x70.jpg 70w" sizes="(max-width: 150px) 100vw, 150px"></div></div><div class="owl-item active" style="width: 72.708px; margin-right: 5px;"><div class="single-thumb-item animation" data-item="5"><img width="150" height="150" src="../../wp-content/uploads/2018/02/adr-9-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" decoding="async" loading="eager" srcset="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-9-150x150.jpg 150w, https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-9-70x70.jpg 70w" sizes="(max-width: 150px) 100vw, 150px"></div></div><div class="owl-item active" style="width: 72.708px; margin-right: 5px;"><div class="single-thumb-item animation" data-item="6"><img width="150" height="150" src="../../wp-content/uploads/2018/02/adr-11-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" decoding="async" loading="eager" srcset="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-11-150x150.jpg 150w, https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/02/adr-11-70x70.jpg 70w" sizes="(max-width: 150px) 100vw, 150px"></div></div><div class="owl-item active" style="width: 72.708px; margin-right: 5px;"><div class="single-thumb-item" data-item="7"><img src="../../wp-content/uploads/2018/02/video-thumb.png" height="90" width="90" alt="video" loading="eager"></div></div></div></div><div class="owl-nav disabled"><div class="owl-prev disabled"><i class="aficon-angle-left"></i></div><div class="owl-next disabled"><i class="aficon-angle-right"></i></div></div><div class="owl-dots disabled"><div class="owl-dot active"><span></span></div></div></div></div>
+				<div class="single-advert-media">
+					<div class="owl-carousel single-slider owl-marked owl-loaded owl-drag" style="">
+						<div class="owl-stage-outer owl-height" style="height: 369.987px;">
+							<div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 4934px;">
+								<div class="owl-item active" style="width: 616.662px;">
+									<a href="{{asset('bookimages/'.$book->coverpage1.'')}}" class="single-slider-href">
+								<img width="750" height="450" src="{{asset('bookimages/'.$book->coverpage1.'')}}" class="attachment-adifier-single-slider size-adifier-single-slider" alt="" decoding="async" loading="eager"></a>
+							</div>
+								<div class="owl-item" style="width: 616.662px;">
+								
+							</div>
+							
+							<div class="owl-item" style="width: 616.662px;">
+								<a href="../../wp-content/uploads/2018/02/adr-8.jpg" class="single-slider-href">
+									<img width="750" height="450" src="{{asset('bookimages/'.$book->coverpage1.'')}}" class="attachment-adifier-single-slider size-adifier-single-slider" alt="" decoding="async" loading="eager">
+								</a>
+							</div>
+						
+								
+									
+									</div>
+								</div>
+								
+								<div class="owl-dots">
+									
+									<div class="owl-dot"><span></span>
+									</div>
+								</div>
+							</div>
+							<div class="owl-carousel single-slider-thumbs hide-print owl-marked owl-loaded owl-drag">
+								
+						<div class="owl-nav disabled">
+							<div class="owl-prev disabled"><i class="aficon-angle-left"></i>
+							</div>
+							<div class="owl-next disabled">
+								<i class="aficon-angle-right"></i>
+							</div>
+						</div>
+						<div class="owl-dots disabled"><div class="owl-dot active"><span></span>
+									</div>
+								</div>
+								</div>
+								</div>
 				<div class="hide-price-big">
 					
 <div class="single-price-wrap">
@@ -46,12 +88,9 @@
 			
 				<div class="white-block">
 					<div class="white-block-content">					
-						<h4 class="blog-item-title h4-size">Handy Mechanic For FORD Vehicles</h4>
+						<h4 class="blog-item-title h4-size">{{$book->bookname}}</h4>
 						<div class="post-content clearfix">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<blockquote><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p></blockquote>
-<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-						</div>
+							<p>{{$book->bookdescription}}</p></div>
 												
 						<ul class="list-inline list-unstyled single-meta top-advert-meta">
 															<li>
@@ -82,7 +121,7 @@
 			<div class="flex-left">
 				<div class="flex-wrap flex-start-h">
 					<div class="comment-avatar">
-												<img width="100" height="100" src="../../wp-content/uploads/2018/03/user-4.png" class="attachment-thumbnail size-thumbnail" alt="" decoding="async" loading="lazy" srcset="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/03/user-4.png 100w, https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/03/user-4-70x70.png 70w" sizes="(max-width: 100px) 100vw, 100px">					</div>
+												<img width="100" height="100" src="{{asset('bookimages/'.$book->coverpage1.'')}}" class="attachment-thumbnail size-thumbnail" alt="" decoding="async" loading="lazy" srcset="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/03/user-4.png 100w, https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/03/user-4-70x70.png 70w" sizes="(max-width: 100px) 100vw, 100px">					</div>
 					<div class="comment-info">
 						<h5>Sally Doe</h5>
 						<p>March 18, 2018 at 1:13 pm </p>
@@ -153,7 +192,7 @@
 							<div class="seller-name">
 								<h5>
 									<a href="../../author/elizabeth/index.html">
-										Elizabeth Harth									</a>
+										{{$book->name}}								</a>
 								</h5>
 									<div class="user-rating">
 		<span class="aficon-star"></span><span class="aficon-star"></span><span class="aficon-star"></span><span class="aficon-star"></span><span class="aficon-star-o"></span>			</div>
