@@ -112,7 +112,7 @@ class GuestController extends Controller
             'address'=>['required'],
             'phonenumber'=>['required'],
             'file'=>['required'],
-            
+            'location'=>['required'],
         ]);
        $fileName1="";
         if($request->file1!=""){
@@ -129,6 +129,7 @@ class GuestController extends Controller
         $books->bookdate=date('Y-m-d');
         $books->bookname=$request->bookname;
         $books->bookdescription=$request->bookdescription;
+        $books->location=$request->location;
         $books->phonenumber=$request->phonenumber;
         $books->address=$request->address;
         $books->price=$request->price;
@@ -199,8 +200,18 @@ class GuestController extends Controller
     public function bookdetails($id)
     {
        // $book=Book::where('id',$id)->select('*')->first();
-        $book=Book::join('users','users.id','book.sellers_id')->select('book.*','users.name','users.email',)->where('book.id',$id)->first();
+        $book=Book::join('users','users.id','book.sellers_id')->select('book.*','users.name','users.email',)
+        ->where('book.id',$id)->first();
         return view('user/viewbuybooks',['book'=>$book]);
+
+    }
+
+    public function blogdetails($id)
+    {
+       
+        $blog=Blog::join('users','users.id','blogs.user_id')->select('blogs.*','users.name','users.email',)
+        ->where('blogs.id',$id)->first();
+        return view('user/viewmoreblogs',['blogs'=>$blog]);
 
     }
 }

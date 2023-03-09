@@ -110,10 +110,6 @@ Route::get('/user.sellbooks', function () {
     return view('user/sellbooks');
 })->name('user.sellbooks');
 
-Route::get('/user.sellbooks1', function () {
-    return view('user/sellbooks1');
-})->name('user.sellbooks1');
-
 Route::get('/user.postblogs', function () {
     return view('user/postblogs');
 })->name('user.postblogs');
@@ -122,10 +118,19 @@ Route::get('/user.usercontactus', function () {
     return view('user/usercontactus');
 })->name('user.usercontactus');
 
+Route::get('/user.howitworks', function () {
+    return view('user/howitworks');
+})->name('user.howitworks');
+
 Route::get('user.buybooks/{id}',[App\Http\Controllers\GuestController::class,'bookdetails'])->name('user.buybooks');
 Route::get('/user.viewbuybooks', function () {
     return view('user/viewbuybooks');
 })->name('user.viewbuybooks');
+
+Route::get('user.viewblogs/{id}',[App\Http\Controllers\GuestController::class,'blogdetails'])->name('user.viewmoreblogs');
+Route::get('/user.viewmoreblogs', function () {
+    return view('user/viewmoreblogs');
+})->name('user.viewmoreblogs');
 
 Route::get('/user.changepassword', function () {
     return view('user/changepassword');

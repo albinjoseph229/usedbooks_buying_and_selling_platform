@@ -26,12 +26,17 @@
     </div>
     @endif
     <div class="container">
+
         <div class="row">
-            @php $i=1; @endphp
-            @foreach($careers as $careers)
+
             <div class="col-sm-12">
+
                 <div class="row">
-                    <div class="col-sm-12">
+                    @php $i=1; @endphp
+                    @foreach($careers as $careers)
+
+
+                    <div class="col-sm-6">
                         <article id="post-425"
                             class="hover-shadow white-block post-425 post type-post status-publish format-standard has-post-thumbnail hentry category-tips-tricks tag-cite tag-dollor tag-ipsum tag-laudantium tag-lorem">
 
@@ -39,12 +44,11 @@
                                 class="article-media">
                                 <img width="750" height="450" src="{{asset('cimages/'.$careers->image.'')}}"
                                     class="attachment-adifier-single-slider size-adifier-single-slider wp-post-image"
-                                    alt="" decoding="async">
-                            </a>
+                                    alt="" decoding="async"> </a>
 
                             <div class="white-block-content">
                                 <h5>
-                                    <a href=".velit-esse-cillum-dolore-eu-fugiat-nulla-pariatur/index.html"
+                                    <a href="velit-esse-cillum-dolore-eu-fugiat-nulla-pariatur/index.html"
                                         class="text-overflow" title="Velit Esse Cillum Dolore Eu Fugiat Nulla Pariatur">
                                         {{$careers->ctitle}}</td>}}</a>
                                 </h5>
@@ -59,7 +63,8 @@
                                         Read More </a>
                                     <div class="top-advert-meta">
                                         <i class="aficon-dot-circle-o"></i>
-                                        <a href="category/tips-tricks/index.html" class="bz-cat">Tips &amp; Tricks</a>
+                                        <a href="category/tips-tricks/index.html" class="bz-cat">Tips &amp;
+                                            Tricks</a>
                                     </div>
                                 </div>
 
@@ -67,11 +72,14 @@
 
                         </article>
                     </div>
+                    @php $i++; @endphp
+                    @endforeach
+
+
+
+
 
                 </div>
-
-                @php $i++; @endphp
-                @endforeach
             </div>
 
 

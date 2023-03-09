@@ -26,7 +26,19 @@
             <h5>Description</h5>
             <textarea rows="12" cols="100" id="bookdescription" name="bookdescription" class="form-control required"
                 placeholder="Write Your Books Description........"></textarea>
+            <div class="submit-field">
 
+                <h5>Location</h5>
+                <div class="row">
+                    <div class="col-xl-6 col-md-12">
+                        <div class="input-with-icon-left">
+
+                            <input type="text" id="location" name="location" class="form-control required"
+                                placeholder="Enter Your Location">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <h5>Address</h5>
             <textarea rows="12" cols="100" id="address" name="address" class="form-control required"

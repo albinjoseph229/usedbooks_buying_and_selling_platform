@@ -92,9 +92,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
 
-
-                <input type="submit" class="submit-ajax-form af-button" value="Register" />
+        <input type="submit" class="submit-ajax-form af-button" value="Register" />
     </form>
 
     <div class="text-center">
@@ -137,79 +138,80 @@
     </div>
 
     <input type="hidden" value="adifier_register" name="action" />
-</div>
-<input type="hidden" id="adifier_nonce" name="adifier_nonce" value="8840aa4f4f" /><input type="hidden"
-    name="_wp_http_referer" value="/themes/adifier/" /> </form>
-</div>
 
-</div>
-</div>
+    <input type="hidden" id="adifier_nonce" name="adifier_nonce" value="8840aa4f4f" /><input type="hidden"
+        name="_wp_http_referer" value="/themes/adifier/" /> </form>
 
-<div class="modal in lrr" id="recover" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
 
-        <!-- Modal content-->
-        <div class="modal-content">
-            <form method="post" class="ajax-form" autocomplete="off">
-                <div class="modal-header">
-                    <h5 class="modal-title">Recover Password</h5>
-                    <a href="#" data-dismiss="modal"><i class="aficon-times"></i></a>
-                </div>
-                <div class="modal-body">
-                    <div class="ajax-form-result"></div>
-                    <div class="form-group has-feedback">
-                        <label for="rec_email" class="bold">Email *</label>
-                        <input type="text" class="form-control" id="rec_email" name="rec_email"
-                            placeholder="Your registered email" />
+
+
+
+    <div class="modal in lrr" id="recover" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <form method="post" class="ajax-form" autocomplete="off">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Recover Password</h5>
+                        <a href="#" data-dismiss="modal"><i class="aficon-times"></i></a>
                     </div>
-                    <a href="javascript:;" class="submit-ajax-form af-button">Recover </a>
+                    <div class="modal-body">
+                        <div class="ajax-form-result"></div>
+                        <div class="form-group has-feedback">
+                            <label for="rec_email" class="bold">Email *</label>
+                            <input type="text" class="form-control" id="rec_email" name="rec_email"
+                                placeholder="Your registered email" />
+                        </div>
+                        <a href="javascript:;" class="submit-ajax-form af-button">Recover </a>
 
-                    <div class="text-center">
-                        <a href="{{ route('login')}}" class="register-acc" data-toggle="modal" data-target="#login"
-                            data-dismiss="modal">Already have an account? Login here.</a>
+                        <div class="text-center">
+                            <a href="{{ route('login')}}" class="register-acc" data-toggle="modal" data-target="#login"
+                                data-dismiss="modal">Already have an account? Login here.</a>
+                        </div>
+
+
+                        <input type="hidden" value="adifier_recover" name="action" />
                     </div>
+                    <input type="hidden" id="adifier_nonce" name="adifier_nonce" value="8840aa4f4f" /><input
+                        type="hidden" name="_wp_http_referer" value="/themes/adifier/" />
+                </form>
+            </div>
 
-
-                    <input type="hidden" value="adifier_recover" name="action" />
-                </div>
-                <input type="hidden" id="adifier_nonce" name="adifier_nonce" value="8840aa4f4f" /><input type="hidden"
-                    name="_wp_http_referer" value="/themes/adifier/" />
-            </form>
         </div>
-
     </div>
-</div>
 
-<div class="modal in lrr" id="resend" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal in lrr" id="resend" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
 
-        <!-- Modal content-->
-        <div class="modal-content">
-            <form method="post" class="ajax-form" autocomplete="off">
-                <div class="modal-header">
-                    <h5 class="modal-title">Resend Verification</h5>
-                    <a href="#" data-dismiss="modal"><i class="aficon-times"></i></a>
-                </div>
-                <div class="modal-body">
-
-                    <div class="ajax-form-result"></div>
-
-                    <div class="form-group has-feedback">
-                        <label for="res_email" class="bold">Email *</label>
-                        <input type="text" class="form-control" id="res_email" name="res_email"
-                            placeholder="Your registered email" />
+            <!-- Modal content-->
+            <div class="modal-content">
+                <form method="post" class="ajax-form" autocomplete="off">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Resend Verification</h5>
+                        <a href="#" data-dismiss="modal"><i class="aficon-times"></i></a>
                     </div>
+                    <div class="modal-body">
+
+                        <div class="ajax-form-result"></div>
+
+                        <div class="form-group has-feedback">
+                            <label for="res_email" class="bold">Email *</label>
+                            <input type="text" class="form-control" id="res_email" name="res_email"
+                                placeholder="Your registered email" />
+                        </div>
 
 
-                    <a href="javascript:;" class="submit-ajax-form af-button">Resend </a>
+                        <a href="javascript:;" class="submit-ajax-form af-button">Resend </a>
 
-                    <input type="hidden" value="adifier_resend" name="action" />
-                </div>
-                <input type="hidden" id="adifier_nonce" name="adifier_nonce" value="8840aa4f4f" /><input type="hidden"
-                    name="_wp_http_referer" value="themes/adifier/" />
-            </form>
+                        <input type="hidden" value="adifier_resend" name="action" />
+                    </div>
+                    <input type="hidden" id="adifier_nonce" name="adifier_nonce" value="8840aa4f4f" /><input
+                        type="hidden" name="_wp_http_referer" value="themes/adifier/" />
+                </form>
+            </div>
+
         </div>
-
     </div>
 </div>
 

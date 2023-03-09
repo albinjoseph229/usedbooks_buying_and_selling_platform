@@ -369,7 +369,7 @@
                                             </div>
                                             <div class="advert-city text-overflow">
                                                 <i class="aficon-map-marker-alt-o"></i>
-                                                <a href="{{url('user.buybooks/'.$book->id.'')}}"> {{$book->address}}</a>
+                                                <a href="{{url('user.buybooks/'.$book->id.'')}}"> {{$book->location}}</a>
                                             </div>
                                         </div>
                                         <h5 class="adv-title">

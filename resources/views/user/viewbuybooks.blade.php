@@ -112,7 +112,7 @@
                         <ul class="list-inline list-unstyled single-meta top-advert-meta">
                             <li>
                                 <i class="aficon-map-marker-alt-o"></i>
-                                <a href="../../advert-location/netherlands/index.html">{{$book->address}}</a>
+                                <a href="../../advert-location/netherlands/index.html">{{$book->location}}</a>
 
                             </li>
 
