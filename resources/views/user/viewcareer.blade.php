@@ -33,32 +33,32 @@
 
                 <div class="row">
                     @php $i=1; @endphp
-                    @foreach($careers as $careers)
+                    @foreach($careers as $career)
 
 
                     <div class="col-sm-6">
                         <article id="post-425"
                             class="hover-shadow white-block post-425 post type-post status-publish format-standard has-post-thumbnail hentry category-tips-tricks tag-cite tag-dollor tag-ipsum tag-laudantium tag-lorem">
 
-                            <a href="velit-esse-cillum-dolore-eu-fugiat-nulla-pariatur/index.html"
+                            <a href="{{url('user.viewcareer/'.$career->id.'')}}"
                                 class="article-media">
-                                <img width="750" height="450" src="{{asset('cimages/'.$careers->image.'')}}"
+                                <img width="750" height="450" src="{{asset('cimages/'.$career->image.'')}}"
                                     class="attachment-adifier-single-slider size-adifier-single-slider wp-post-image"
                                     alt="" decoding="async"> </a>
 
                             <div class="white-block-content">
                                 <h5>
-                                    <a href="velit-esse-cillum-dolore-eu-fugiat-nulla-pariatur/index.html"
+                                    <a href="{{url('user.viewcareer/'.$career->id.'')}}"
                                         class="text-overflow" title="Velit Esse Cillum Dolore Eu Fugiat Nulla Pariatur">
-                                        {{$careers->ctitle}}</td>}}</a>
+                                        {{$career->ctitle}}</td>}}</a>
                                 </h5>
 
                                 <div class="article-excerpt">
-                                    <p>{{$careers->description}}</p>
+                                    <p>{{$career->created_at}}</p>
                                 </div>
 
                                 <div class="flex-wrap">
-                                    <a href="velit-esse-cillum-dolore-eu-fugiat-nulla-pariatur/index.html"
+                                    <a href="{{url('user.viewcareer/'.$career->id.'')}}"
                                         class="af-button">
                                         Read More </a>
                                     <div class="top-advert-meta">

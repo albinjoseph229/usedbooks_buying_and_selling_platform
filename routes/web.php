@@ -51,9 +51,10 @@ Route::group(['middleware' => ['auth','prevent-back-history']],function()
 Route::get('logout',[App\Http\Controllers\AdminController::class,'logout'])->name('logout');
 
 // admin routes
+Route::get('/adminhome',[App\Http\Controllers\AdminController::class,'getindexdetails'
+,App\Http\Controllers\AdminController::class,'index'])->name('adminhome');
 
-
-Route::get('/adminhome',[App\Http\Controllers\AdminController::class,'index',])->name('adminhome');
+//Route::get('/adminhome',[App\Http\Controllers\AdminController::class,'index',])->name('adminhome');
 
 Route::get('/admin.viewuser',[App\Http\Controllers\AdminController::class,'getusers'])->name('admin.viewuser');
 
@@ -122,6 +123,10 @@ Route::get('/user.howitworks', function () {
     return view('user/howitworks');
 })->name('user.howitworks');
 
+Route::get('/user.changepassword', function () {
+    return view('user/changepassword');
+})->name('user.changepassword');
+
 Route::get('user.buybooks/{id}',[App\Http\Controllers\GuestController::class,'bookdetails'])->name('user.buybooks');
 Route::get('/user.viewbuybooks', function () {
     return view('user/viewbuybooks');
@@ -132,9 +137,12 @@ Route::get('/user.viewmoreblogs', function () {
     return view('user/viewmoreblogs');
 })->name('user.viewmoreblogs');
 
-Route::get('/user.changepassword', function () {
-    return view('user/changepassword');
-})->name('user.changepassword');
+Route::get('user.viewcareer/{id}',[App\Http\Controllers\GuestController::class,'careerdetails'])->name('user.viewmorecareer');
+Route::get('/user.viewmorcareer', function () {
+    return view('user/viewmoreecareer');
+})->name('user.viewmorecareer');
+
+
 
 Route::get('/userhome',[App\Http\Controllers\GuestController::class,'getindexbooks'
 ,App\Http\Controllers\GuestController::class,'index'])->name('userhome');

@@ -212,5 +212,13 @@ class AdminController extends Controller
             return back()->with('error','Some error occured please try again later..');
         }
     }
-   
+    public function getindexdetails()
+    {
+        $books=Book::select('*')->get();
+        $career=Career::select('*')->get();
+        $users=User::select('*')->get();
+        $blogs=Blog::select('*')->get();
+
+        return view('admin/index',['career'=>$career],['books'=> $books],['users'=>$users],['blogs'=>$blogs]);
+    }
 }

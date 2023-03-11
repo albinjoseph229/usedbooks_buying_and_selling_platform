@@ -214,6 +214,15 @@ class GuestController extends Controller
         return view('user/viewmoreblogs',['blogs'=>$blog]);
 
     }
+    
+    public function careerdetails($id)
+    {
+       
+        $careers=Career::where('id',$id)->select('*')->first();
+       
+        return view('user/viewmorecareer',['career'=>$careers]);
+
+    }
 }
 
 
