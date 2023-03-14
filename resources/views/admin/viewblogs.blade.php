@@ -47,7 +47,6 @@
                                         <th>SI.No</th>
                                         <th>Title</th>
                                         <th>User</th>
-                                        <th>Description</th>
                                         <th>Date</th>
                                         <th>Action</th>
 
@@ -60,13 +59,12 @@
                                         <td>{{$i}}</td>
                                         <td>{{$blogs->blog_title}}</td>
                                         <td>{{$blogs->name}}</td>
-                                        <td>{{$blogs->blog_description}}</td>
                                         <td>{{$blogs->created_at}}</td>
                                         <td>
                                             <button title="Delete Blogs" class="btn btn-danger btn-sm deleteme"
                                                 data-value="{{$blogs->id}}" data-toggle="modal"
                                                 data-target="#modal-primary"><i class="fa fa-trash"></i></button>
-                                            <a title="View More" href="{{ route('admin.viewmoreblogs')}}"
+                                            <a title="View More" href="{{url('admin.viewblogs/'.$blogs->id.'')}}"
                                                 class="btn btn-sm btn-primary"><i class="fas fa-folder"></i></a>
                                             <a title="View Comments" href="{{ route('admin.viewblogcomments')}}"
                                                 class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
@@ -79,11 +77,10 @@
                                 <tfoot>
                                     <tr>
                                         <th>SI.No</th>
-                                        <th>Name of Book</th>
-                                        <th>Buyer</th>
-                                        <th>Seller</th>
+                                        <th>Title</th>
+                                        <th>User</th>
                                         <th>Date</th>
-                                        <th>Status</th>
+                                        <th>Action</th>
                                     </tr>
                                 </tfoot>
                             </table>

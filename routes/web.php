@@ -94,13 +94,20 @@ Route::get('/admin.viewblogcomments', function () {
     return view('admin/viewblogcomments');
 })->name('admin.viewblogcomments');
 
-Route::get('/admin.viewmoreblogs', function () {
-    return view('admin/viewmoreblogs');
-})->name('admin.viewmoreblogs');
 
 Route::get('/admin.viewuserdetails', function () {
     return view('admin/viewuserdetails');
 })->name('admin.viewuserdetails');
+
+Route::get('admin.viewblogs/{id}',[App\Http\Controllers\AdminController::class,'blogdetails'])->name('admin.viewmoreblogs');
+Route::get('/admin.viewmoreblogs', function () {
+    return view('admin/viewmoreblogs');
+})->name('admin.viewmoreblogs');
+
+Route::get('admin.viewcareer/{id}',[App\Http\Controllers\AdminController::class,'careerdetails'])->name('admin.viewmorecareer');
+Route::get('/admin.viewmorcareer', function () {
+    return view('admin/viewmoreecareer');
+})->name('admin.viewmorecareer');
 
 //user routes
 /*Route::get('/userhome', function () {

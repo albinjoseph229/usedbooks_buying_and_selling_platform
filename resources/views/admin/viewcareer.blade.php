@@ -44,7 +44,7 @@
                                     <tr>
                                         <th>S.No</th>
                                         <th>Title</th>
-                                        <th>Description</th>
+
                                         <th>Date</th>
                                         <th>Image</th>
                                         <th>Action</th>
@@ -56,7 +56,7 @@
                                     <tr>
                                         <td>{{$i}}</td>
                                         <td>{{$career->ctitle}}</td>
-                                        <td>{{$career->description}}</td>
+
                                         <td>{{$career->created_at}}</td>
                                         <td><img src="{{asset('cimages/'.$career->image.'')}}" height="150px"
                                                 width="200px" /></td>
@@ -67,6 +67,8 @@
                                                 data-value="{{$career->id}}"><i class="fa fa-trash"></i></button>
                                             <a title="View Comments" href="{{ route('admin.viewcareercomments')}}"
                                                 class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
+                                            <a title="View More" href="{{url('admin.viewcareer/'.$career->id.'')}}"
+                                                class="btn btn-sm btn-primary"><i class="fas fa-folder"></i></a>
                                         </td>
 
                                     </tr>
@@ -77,7 +79,7 @@
                                     <tr>
                                         <th>S.No</th>
                                         <th>Title</th>
-                                        <th>Description</th>
+
                                         <th>Date</th>
                                         <th>Image</th>
                                         <th>Action</th>

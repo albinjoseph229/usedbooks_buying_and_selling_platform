@@ -6,12 +6,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>View Full Blog</h1>
+                    <h1>View More Career</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{ route('adminhome')}}">Home</a></li>
-                        <li class="breadcrumb-item active">VIew Blogs/View Full Blog>
+                        <li class="breadcrumb-item active">VIew More Career>
                     </ol>
                 </div>
             </div>
@@ -36,14 +36,13 @@
                         <!-- /.card-header -->
                         <div class="card-body p-0">
                             <div class="mailbox-read-info">
-                                <h5>Title:{{$blogs->blog_title}}</h5>
-                                <h6>User:{{$blogs->name}}</h6>
-                                <h6>Date:{{$blogs->bdate}}</h6>
+                                <h5>Title:{{$career->ctitle}}</h5>
+                                <h6>Date:{{$career->created_at}}</h6>
                             </div>
 
                             <!-- /.mailbox-controls -->
                             <div class="mailbox-read-message">
-                                <p>{{$blogs->blog_description}}</p>
+                                <p>{{$career->description}}</p>
 
                             </div>
                             <!-- /.mailbox-read-message -->
@@ -53,13 +52,13 @@
                             <ul class="mailbox-attachments d-flex align-items-stretch clearfix">
                                 <li>
                                     <span class="mailbox-attachment-icon has-img"><img
-                                            src="{{asset('blogimages/'.$blogs->bimage1.'')}}" alt="Attachment"></span>
+                                            src="{{asset('cimages/'.$career->image.'')}}" alt="Attachment"></span>
 
                                     <div class="mailbox-attachment-info">
-                                        <a href="{{asset('blogimages/'.$blogs->bimage1.'')}}" class="mailbox-attachment-name"><i class="fas fa-camera"></i>
+                                        <a href="{{asset('cimages/'.$career->image.'')}}" class="mailbox-attachment-name"><i class="fas fa-camera"></i>
                                             photo1.png</a>
                                         <span class="mailbox-attachment-size clearfix mt-1">
-                                            <a href="{{asset('blogimages/'.$blogs->bimage1.'')}}" class="btn btn-default btn-sm float-right"><i
+                                            <a href="{{asset('cimages/'.$career->image.'')}}" class="btn btn-default btn-sm float-right"><i
                                                     class="fas fa-cloud-download-alt"></i></a>
                                         </span>
                                     </div>

@@ -221,4 +221,23 @@ class AdminController extends Controller
 
         return view('admin/index',['career'=>$career],['books'=> $books],['users'=>$users],['blogs'=>$blogs]);
     }
+
+    
+    public function blogdetails($id)
+    {
+       
+        $blogs=Blog::join('users','users.id','blogs.user_id')->select('blogs.*','users.name','users.email',)
+        ->where('blogs.id',$id)->first();
+        return view('admin/viewmoreblogs',['blogs'=>$blogs]);
+
+    }
+
+    public function careerdetails($id)
+    {
+       
+        $careers=Career::where('id',$id)->select('*')->first();
+       
+        return view('admin/viewmorecareer',['career'=>$careers]);
+
+    }
 }
