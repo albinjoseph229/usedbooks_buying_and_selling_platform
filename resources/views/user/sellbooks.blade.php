@@ -19,6 +19,11 @@
                 <h5>Book Name</h5>
                 <input type="text" id="bookname" name="bookname" class="form-control required"
                     placeholder="Name of your book">
+                @error('bookname')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
         </div>
         <div class="white-block-content">
 
@@ -26,6 +31,11 @@
             <h5>Description</h5>
             <textarea rows="12" cols="100" id="bookdescription" name="bookdescription" class="form-control required"
                 placeholder="Write Your Books Description........"></textarea>
+            @error('bookdescription')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
             <div class="submit-field">
 
                 <h5>Location</h5>
@@ -38,11 +48,21 @@
                         </div>
                     </div>
                 </div>
+                @error('location')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
             </div>
 
             <h5>Address</h5>
             <textarea rows="12" cols="100" id="address" name="address" class="form-control required"
                 placeholder="Write Your Address Here........"></textarea>
+            @error('address')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
 
 
             <div class="submit-field">
@@ -56,6 +76,11 @@
                         </div>
                     </div>
                 </div>
+                @error('phonenumber')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
             </div>
 
             <div class="submit-field" id="price">
@@ -71,6 +96,11 @@
 
                     </div>
                 </div>
+                @error('price')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
             </div>
 
             <div class="submit-field">
@@ -85,6 +115,11 @@
                         </div>
                     </div>
                 </div>
+                @error('file1')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
             </div>
 
 

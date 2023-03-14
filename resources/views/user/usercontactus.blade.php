@@ -21,6 +21,11 @@
                 <label for="name">Message Subject *</label>
                 <input type="text" id="message_subject" name="message_subject" class="form-control required"
                     placeholder="Your Message Subject">
+                @error('message_subject')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
             </div>
             <div class="card-body">
 
@@ -45,6 +50,11 @@
 
                                 </div>
                             </div>
+                            @error('message_description')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                             <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit"
                                     value="send message"> <input type="hidden" name="comment_post_ID" value="425"
                                     id="comment_post_ID">

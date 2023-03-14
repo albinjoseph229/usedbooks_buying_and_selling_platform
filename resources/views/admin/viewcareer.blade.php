@@ -58,8 +58,8 @@
                                         <td>{{$career->ctitle}}</td>
 
                                         <td>{{$career->created_at}}</td>
-                                        <td><img src="{{asset('cimages/'.$career->image.'')}}" height="150px"
-                                                width="200px" /></td>
+                                        <td><img src="{{asset('cimages/'.$career->image.'')}}" height="100px"
+                                                width="150px" /></td>
 
                                         <td>
                                             <button data-toggle="modal" data-target="#modal-primary" title="Delete"
@@ -104,7 +104,7 @@
     <div class="modal-dialog">
         <div class="modal-content bg-danger">
             <div class="modal-header">
-                <h4 class="modal-title">Delete Blogs</h4>
+                <h4 class="modal-title">Delete career</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -124,5 +124,7 @@
         <!-- /.modal-content -->
     </div>
     <!-- /.modal-dialog -->
+    </<div>
+
 </div>
 @endsection

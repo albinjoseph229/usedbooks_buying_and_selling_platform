@@ -44,10 +44,20 @@
                                 @csrf
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Title:" name="ctitle" id="ctitle" required>
+                                    @error('ctitle')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <textarea class="form-control" placeholder="Description:" name="cdescr" id="cdescr"
                                         required></textarea>
+                                    @error('cdescr')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                                 </div>
 
                                 <div class="form-group">
@@ -57,6 +67,11 @@
                                     </div>
 
                                     <p class="help-block">Max. 32MB</p>
+                                    @error('file')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                                 </div>
                         </div>
                         <!-- /.card-body -->

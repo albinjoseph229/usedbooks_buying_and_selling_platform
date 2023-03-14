@@ -28,15 +28,6 @@
                         <div class="card-header">
                             <h3 class="card-title">View Books</h3>
                         </div>
-                        @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                        @elseif(session('failed'))
-                        <div class="alert alert-danger" role="alert">
-                            {{ session('failed') }}
-                        </div>
-                        @endif
                         <!-- /.card-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-hover">

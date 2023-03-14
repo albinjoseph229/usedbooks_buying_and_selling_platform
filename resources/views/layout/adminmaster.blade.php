@@ -265,14 +265,7 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{ route('admin.viewads')}}" class="nav-link">
-                                <i class=" 	fas fa-ad"></i>
-                                <p>
-                                    View Ads
-                                </p>
-                            </a>
-                        </li>
+                 
                         <li class="nav-item">
                             <a href="{{ route('admin.viewcareer')}}" class="nav-link">
                                 <i class="fas fa-eye"></i>

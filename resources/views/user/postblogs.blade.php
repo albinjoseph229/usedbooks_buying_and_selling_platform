@@ -19,6 +19,11 @@
                 <label for="name">Title *</label>
                 <input type="text" id="blogtitle" name="blogtitle" class="form-control required"
                     placeholder="Title of your blog">
+                @error('blogtitle')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
         </div>
         <div class="card-body">
 
@@ -31,7 +36,11 @@
                         <input type="hidden" value="1" name="aff-cpt"><label for="comment">Blog Content*</label>
                         <textarea rows="12" cols="100" id="blogdescr" name="blogdescr" class="form-control required"
                             placeholder="Write You Blog Here........"></textarea>
-
+                        @error('blogdescr')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
                         <div class="row">
                             <div class="col-sm-4">
                             </div>
