@@ -109,6 +109,11 @@ Route::get('/admin.viewmorcareer', function () {
     return view('admin/viewmoreecareer');
 })->name('admin.viewmorecareer');
 
+Route::get('admin.viewbooks/{id}',[App\Http\Controllers\AdminController::class,'bookdetails'])->name('admin.viewmorebooks');
+Route::get('/admin.viewmorebooks', function () {
+    return view('admin/viewmorebooks');
+})->name('admin.viewmorebooks');
+
 //user routes
 /*Route::get('/userhome', function () {
     return view('user/index');

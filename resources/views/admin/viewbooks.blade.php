@@ -54,20 +54,20 @@
                                         </thead>
                                     <tbody>
                                         @php $i=1; @endphp
-                                        @foreach($books as $books)
+                                        @foreach($books as $book)
                                         <tr>
                                             <td>{{$i}}</td>
-                                            <td>{{$books->bookname}}</td>
-                                            <td>{{$books->name}}</td>
-                                            <td>{{$books->price}}</td>
-                                            <td>{{$books->created_at}}</td>
+                                            <td>{{$book->bookname}}</td>
+                                            <td>{{$book->name}}</td>
+                                            <td>{{$book->price}}</td>
+                                            <td>{{$book->created_at}}</td>
 
 
                                             <td>
                                                 <button title="Delete Book" class="btn btn-danger btn-sm deleteme"
-                                                    data-value="{{$books->id}}" data-toggle="modal"
+                                                    data-value="{{$book->id}}" data-toggle="modal"
                                                     data-target="#modal-primary"><i class="fa fa-trash"></i></button>
-                                                <a title="View more " href="{{ route('admin.viewblogcomments')}}"
+                                                <a title="View more " href="{{url('admin.viewbooks/'.$book->id.'')}}"
                                                     class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
                                                 <a title="View complaints" href="{{ route('admin.viewblogcomments')}}"
                                                     class="btn btn-sm btn-warning"><i class=" 	fas fa-frown"></i></a>

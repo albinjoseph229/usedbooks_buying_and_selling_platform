@@ -240,4 +240,14 @@ class AdminController extends Controller
         return view('admin/viewmorecareer',['career'=>$careers]);
 
     }
+
+    public function bookdetails($id)
+    {
+       // $book=Book::where('id',$id)->select('*')->first();
+        $book=Book::join('users','users.id','book.sellers_id')->select('book.*','users.name','users.email',)
+        ->where('book.id',$id)->first();
+        return view('admin/viewmorebooks',['book'=>$book]);
+
+    }
+
 }
