@@ -434,7 +434,7 @@ var adifier_map_data = {
 /* ]]> */
 </script>
 
-<script type='text/javascript' src='../../../unpkg.com/leaflet%401.6.0/dist/leaflet.js' id='adifier-map-js'></script>
+<script type='text/javascript' src='unpkg.com/leaflet%401.6.0/dist/leaflet.js' id='adifier-map-js'></script>
 
 <script type='text/javascript' id='adifier-custom-js-extra'>
 /* <![CDATA[ */
