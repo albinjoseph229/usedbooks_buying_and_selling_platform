@@ -115,7 +115,7 @@ class GuestController extends Controller
             'file'=>['required'],
             'location'=>['required'],
         ]);
-       $fileName1="";
+        $fileName1="";
         if($request->file1!=""){
                     $fileName1 = time().'.'.$request->file1->extension();  
                     $request->file1->move(public_path('bookimages'), $fileName1);
