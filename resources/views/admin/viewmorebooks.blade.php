@@ -27,14 +27,14 @@
                         <div class="card-header">
                             <h3 class="card-title">More Book Deatails</h3>
                             @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                        @elseif(session('failed'))
-                        <div class="alert alert-danger" role="alert">
-                            {{ session('failed') }}
-                        </div>
-                        @endif
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                            @elseif(session('failed'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ session('failed') }}
+                            </div>
+                            @endif
                             <div class="card-tools">
                                 <a href="#" class="btn btn-tool" title="Previous"><i
                                         class="fas fa-chevron-left"></i></a>
@@ -99,10 +99,10 @@
                                 <button type="button" class="btn btn-default"><i class="fas fa-share"></i>
                                     Forward</button>
                             </div>
-                            <button data-toggle="modal" data-target="#modal-primary" title="Delete"
-                             type="button" class="btn btn-sm btn-danger deleteme" data-value="{{$book->id}}"><i
+                            <button data-toggle="modal" data-target="#modal-primary" title="Delete" type="button"
+                                class="btn btn-sm btn-danger deleteme" data-value="{{$book->id}}"><i
                                     class="fa fa-trash"></i>
-                            Delete</button>
+                                Delete</button>
                             <button type="button" class="btn btn-default"><i class="fas fa-print"></i> Print</button>
                         </div>
                         <!-- /.card-footer -->

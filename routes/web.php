@@ -144,7 +144,8 @@ Route::get('/user.viewbuybooks', function () {
     return view('user/viewbuybooks');
 })->name('user.viewbuybooks');
 
-Route::get('user.viewblogs/{id}',[App\Http\Controllers\GuestController::class,'blogdetails'])->name('user.viewmoreblogs');
+Route::get('user.viewblogs/{id}',[App\Http\Controllers\GuestController::class,'blogdetails',
+App\Http\Controllers\GuestController::class,'getblogcomments'])->name('user.viewmoreblogs');
 Route::get('/user.viewmoreblogs', function () {
     return view('user/viewmoreblogs');
 })->name('user.viewmoreblogs');
@@ -181,5 +182,5 @@ Route::post('admin.deletecareer',[App\Http\Controllers\AdminController::class,'d
 
 Route::post('admin.deletemessages',[App\Http\Controllers\AdminController::class,'deletemessages'])->name('admin.deletemessages');
 
-
+Route::post('user.saveblogcomment',[App\Http\Controllers\GuestController::class,'saveblogcomment'])->name('user.saveblogcomment');
 });

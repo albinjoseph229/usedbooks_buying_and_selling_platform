@@ -9,6 +9,7 @@ use App\Models\Book;
 use App\Models\Blog;
 use App\Models\Career;
 use App\Models\Message;
+use App\Models\BlogComments;
 use Hash;
 use Illuminate\Support\Facades\DB;
 
@@ -179,7 +180,7 @@ class GuestController extends Controller
         $messages=new Message();
         $messages->user_id=auth::user()->id;
         $messages->message_subject=$request->message_subject;
-                $messages->message_content=$request->message_description;
+        $messages->message_content=$request->message_description;
         $messages->save();
         if($messages)
         {
@@ -221,6 +222,38 @@ class GuestController extends Controller
         $careers=Career::where('id',$id)->select('*')->first();
        
         return view('user/viewmorecareer',['career'=>$careers]);
+
+    }
+
+    public function saveblogcomment(Request $request)
+    {
+        $validate=$request->validate([
+            'comment'=>['required'],
+            'blog_id'=>['required']
+            
+        ]);
+        
+        $blogcomment=new BlogComments();
+        $blogcomment->user_id=auth::user()->id;
+        $blogcomment->blog_id=$request->blog_id;
+        $blogcomment->comment=$request->comment;
+        $blogcomment->commentdate=date('Y-m-d');
+        $blogcomment->save();
+        if($blogcomment)
+        {
+            return back()->with('status','Comment Posted successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
+    }
+    public function getblogcomments($id)
+    {
+       
+        $blogcomments=BlogComments::join('users','users.id','blogcomments.user_id')->select('blogcomments.*','users.name','users.email',)
+        ->where('blogcomments.id',$id)->first();
+        return view('user/viewmoreblogs',['blogcomments'=>$blogcomments]);
 
     }
 }
