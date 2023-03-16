@@ -138,7 +138,7 @@
                                             <div class="comment-avatar">
                                                 <i class="icon-user aficon-user-alt" title="Author"></i>
                                                 <img width="100" height="100"
-                                                    src="../../wp-content/uploads/2018/03/user-4.png"
+                                                    src="{{asset('wp-content/uploads/2018/03/user-4.png')}}"
                                                     class="attachment-thumbnail size-thumbnail" alt="" decoding="async"
                                                     loading="lazy"
                                                     srcset="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/03/user-4.png 100w, https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/03/user-4-70x70.png 70w"
@@ -187,7 +187,7 @@
                     <div class="white-block-content">
                         <div class="seller-details flex-wrap flex-start-h">
                             <a href="../../author/admin/index.html" class="avatar-wrap">
-                                <img width="100" height="100" src="../../wp-content/uploads/2018/03/user-4.png"
+                                <img width="100" height="100" src="{{asset('wp-content/uploads/2018/03/user-4.png')}}"
                                     class="attachment-thumbnail size-thumbnail" alt="" decoding="async" loading="lazy"
                                     srcset="https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/03/user-4.png 100w, https://demo.spoonthemes.net/themes/adifier/wp-content/uploads/2018/03/user-4-70x70.png 70w"
                                     sizes="(max-width: 100px) 100vw, 100px"> </a>
@@ -293,5 +293,7 @@
             </div>
         </div>
     </div>
+
 </main>
+
 @endsection
