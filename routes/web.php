@@ -183,4 +183,7 @@ Route::post('admin.deletecareer',[App\Http\Controllers\AdminController::class,'d
 Route::post('admin.deletemessages',[App\Http\Controllers\AdminController::class,'deletemessages'])->name('admin.deletemessages');
 
 Route::post('user.saveblogcomment',[App\Http\Controllers\GuestController::class,'saveblogcomment'])->name('user.saveblogcomment');
+
+Route::post('user.savecareercomment',[App\Http\Controllers\GuestController::class,'savecareercomment'])->name('user.savecareercomment');
+
 });

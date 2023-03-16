@@ -10,6 +10,7 @@ use App\Models\Blog;
 use App\Models\Career;
 use App\Models\Message;
 use App\Models\BlogComments;
+use App\Models\CareerComments;
 use Hash;
 use Illuminate\Support\Facades\DB;
 
@@ -256,5 +257,29 @@ class GuestController extends Controller
         ->where('blogcomments.id',$id)->first();
         return view('user/viewmoreblogs',['blogcomments'=>$blogcomments]);
 
+    }
+
+    public function savecareercomment(Request $request)
+    {
+        $validate=$request->validate([
+            'comment'=>['required'],
+            'career_id'=>['required']
+            
+        ]);
+        
+        $careercomment=new CareerComments();
+        $careercomment->user_id=auth::user()->id;
+        $careercomment->career_id=$request->career_id;
+        $careercomment->comment=$request->comment;
+        $careercomment->commentdate=date('Y-m-d');
+        $careercomment->save();
+        if($careercomment)
+        {
+            return back()->with('status','Comment Posted successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
     }
 }

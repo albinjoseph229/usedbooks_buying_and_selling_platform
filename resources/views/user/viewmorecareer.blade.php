@@ -19,23 +19,34 @@
         <div class="row">
             <div class="col-sm-8">
                 <div class="white-block">
+                    
+                    @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
+                    @elseif(session('failed'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ session('failed') }}
+                    </div>
+                    @endif
                     <div class="white-block-media">
                         <img width="750" height="500" src="{{asset('cimages/'.$career->image.'')}}"
                             class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async"
-                            srcset="{{asset('cimages/'.$career->image.'')}}"
-                            sizes="(max-width: 750px) 100vw, 750px">
+                            srcset="{{asset('cimages/'.$career->image.'')}}" sizes="(max-width: 750px) 100vw, 750px">
                     </div>
                     <div class="white-block-content">
                         <h4 class="blog-item-title h3-size">{{$career->ctitle}}</h4>
                         <div class="post-content clearfix">
-                            <h5><p>{{$career->description}}</p></h5>
+                            <h5>
+                                <p>{{$career->description}}</p>
+                            </h5>
                         </div>
                         <ul class="list-inline list-unstyled single-meta top-advert-meta">
                             <li>
                                 <i class="aficon-user-alt"></i>
                                 {{$career->name}}
                             </li>
-                           
+
                             <li>
                                 <i class="aficon-dot-circle-o"></i>
                                 <a href="../category/tips-tricks/index.html" class="bz-cat"> {{$career->created_at}}</a>
@@ -44,7 +55,7 @@
                     </div>
                 </div>
 
-              
+
                 <div class="white-block">
                     <div class="white-block-title">
                         <h5>
@@ -85,7 +96,7 @@
                 </div>
 
 
-               
+
 
             </div>
 
@@ -96,7 +107,7 @@
                     </div>
                     <div class="menu-widget-menu-container">
                         <ul id="menu-widget-menu" class="menu">
-                        <li id="menu-item-362"
+                            <li id="menu-item-362"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362"><a
                                     href="{{ route('user.postblogs')}}">Post Blogs</a></li>
                             <li id="menu-item-358"
@@ -107,15 +118,16 @@
                                     href="{{ route('user.usercontactus')}}">Contact Us</a></li>
                             <li id="menu-item-360"
                                 class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-360">
-                                <a href="{{ route('user.viewblogs')}}">View Blogs</a></li>
+                                <a href="{{ route('user.viewblogs')}}">View Blogs</a>
+                            </li>
                             <li id="menu-item-361"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361"><a
                                     href="{{ route('user.sellbooks')}}">Sell Books</a></li>
-                            
+
                         </ul>
                     </div>
                 </div>
-               
+
                 <div class="white-block">
                     <div class="white-block-title">
                         <h5>Leave A Comment</h5>
@@ -125,15 +137,15 @@
                             <p id="reply-title" class="comment-reply-title"> <a rel="nofollow"
                                     id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">or
                                     cancel reply</a></p>
-                            <form action="https://demo.spoonthemes.net/themes/adifier/wp-comments-post.php"
-                                method="post" id="commentform" class="comment-form" novalidate=""><input type="hidden"
-                                    value="1" name="aff-cpt"><label for="comment">Comment *</label><textarea rows="10"
-                                    cols="100" id="comment" name="comment" class="form-control required"
-                                    placeholder="Your comment goes here..."></textarea>
+                            <form method="POST" action="{{url('user.savecareercomment')}}" enctype="multipart/form-data">
+                                @csrf
+                                <input type="hidden" value="{{$career->id}}" name="career_id"><label for="comment">Comment
+                                    *</label><textarea rows="10" cols="100" id="comment" name="comment"
+                                    class="form-control required" placeholder="Your comment goes here..."></textarea>
                                 <div class="alert-error hidden comment-required-fields">Fields marked with * are
                                     required</div>
                                 <div class="alert-error hidden comment-required-email">Email is invalid</div>
-                                
+
                                 <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit"
                                         value="Send Comment"> <input type="hidden" name="comment_post_ID" value="417"
                                         id="comment_post_ID">
@@ -145,7 +157,7 @@
                     </div>
                 </div>
 
-            </div> 
+            </div>
         </div>
     </div>
 </main>
