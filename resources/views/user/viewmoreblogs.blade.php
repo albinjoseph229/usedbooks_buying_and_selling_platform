@@ -63,8 +63,7 @@
                     <div class="white-block-content">
                         <div class="comment-content comments">
                             <!-- comment -->
-                            @php $i=1; @endphp
-                            @foreach($blogcomments as $blogcomment)
+                          
                             <div class="comment " id="comment-27">
                                 <div class="flex-wrap flex-start-h">
                                     <div class="flex-left">
@@ -91,8 +90,7 @@
 
                                 </div>
                             </div><!-- #comment-## -->
-                            @php $i++; @endphp
-                            @endforeach
+                           
                         </div>
                     </div>
                 </div>

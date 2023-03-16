@@ -254,7 +254,7 @@ class GuestController extends Controller
     {
        
         $blogcomments=BlogComments::join('users','users.id','blogcomments.user_id')->select('blogcomments.*','users.name','users.email',)
-        ->where('blogcomments.id',$id)->first();
+        ->where('blogcomments.id')->first();
         return view('user/viewmoreblogs',['blogcomments'=>$blogcomments]);
 
     }
