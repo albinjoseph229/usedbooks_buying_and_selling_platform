@@ -26,9 +26,9 @@
                             sizes="(max-width: 750px) 100vw, 750px">
                     </div>
                     <div class="white-block-content">
-                        <h4 class="blog-item-title h4-size">{{$career->ctitle}}</h4>
+                        <h4 class="blog-item-title h3-size">{{$career->ctitle}}</h4>
                         <div class="post-content clearfix">
-                            <p>{{$career->description}}</p>
+                            <h5><p>{{$career->description}}</p></h5>
                         </div>
                         <ul class="list-inline list-unstyled single-meta top-advert-meta">
                             <li>
