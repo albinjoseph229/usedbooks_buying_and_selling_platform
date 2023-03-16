@@ -258,5 +258,3 @@ class GuestController extends Controller
 
     }
 }
-
-
