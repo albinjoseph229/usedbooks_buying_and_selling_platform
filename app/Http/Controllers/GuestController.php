@@ -118,7 +118,7 @@ class GuestController extends Controller
        $fileName1="";
         if($request->file1!=""){
                     $fileName1 = time().'.'.$request->file1->extension();  
-                    $request->file1->move(public_path('blogimages'), $fileName1);
+                    $request->file1->move(public_path('bookimages'), $fileName1);
         }
         
         $fileName = time().'.'.$request->file->extension();  
@@ -135,6 +135,7 @@ class GuestController extends Controller
         $books->address=$request->address;
         $books->price=$request->price;
         $books->coverpage1=$fileName;
+        $books->coverpage2=$fileName1;
         $books->save();
         if($books)
         {
