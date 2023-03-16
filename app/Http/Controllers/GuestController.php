@@ -249,7 +249,7 @@ class GuestController extends Controller
             return back()->with('error','Some error occured please try again later..');
         }
     }
-    public function getblogcomments($id)
+    public function getblogcomments()
     {
        
         $blogcomments=BlogComments::join('users','users.id','blogcomments.user_id')->select('blogcomments.*','users.name','users.email',)

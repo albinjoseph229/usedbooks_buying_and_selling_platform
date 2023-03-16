@@ -147,7 +147,7 @@ Route::get('/user.viewbuybooks', function () {
 Route::get('user.viewblogs/{id}',[App\Http\Controllers\GuestController::class,'blogdetails',
 App\Http\Controllers\GuestController::class,'getblogcomments'])->name('user.viewmoreblogs');
 Route::get('/user.viewmoreblogs', function () {
-    return view('user/viewmoreblogs');
+    return view('user.viewmoreblogs');
 })->name('user.viewmoreblogs');
 
 Route::get('user.viewcareer/{id}',[App\Http\Controllers\GuestController::class,'careerdetails'])->name('user.viewmorecareer');

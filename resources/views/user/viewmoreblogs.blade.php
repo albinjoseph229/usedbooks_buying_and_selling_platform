@@ -64,7 +64,7 @@
                         <div class="comment-content comments">
                             <!-- comment -->
                             @php $i=1; @endphp
-                            @foreach($blogs as $blogcomment)
+                            @foreach($blogcomments as $blogcomment)
                             <div class="comment " id="comment-27">
                                 <div class="flex-wrap flex-start-h">
                                     <div class="flex-left">
