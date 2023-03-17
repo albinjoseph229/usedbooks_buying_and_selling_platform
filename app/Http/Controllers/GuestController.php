@@ -211,19 +211,22 @@ class GuestController extends Controller
 
     public function blogdetails($id)
     {
-       
+        $blogcomments=BlogComments::join('users','users.id','blogcomments.user_id')->select('blogcomments.*','users.name','users.email',)
+        ->where('blogcomments.blog_id',$id)->get();
         $blog=Blog::join('users','users.id','blogs.user_id')->select('blogs.*','users.name','users.email',)
         ->where('blogs.id',$id)->first();
-        return view('user/viewmoreblogs',['blogs'=>$blog]);
+        return view('user/viewmoreblogs',['blogs'=>$blog,'blogcomments'=>$blogcomments]);
 
     }
     
     public function careerdetails($id)
     {
+        $careercomments=CareerComments::join('users','users.id','career_comments.user_id')->select('career_comments.*','users.name','users.email',)
+        ->where('career_comments.career_id',$id)->get();
        
         $careers=Career::where('id',$id)->select('*')->first();
-       
         return view('user/viewmorecareer',['career'=>$careers]);
+        
 
     }
 
@@ -250,14 +253,7 @@ class GuestController extends Controller
             return back()->with('error','Some error occured please try again later..');
         }
     }
-    public function getblogcomments()
-    {
-       
-        $blogcomments=BlogComments::join('users','users.id','blogcomments.user_id')->select('blogcomments.*','users.name','users.email',)
-        ->where('blogcomments.id')->first();
-        return view('user/viewmoreblogs',['blogcomments'=>$blogcomments]);
-
-    }
+  
 
     public function savecareercomment(Request $request)
     {

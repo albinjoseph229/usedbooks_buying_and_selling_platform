@@ -58,12 +58,12 @@
                 <div class="white-block">
                     <div class="white-block-title">
                         <h5>
-                            1 Comment </h5>
+                            {{count($blogcomments)}} Comments</h5>
                     </div>
                     <div class="white-block-content">
                         <div class="comment-content comments">
                             <!-- comment -->
-                          
+                          @foreach($blogcomments as $blogcomment)
                             <div class="comment " id="comment-27">
                                 <div class="flex-wrap flex-start-h">
                                     <div class="flex-left">
@@ -79,17 +79,19 @@
                                             </div>
 
                                             <div class="comment-info">
-                                                <h5>Sally Doe</h5>
-                                                <p>March 18, 2018 at 1:16 pm </p>
+                                                <h5>{{$blogcomment->name}}</h5>
+                                                <p>{{$blogcomment->created_at}}</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="comment-content-wrap">
-                                    <p>comment</p>
+                                    <p>{{$blogcomment->comment}}</p>
 
                                 </div>
-                            </div><!-- #comment-## -->
+                            </div>
+                            @endforeach
+                            <!-- #comment-## -->
                            
                         </div>
                     </div>
