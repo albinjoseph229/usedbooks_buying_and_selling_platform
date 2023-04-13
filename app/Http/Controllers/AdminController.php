@@ -11,6 +11,9 @@ use App\Models\Career;
 use App\Models\Transaction;
 use App\Models\Blog;
 use App\Models\Message;
+use App\Models\BookComplaint;
+use App\Models\CareerComments;
+use App\Models\BlogComments;
 use Session;
 use Hash;
 
@@ -75,7 +78,8 @@ class AdminController extends Controller
 
     public function gettransactions()
     {
-        $transactions=Transaction::select('*')->get();
+        $transactions=Transaction::join('book','book.id','booksales.book_id')->join('users','users.id','booksales.buyer_id')->select('booksales.*','users.name','book.seller')->get();
+
         return view('admin/viewtransactions',['transactions'=> $transactions]);
         
     }
@@ -244,10 +248,63 @@ class AdminController extends Controller
     public function bookdetails($id)
     {
        // $book=Book::where('id',$id)->select('*')->first();
-        $book=Book::join('users','users.id','book.sellers_id')->select('book.*','users.name','users.email',)
-        ->where('book.id',$id)->first();
+        $book=Book::join('users','users.id','book.sellers_id')->select('book.*','users.name','users.email')->where('book.id',$id)->first();
         return view('admin/viewmorebooks',['book'=>$book]);
 
+    }
+    public function viewcomplaints($id)
+    {
+        $complaints=BookComplaint::join('book','book.id','bookcomplaint.book_id')->join('users','users.id','bookcomplaint.buyer_id')->select('bookcomplaint.*','users.name','book.bookname','book.seller')->where('bookcomplaint.book_id',$id)->get();
+        return view('admin.viewcomplaints',['complaints'=>$complaints]);
+    }
+    public function deletecomplaint(Request $request)
+    {
+        $id=$request->dodelete;
+        $delete=BookComplaint::where('id',$id)->delete();
+        if($delete)
+        {
+            return back()->with('status','Complaint deleted successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
+    }
+    public function viewcareercomments($id)
+    {
+        $comments=CareerComments::join('career','career.id','career_comments.career_id')->join('users','users.id','career_comments.user_id')->select('career_comments.*','users.name')->where('career_comments.career_id',$id)->get();
+        return view('admin/viewcareercomments',['comments'=>$comments]);
+    }
+    public function deletecomment(Request $request)
+    {
+        $id=$request->dodelete;
+        $delete=CareerComments::where('id',$id)->delete();
+        if($delete)
+        {
+            return back()->with('status','Commment deleted successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
+    }
+    public function viewblogcomments($id)
+    {
+        $comments=BlogComments::join('blogs','blogs.id','blogcomments.blog_id')->join('users','users.id','blogcomments.user_id')->select('blogcomments.*','users.name')->where('blogcomments.blog_id',$id)->get();
+        return view('admin/viewblogcomments',['comments'=>$comments]);
+    }
+    public function deleteblogcomment(Request $request)
+    {
+        $id=$request->dodelete;
+        $delete=BlogComments::where('id',$id)->delete();
+        if($delete)
+        {
+            return back()->with('status','Commment deleted successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
     }
 
 }

@@ -409,9 +409,11 @@
             @php $i++; @endphp
             @endforeach
         </div>
-        <div class="pagination">
-            <span aria-current="page" class="page-numbers current">1</span>
-            <a class="page-numbers" href="index5f6c.html?af_page=2">2</a>
+      
+        <div class="">
+           
+            {{ $books->links() }}
+                       
         </div>
 
     </div>

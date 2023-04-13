@@ -11,6 +11,10 @@ use App\Models\Career;
 use App\Models\Message;
 use App\Models\BlogComments;
 use App\Models\CareerComments;
+use App\Models\BookSales;
+use App\Models\CommentReplies;
+use App\Models\BookComplaint;
+use App\Models\Transaction;
 use Hash;
 use Illuminate\Support\Facades\DB;
 
@@ -128,6 +132,7 @@ class GuestController extends Controller
 
         $books=new Book();
         $books->sellers_id=auth::user()->id;
+        $books->seller=auth::user()->name;
         $books->bookdate=date('Y-m-d');
         $books->bookname=$request->bookname;
         $books->bookdescription=$request->bookdescription;
@@ -167,7 +172,7 @@ class GuestController extends Controller
 
     public function getbooks()
     {
-        $books=Book::select('*')->get();
+        $books=Book::select('*')->paginate(8);
         return view('user/buybooks',['books'=> $books]);
         $data=books::paginate(2);
         $books=Book::count();
@@ -205,7 +210,93 @@ class GuestController extends Controller
        // $book=Book::where('id',$id)->select('*')->first();
         $book=Book::join('users','users.id','book.sellers_id')->select('book.*','users.name','users.email',)
         ->where('book.id',$id)->first();
-        return view('user/viewbuybooks',['book'=>$book]);
+        $comments=CommentReplies::select('*')->where('book_id',$book->id)->where('seller_id',$book->sellers_id)->where('buyer_id',auth::user()->id)->get();
+        $binterest=BookSales::select('status')->where('book_id',$book->id)->where('seller_id',$book->sellers_id)->where('buyer_id',auth::user()->id)->first();
+        $complaints=BookComplaint::select('*')->where('book_id',$book->id)->where('seller_id',$book->sellers_id)->get();
+        return view('user/viewbuybooks',['book'=>$book,'comments'=>$comments,'intereststatus'=>$binterest,'complaints'=>$complaints]);
+
+    }
+    public function sendinterest(Request $request)
+    {
+        $validated=$request->validate([
+            'seller'=>['required'],
+            'book'=>['required'],
+            'bookname'=>['required'],
+            'price'=>['required'],
+        ]);
+        $check=BookSales::select('id')->where('book_id',$request->book)->where('seller_id',$request->seller)->where('buyer_id',auth::user()->id)->get();
+        if(count($check)>0){
+            return back()->with('error','You have already send interest..');
+        }
+        else
+        {
+            $intr=new BookSales();
+            $intr->book_id=$request->book;
+            $intr->bname=$request->bookname;
+            $intr->seller_id=$request->seller;
+            $intr->buyer_id=auth::user()->id;
+            $intr->amount=$request->price;
+            $intr->date=date('Y-m-d');
+            $intr->status=0;
+            $intr->save();
+            if($intr)
+            {
+                return back()->with('status','Your Interest Sent Successfully..');
+            }
+            else
+            {
+                return back()->with('error','Some error occured please try again later..');
+            }
+        }
+        
+    }
+    public function sendcomment(Request $request)
+    {
+        $validated=$request->validate([
+            'cbook'=>['required'],
+            'cseller'=>['required'],
+            'comment'=>['required'],
+        ]);
+        $cmnt=new CommentReplies();
+        $cmnt->buyer_id=auth::user()->id;
+        $cmnt->seller_id=$request->cseller;
+        $cmnt->book_id=$request->cbook;
+        $cmnt->comment=$request->comment;
+        $cmnt->date=date('Y-m-d');
+        $cmnt->save();
+        if($cmnt)
+            {
+                return back()->with('status','Your Comment Sent Successfully..');
+            }
+            else
+            {
+                return back()->with('error','Some error occured please try again later..');
+            }
+       
+
+    }
+    public function sendcomplaint(Request $request)
+    {
+        $validated=$request->validate([
+            'mbook'=>['required'],
+            'mseller'=>['required'],
+            'complaint'=>['required'],
+        ]);
+        $cmnt=new BookComplaint();
+        $cmnt->buyer_id=auth::user()->id;
+        $cmnt->seller_id=$request->mseller;
+        $cmnt->book_id=$request->mbook;
+        $cmnt->complaint=$request->complaint;
+        $cmnt->save();
+        if($cmnt)
+            {
+                return back()->with('status','Your Complaint Sent Successfully..');
+            }
+            else
+            {
+                return back()->with('error','Some error occured please try again later..');
+            }
+       
 
     }
 
@@ -223,11 +314,8 @@ class GuestController extends Controller
     {
         $careercomments=CareerComments::join('users','users.id','career_comments.user_id')->select('career_comments.*','users.name','users.email',)
         ->where('career_comments.career_id',$id)->get();
-       
         $careers=Career::where('id',$id)->select('*')->first();
         return view('user/viewmorecareer',['career'=>$careers]);
-        
-
     }
 
     public function saveblogcomment(Request $request)
@@ -272,6 +360,113 @@ class GuestController extends Controller
         if($careercomment)
         {
             return back()->with('status','Comment Posted successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
+    }
+    public function dashboard()
+    {
+        return view('user.dashboard');
+    }
+    public function viewmyblogs()
+    {
+        $blogs=Blog::select('*')->where('user_id',auth::user()->id)->get();
+        return view('user.viewmyblogs',['blogs'=>$blogs]);
+    }
+    public function viewblogcomments($id)
+    {
+        $comments=BlogComments::join('blogs','blogs.id','blogcomments.blog_id')->join('users','users.id','blogcomments.user_id')->select('blogcomments.*','users.name')->where('blogcomments.blog_id',$id)->get();
+        return view('user/myblogcomments',['comments'=>$comments]);
+    }
+    public function deleteblogcomment(Request $request)
+    {
+        $id=$request->dodelete;
+        $delete=BlogComments::where('id',$id)->delete();
+        if($delete)
+        {
+            return back()->with('status','Commment deleted successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
+    }
+    public function deleteblog(Request $request)
+    {
+        $id=$request->dodelete;
+        $delete=Blog::where('id',$id)->delete();
+        if($delete)
+        {
+            return back()->with('status','Blog deleted successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
+    }
+    public function viewmybooks()
+    {
+        $books=Book::join('users','users.id','book.sellers_id')->select('book.*','users.name')->where('book.sellers_id',auth::user()->id)->get();
+        return view('user/viewmybooks',['books'=> $books]);
+    }
+    public function deletebooks(Request $request)
+    {
+        $id=$request->dodelete;
+        $delete=Book::where('id',$id)->delete();
+        if($delete)
+        {
+            return back()->with('status','Book deleted successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
+    }
+    public function viewcomplaints($id)
+    {
+        $complaints=BookComplaint::join('book','book.id','bookcomplaint.book_id')->join('users','users.id','bookcomplaint.buyer_id')->select('bookcomplaint.*','users.name','book.bookname','book.seller')->where('bookcomplaint.book_id',$id)->get();
+        return view('user.viewcomplaints',['complaints'=>$complaints]);
+    }
+    public function deletecomplaint(Request $request)
+    {
+        $id=$request->dodelete;
+        $delete=BookComplaint::where('id',$id)->delete();
+        if($delete)
+        {
+            return back()->with('status','Complaint deleted successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
+    }
+    public function bookrequests()
+    {
+        $requests=Transaction::join('users','users.id','booksales.buyer_id')->select('booksales.*','users.name','users.phoneno')->where('booksales.seller_id',auth::user()->id)->get();
+        return view('user.viewbookrequests',['requests'=>$requests]);
+    }
+    public function deleteintbooks()
+    {
+        $id=$request->dodelete;
+        $delete=Transaction::where('id',$id)->delete();
+        if($delete)
+        {
+            return back()->with('status','Complaint deleted successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occured please try again later..');
+        }
+    }
+    public function acceptrequest(Request $request)
+    {
+        $id=$request->doupdate;
+        $update=Transaction::where('id',$id)->update(['status'=>1]);
+        if($update)
+        {
+            return back()->with('status','You are accepted the request..');
         }
         else
         {

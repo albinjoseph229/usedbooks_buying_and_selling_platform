@@ -7,12 +7,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>View Books</h1>
+                    <h1>View Complaints</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{ route('adminhome')}}">Home</a></li>
-                        <li class="breadcrumb-item active">View Books</li>
+                        <li class="breadcrumb-item active">View Complaints</li>
                     </ol>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">View Books</h3>
+                            <h3 class="card-title">View Complaints</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -45,33 +45,30 @@
                                         <thead>
                                             <tr>
                                                 <th>S.No</th>
-                                                <th>Title</th>
-                                                <th>User Name</th>
-                                                <th>Price</th>
-                                                <th>Date</th>
+                                                <th>Book</th>
+                                                <th>Seller</th>
+                                                <th>Buyer</th>
+                                                <th>Complaint</th>
+                                              
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                     <tbody>
                                         @php $i=1; @endphp
-                                        @foreach($books as $book)
+                                        @foreach($complaints as $complaint)
                                         <tr>
                                             <td>{{$i}}</td>
-                                            <td>{{$book->bookname}}</td>
-                                            <td>{{$book->name}}</td>
-                                            <td>{{$book->price}}</td>
-                                            <td>{{$book->created_at}}</td>
+                                            <td>{{$complaint->bookname}}</td>
+                                            <td>{{$complaint->seller}}</td>
+                                            <td>{{$complaint->name}}</td>
+                                           <td>{{$complaint->complaint}}</td>
 
 
                                             <td>
                                                 <button title="Delete Book" class="btn btn-danger btn-sm deleteme"
-                                                    data-value="{{$book->id}}" data-toggle="modal"
+                                                    data-value="{{$complaint->id}}" data-toggle="modal"
                                                     data-target="#modal-primary"><i class="fa fa-trash"></i></button>
-                                                <a title="View more " href="{{url('admin.viewbooks/'.$book->id.'')}}"
-                                                    class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
-                                                <a title="View complaints" href="{{ route('admin.viewcomplaints',$book->id)}}"
-                                                    class="btn btn-sm btn-warning"><i class=" 	fas fa-frown"></i></a>
-                                                   
+                                             
                                             </td>
                                             </td>
                                         </tr>
@@ -81,11 +78,12 @@
                                     <tfoot>
                                         <tr>
                                             <th>S.No</th>
-                                            <th>Title</th>
-                                            <th>User Name</th>
-                                            <th>Price</th>
-                                            <th>Date</th>
-                                            <th>Action</th>
+                                                <th>Book</th>
+                                                <th>Seller</th>
+                                                <th>Buyer</th>
+                                                <th>Complaint</th>
+                                              
+                                                <th>Action</th>
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -107,12 +105,12 @@
     <div class="modal-dialog">
         <div class="modal-content bg-danger">
             <div class="modal-header">
-                <h4 class="modal-title">Delete Blogs</h4>
+                <h4 class="modal-title">Delete Complaint</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <form method="post" action="{{route('admin.deletebooks')}}">
+            <form method="post" action="{{route('admin.deletecomplaint')}}">
                 @csrf
                 <div class="modal-body">
                     <input type="hidden" id="dodelete" name="dodelete" />

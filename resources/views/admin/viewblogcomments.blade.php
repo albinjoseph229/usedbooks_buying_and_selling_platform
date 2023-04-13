@@ -1,154 +1,122 @@
 @extends('layout/adminmaster')
 @section('content')
-<div class="content-wrapper" style="min-height: 2056.4px;">
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>View Blog comments</h1>
+                    <h1>View Comments</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{ route('adminhome')}}">Home</a></li>
-                        <li class="breadcrumb-item active">VIew Blogs/View Blog comments>
+                        <li class="breadcrumb-item active">View Comments</li>
                     </ol>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
     </section>
 
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header p-2">
-                <ul class="nav nav-pills">
-                    <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Activity</a></li>
-
-                </ul>
-            </div><!-- /.card-header -->
-            <div class="card-body">
-                <div class="tab-content">
-                    <div class="active tab-pane" id="activity">
-                        <!-- Post -->
-                        <div class="post">
-                            <div class="user-block">
-                                <img class="img-circle img-bordered-sm" src="admin/dist/img/user1-128x128.jpg"
-                                    alt="user image">
-                                <span class="username">
-                                    <a href="#">Jonathan Burke Jr.</a>
-                                    <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
-                                </span>
-                                <span class="description">Shared publicly - 7:30 PM today</span>
-                            </div>
-                            <!-- /.user-block -->
-                            <p>
-                                Lorem ipsum represents a long-held tradition for designers,
-                                typographers and the like. Some people hate it and argue for
-                                its demise, but others ignore the hate as they create awesome
-                                tools to help create filler text for everyone from bacon lovers
-                                to Charlie Sheen fans.
-                            </p>
-
-                            <p>
-                                <a href="#" class="link-black text-sm mr-2"><i class="fas fa-share mr-1"></i> Share</a>
-                                <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Like</a>
-                                <span class="float-right">
-                                    <a href="#" class="link-black text-sm">
-                                        <i class="far fa-comments mr-1"></i> Comments (5)
-                                    </a>
-                                </span>
-                            </p>
-
-                            <input class="form-control form-control-sm" type="text" placeholder="Type a comment">
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">View Comments</h3>
                         </div>
-                        <!-- /.post -->
-
-                        <!-- Post -->
-                        <div class="post clearfix">
-                            <div class="user-block">
-                                <img class="img-circle img-bordered-sm" src="admin/dist/img/user7-128x128.jpg"
-                                    alt="User Image">
-                                <span class="username">
-                                    <a href="#">Sarah Ross</a>
-                                    <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
-                                </span>
-                                <span class="description">Sent you a message - 3 days ago</span>
-                            </div>
-                            <!-- /.user-block -->
-                            <p>
-                                Lorem ipsum represents a long-held tradition for designers,
-                                typographers and the like. Some people hate it and argue for
-                                its demise, but others ignore the hate as they create awesome
-                                tools to help create filler text for everyone from bacon lovers
-                                to Charlie Sheen fans.
-                            </p>
-
-                            <form class="form-horizontal">
-                                <div class="input-group input-group-sm mb-0">
-                                    <input class="form-control form-control-sm" placeholder="Response">
-                                    <div class="input-group-append">
-                                        <button type="submit" class="btn btn-danger">Send</button>
-                                    </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-hover">
+                                @if (session('status'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('status') }}
                                 </div>
-                            </form>
+                                @elseif(session('error'))
+                                <div class="alert alert-danger" role="alert">
+                                    {{ session('error') }}
+                                </div>
+                                @endif
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <thead>
+                                            <tr>
+                                                <th>S.No</th>
+                                                <th>User</th>
+                                                <th>Comment</th>
+                                                <th>Date</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                    <tbody>
+                                        @php $i=1; @endphp
+                                        @foreach($comments as $comment)
+                                        <tr>
+                                            <td>{{$i}}</td>
+                                            <td>{{$comment->name}}</td>
+                                            <td>{{$comment->comment}}</td>
+                                            <td>{{$comment->commentdate}}</td>
+                                             <td>
+                                                <button title="Delete Book" class="btn btn-danger btn-sm deleteme"
+                                                    data-value="{{$comment->id}}" data-toggle="modal"
+                                                    data-target="#modal-primary"><i class="fa fa-trash"></i></button>
+                                             
+                                            </td>
+                                            </td>
+                                        </tr>
+                                        @php $i++; @endphp
+                                        @endforeach
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>S.No</th>
+                                            <th>User</th>
+                                            <th>Comment</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
                         </div>
-                        <!-- /.post -->
-
-                        <!-- Post -->
-                        <div class="post">
-                            <div class="user-block">
-                                <img class="img-circle img-bordered-sm" src="admin/dist/img/user6-128x128.jpg"
-                                    alt="User Image">
-                                <span class="username">
-                                    <a href="#">Adam Jones</a>
-                                    <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
-                                </span>
-                                <span class="description">Posted 5 photos - 5 days ago</span>
-                            </div>
-                            <!-- /.user-block -->
-                            <div class="row mb-3">
-                                <div class="col-sm-6">
-                                    <img class="img-fluid" src="admin/dist/img/photo1.png" alt="Photo">
-                                </div>
-                                <!-- /.col -->
-                                <div class="col-sm-6">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <img class="img-fluid mb-3" src="admin/dist/img/photo2.png" alt="Photo">
-                                            <img class="img-fluid" src="admin/dist/img/photo3.jpg" alt="Photo">
-                                        </div>
-                                        <!-- /.col -->
-                                        <div class="col-sm-6">
-                                            <img class="img-fluid mb-3" src="admin/dist/img/photo4.jpg" alt="Photo">
-                                            <img class="img-fluid" src="admin/dist/img/photo1.png" alt="Photo">
-                                        </div>
-                                        <!-- /.col -->
-                                    </div>
-                                    <!-- /.row -->
-                                </div>
-                                <!-- /.col -->
-                            </div>
-                            <!-- /.row -->
-
-                            <p>
-                                <a href="#" class="link-black text-sm mr-2"><i class="fas fa-share mr-1"></i> Share</a>
-                                <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Like</a>
-                                <span class="float-right">
-                                    <a href="#" class="link-black text-sm">
-                                        <i class="far fa-comments mr-1"></i> Comments (5)
-                                    </a>
-                                </span>
-                            </p>
-
-                            <input class="form-control form-control-sm" type="text" placeholder="Type a comment">
-                        </div>
-                        <!-- /.post -->
+                        <!-- /.card-body -->
                     </div>
-
-
-                </div><!-- /.card-body -->
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
             </div>
-            <!-- /.card -->
+            <!-- /.row -->
         </div>
-
-        @endsection
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<div class="modal fade" id="modal-primary" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-danger">
+            <div class="modal-header">
+                <h4 class="modal-title">Delete Complaint</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <form method="post" action="{{route('admin.deletecomment')}}">
+                @csrf
+                <div class="modal-body">
+                    <input type="hidden" id="dodelete" name="dodelete" />
+                    <p>Are You Sure ?</p>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-outline-light">OK</button>
+                </div>
+            </form>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+@endsection

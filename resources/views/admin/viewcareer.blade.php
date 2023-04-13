@@ -65,7 +65,7 @@
                                             <button data-toggle="modal" data-target="#modal-primary" title="Delete"
                                                 type="button" class="btn btn-sm btn-danger deleteme"
                                                 data-value="{{$career->id}}"><i class="fa fa-trash"></i></button>
-                                            <a title="View Comments" href="{{ route('admin.viewcareercomments')}}"
+                                            <a title="View Comments" href="{{ route('admin.viewcareercomments',$career->id)}}"
                                                 class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
                                             <a title="View More" href="{{url('admin.viewcareer/'.$career->id.'')}}"
                                                 class="btn btn-sm btn-primary"><i class="fas fa-folder"></i></a>

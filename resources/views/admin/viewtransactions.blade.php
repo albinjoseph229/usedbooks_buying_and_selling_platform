@@ -50,10 +50,10 @@
                                     <tr>
                                         <td>{{$i}}</td>
                                         <td>{{$transactions->bname}}</td>
-                                        <td>{{$transactions->buyer_id}}</td>
-                                        <td>{{$transactions->seller_id}}</td>
+                                        <td>{{$transactions->name}}</td>
+                                        <td>{{$transactions->seller}}</td>
                                         <td>{{$transactions->updated_at}}</td>
-                                        <td><span class="badge bg-success">Completed</span></td>
+                                        <td>@if($transactions->status==0)<span class="badge bg-info">Pending</span>@else<span class="badge bg-success">Completed</span>@endif</td>
                                     </tr>
                                     @php $i++; @endphp
                                     @endforeach

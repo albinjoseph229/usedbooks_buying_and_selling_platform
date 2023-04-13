@@ -66,7 +66,7 @@
                                                 data-target="#modal-primary"><i class="fa fa-trash"></i></button>
                                             <a title="View More" href="{{url('admin.viewblogs/'.$blogs->id.'')}}"
                                                 class="btn btn-sm btn-primary"><i class="fas fa-folder"></i></a>
-                                            <a title="View Comments" href="{{ route('admin.viewblogcomments')}}"
+                                            <a title="View Comments" href="{{ route('admin.viewblogcomments',$blogs->id)}}"
                                                 class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
                                         </td>
                                     </tr>

@@ -833,7 +833,7 @@
     class="home page-template page-template-page-tpl_home page-template-page-tpl_home-php page page-id-10 kingcomposer kc-css-system">
 
     <header class="header-2 header-3 sticky-header sticky-nav" style="top: 0px;">
-        <div class="container">
+        <div class="container" style="width: 90%;">
             <div class="flex-wrap">
 
                 <div class="show-on-414">
@@ -854,6 +854,11 @@
                             <a title="Buy Books" href="{{ route('user.buybooks')}}" data-toggle="dropdown"
                                 class="dropdown-toggle" data-hover="dropdown" aria-haspopup="true">Buy Books </a>
                         </li>
+                        <li id="menu-item-2"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2 ">
+                        <a title="Buy Books" href="{{ route('user.dashboard')}}" data-toggle="dropdown"
+                            class="dropdown-toggle" data-hover="dropdown" aria-haspopup="true">My DashBoard </a>
+                    </li>
                         <li id="menu-item-3"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3 ">
                             <a title="Career" href="{{ route('user.viewcareer')}}" data-toggle="dropdown"
@@ -1042,4 +1047,44 @@
             </div>
         </div>
 
+    <!-- jQuery -->
+    <script src="{{asset('admin/plugins/jquery/jquery.min.js')}}"></script>
+   
+    <script src="{{asset('admin/plugins/jquery/jquery.min.js')}}"></script>
+    <!-- Bootstrap 4 -->
+  
+    <!-- DataTables  & Plugins -->
+    <script src="{{asset('admin/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('admin/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('admin/plugins/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
+    <script src="{{asset('admin/plugins/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('admin/plugins/jszip/jszip.min.js')}}"></script>
+    
+    <script src="{{asset('admin/plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>
+    <script src="{{asset('admin/plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
+    <script src="{{asset('admin/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
+    <script>
+    $(function() {
+      
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+    </script>
+    <script>
+    $(function() {
+
+        $('.deleteme').click(function() {
+            $('#dodelete').val($(this).data('value'));
+        });
+    });
+    </script>
     </footer>

@@ -1,6 +1,6 @@
 @extends('layout/master')
 @section('content')
-<link href='https://css.gg/eye.css' rel='stylesheet'>
+
 <div class="container" style="margin-top: 40px;width: 30%;border: black;background: white;padding: 42px;" class="container"
     style="margin-top: 405px;">
     <div class="white-block">
