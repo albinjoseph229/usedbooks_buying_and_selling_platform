@@ -375,6 +375,8 @@ class GuestController extends Controller
         $blogs=Blog::select('*')->where('user_id',auth::user()->id)->get();
         return view('user.viewmyblogs',['blogs'=>$blogs]);
     }
+
+    
     public function viewblogcomments($id)
     {
         $comments=BlogComments::join('blogs','blogs.id','blogcomments.blog_id')->join('users','users.id','blogcomments.user_id')->select('blogcomments.*','users.name')->where('blogcomments.blog_id',$id)->get();
