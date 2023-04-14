@@ -125,7 +125,7 @@
 
                         <ul class="list-inline list-unstyled single-meta top-advert-meta">
                             <li>
-                                
+
                                 <b>Location :</b> {{$book->location}}
 
                             </li>
@@ -141,25 +141,25 @@
                             <input type="hidden" name="book" id="book" value="{{$book->id}}">
                             <input type="hidden" name="bookname" id="bookname" value="{{$book->bookname}}">
                             <input type="hidden" name="price" id="price" value="{{$book->price}}">
-                           
+
                             @if(isset(Auth::user()->id))
 
-                                @if($book->sellers_id==Auth::user()->id)
-                                    <span>You are the author , you cannot buy</span>
-                                @else
-                                    @if(isset($intereststatus))
-                                        @if($intereststatus->status==0)
-                                            <button type="submit"  class="btn submit" >I am Interested</button>
-                                        @endif
-                                    @else
-                                        <button type="submit"  class="btn submit" >I am Interested</button>
-                                    @endif
-
-                                @endif
+                            @if($book->sellers_id==Auth::user()->id)
+                            <span>You are the author , you cannot buy</span>
                             @else
-                            <a href="{{route('login')}}">Please Login to continue</a>
+                            @if(isset($intereststatus))
+                            @if($intereststatus->status==0)
+                            <button type="submit" class="btn submit">I am Interested</button>
                             @endif
-                      
+                            @else
+                            <button type="submit" class="btn submit">I am Interested</button>
+                            @endif
+
+                            @endif
+                            @else
+                            <a href="{{route('login')}}">Please Login to continue!</a>
+                            @endif
+
                         </form>
                     </div>
                 </div>
@@ -176,7 +176,7 @@
                                 <div class="flex-wrap flex-start-h">
                                     <div class="flex-left">
                                         <div class="flex-wrap flex-start-h">
-                                           
+
                                             <div class="comment-info">
                                                 <h5>{{Auth::user()->name}}</h5>
                                                 <p>{{$comment->created_at}} </p>
@@ -194,12 +194,13 @@
                                     <p>{{$comment->reply}}</p>
 
                                 </div>
-                            </div><!-- #comment-## -->
+                            </div>
+                            <!-- #comment-## -->
                             @endforeach
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="white-block">
                     <div class="white-block-title">
                         <h5>
@@ -213,20 +214,20 @@
                                 <div class="flex-wrap flex-start-h">
                                     <div class="flex-left">
                                         <div class="flex-wrap flex-start-h">
-                                           
+
                                             <div class="comment-info">
-                                              
+
                                                 <p>{{$complaint->created_at}} </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="comment-content-wrap">
-                                  
+
                                     <p>{{$complaint->complaint}}</p>
 
                                 </div>
-                               
+
                             </div><!-- #comment-## -->
                             @endforeach
                         </div>
@@ -296,13 +297,13 @@
                     <div class="white-block-content">
                         @if(isset($intereststatus))
                         @if($intereststatus->status==0)
-                     <span>Pending</span>
-                     @elseif($intereststatus->status==1)
-                     <span>Confirmed</span>
-                     @else
-                     <span>Seller Not Interested</span>
-                     @endif
-                     @endif
+                        <span>Pending</span>
+                        @elseif($intereststatus->status==1)
+                        <span>Confirmed</span>
+                        @else
+                        <span>Seller Not Interested</span>
+                        @endif
+                        @endif
                     </div>
                 </div>
                 <div class="hide-print small-screen-last">
@@ -318,17 +319,17 @@
                                 <p id="reply-title" class="comment-reply-title"> <a rel="nofollow"
                                         id="cancel-comment-reply-link" href="index.html#respond"
                                         style="display:none;">or cancel reply</a></p>
-                                <form action="{{route('user.sendcomment')}}"  method="post">
+                                <form action="{{route('user.sendcomment')}}" method="post">
                                     @csrf
                                     <label for="comment">Comment
                                         *</label>
-                                        <textarea required rows="10" cols="100" id="comment" name="comment"
+                                    <textarea required rows="10" cols="100" id="comment" name="comment"
                                         class="form-control required"
                                         placeholder="Your comment goes here..."></textarea>
                                     <div class="alert-error hidden comment-required-fields">Fields marked with * are
                                         required</div>
-                                        <input type="hidden" name="cseller" id="cseller" value="{{$book->sellers_id}}">
-                                 <input type="hidden" name="cbook" id="cbook" value="{{$book->id}}">
+                                    <input type="hidden" name="cseller" id="cseller" value="{{$book->sellers_id}}">
+                                    <input type="hidden" name="cbook" id="cbook" value="{{$book->id}}">
                                     <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit"
                                             value="Send Comment"> <input type="hidden" name="comment_post_ID" value="88"
                                             id="comment_post_ID">
@@ -345,21 +346,21 @@
                         </div>
                         <div class="white-block-content">
                             <div id="respond" class="comment-respond">
-                               
-                                <form action="{{route('user.sendcomplaint')}}"  method="post">
+
+                                <form action="{{route('user.sendcomplaint')}}" method="post">
                                     @csrf
                                     <label for="comment">Complaint
                                         *</label>
-                                        <textarea required rows="10" cols="100" id="complaint" name="complaint"
+                                    <textarea required rows="10" cols="100" id="complaint" name="complaint"
                                         class="form-control required"
                                         placeholder="Your Complaint goes here..."></textarea>
                                     <div class="alert-error hidden comment-required-fields">Fields marked with * are
                                         required</div>
-                                        <input type="hidden" name="mseller" id="mseller" value="{{$book->sellers_id}}">
-                                 <input type="hidden" name="mbook" id="mbook" value="{{$book->id}}">
+                                    <input type="hidden" name="mseller" id="mseller" value="{{$book->sellers_id}}">
+                                    <input type="hidden" name="mbook" id="mbook" value="{{$book->id}}">
                                     <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit"
-                                            value="Send Complaint"> <input type="hidden" name="comment_post_ID" value="88"
-                                            id="comment_post_ID">
+                                            value="Send Complaint"> <input type="hidden" name="comment_post_ID"
+                                            value="88" id="comment_post_ID">
                                         <input type="hidden" name="comment_parent" id="comment_parent" value="0">
                                     </p>
                                 </form>
