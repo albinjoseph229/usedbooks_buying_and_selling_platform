@@ -369,10 +369,9 @@ class GuestController extends Controller
 
     public function viewcareercomments($id)
     {
-        $comments=CareerComments::join('career','career.id','careercomments.career_id')->join('users','users.id','careercomments.user_id')->select('careercomments.*','users.name')->where('careercomments.career_id',$id)->get();
-        return view('user/mycareercomments',['comments'=>$comments]);
+        $comments=CareerComments::join('career','career.id','career_comments.career_id')->join('users','users.id','career_comments.user_id')->select('career_comments.*','users.name')->where('career_comments.career_id',$id)->get();
+        return view('user/viewcareercomments',['comments'=>$comments]);
     }
-
     public function dashboard()
     {
         return view('user.dashboard');

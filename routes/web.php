@@ -47,7 +47,6 @@ Route::group(['middleware' => ['auth','prevent-back-history']],function()
 
 {
    
-
 Route::get('logout',[App\Http\Controllers\AdminController::class,'logout'])->name('logout');
 
 // admin routes
@@ -87,17 +86,21 @@ Route::get('/admin.postcareer', function () {
 })->name('admin.postcareer');
 
 Route::get('admin.viewcareercomments/{id}',[App\Http\Controllers\AdminController::class,'viewcareercomments'])->name('admin.viewcareercomments');
-Route::post('admin.deletecomment',[App\Http\Controllers\AdminController::class,'deletecomment'])->name('admin.deletecomment');
-Route::get('/admin.viewblogcomments/{id}',[App\Http\Controllers\AdminController::class,'viewblogcomments'] )->name('admin.viewblogcomments');
-Route::post('admin.deleteblogcomment',[App\Http\Controllers\AdminController::class,'deleteblogcomment'])->name('admin.deleteblogcomment');
 
+Route::post('admin.deletecomment',[App\Http\Controllers\AdminController::class,'deletecomment'])->name('admin.deletecomment');
+
+Route::get('/admin.viewblogcomments/{id}',[App\Http\Controllers\AdminController::class,'viewblogcomments'] )->name('admin.viewblogcomments');
+
+Route::post('admin.deleteblogcomment',[App\Http\Controllers\AdminController::class,'deleteblogcomment'])->name('admin.deleteblogcomment');
 
 Route::get('/admin.viewuserdetails', function () {
     return view('admin/viewuserdetails');
 })->name('admin.viewuserdetails');
+
 Route::get('admin.viewblogs/{id}',[App\Http\Controllers\AdminController::class,'blogdetails'])->name('admin.viewmoreblogs');
 
 Route::get('admin.viewcomplaints/{id}',[App\Http\Controllers\AdminController::class,'viewcomplaints'])->name('admin.viewcomplaints');
+
 Route::post('admin.deletecomplaint',[App\Http\Controllers\AdminController::class,'deletecomplaint'])->name('admin.deletecomplaint');
 
 Route::get('/admin.viewmoreblogs', function () {
@@ -105,6 +108,7 @@ Route::get('/admin.viewmoreblogs', function () {
 })->name('admin.viewmoreblogs');
 
 Route::get('admin.viewcareer/{id}',[App\Http\Controllers\AdminController::class,'careerdetails'])->name('admin.viewmorecareer');
+
 Route::get('/admin.viewmorcareer', function () {
     return view('admin/viewmoreecareer');
 })->name('admin.viewmorecareer');
@@ -115,21 +119,36 @@ Route::get('/admin.viewmorebooks', function () {
 })->name('admin.viewmorebooks');
 
 //user routes
+
+
 /*Route::get('/userhome', function () {
     return view('user/index');
 })->name('userhome');*/
 Route::get('user.dashboard',[App\Http\Controllers\GuestController::class,'dashboard'] )->name('user.dashboard');
+
 Route::get('user.viewmyblogs',[App\Http\Controllers\GuestController::class,'viewmyblogs'])->name('user.viewmyblogs');
+
 Route::get('user.viewblogcomments/{id}',[App\Http\Controllers\GuestController::class,'viewblogcomments'] )->name('user.viewblogcomments');
+
 Route::post('user.deletemyblogcomment',[App\Http\Controllers\GuestController::class,'deleteblogcomment'])->name('user.deletemyblogcomment');
+
 Route::post('user.deleteblog',[App\Http\Controllers\GuestController::class,'deleteblog'])->name('user.deleteblog');
+
 Route::get('user.viewmybooks',[App\Http\Controllers\GuestController::class,'viewmybooks'])->name('user.viewmybooks');
+
 Route::post('user.deletebook',[App\Http\Controllers\GuestController::class,'deletebooks'])->name('user.deletebook');
+
 Route::get('user.viewcomplaints/{id}',[App\Http\Controllers\GuestController::class,'viewcomplaints'])->name('user.viewcomplaints');
+
 Route::post('user.deletecomplaint',[App\Http\Controllers\GuestController::class,'deletecomplaint'])->name('user.deletecomplaint');
+
 Route::get('user.bookrequests',[App\Http\Controllers\GuestController::class,'bookrequests'] )->name('user.bookrequests');
+
 Route::post('user.deleteintbook',[App\Http\Controllers\GuestController::class,'deleteintbook'])->name('user.deleteintbook');
+
 Route::post('user.acceptrequest',[App\Http\Controllers\GuestController::class,'acceptrequest'])->name('user.acceptrequest');
+
+Route::get('user.viewcareercomments/{id}',[App\Http\Controllers\GuestController::class,'viewcareercomments'] )->name('user.viewcareercomments');
 
 Route::get('/user.sellbooks', function () {
     return view('user/sellbooks');
@@ -152,11 +171,15 @@ Route::get('/user.changepassword', function () {
 })->name('user.changepassword');
 
 Route::get('user.buybooks/{id}',[App\Http\Controllers\GuestController::class,'bookdetails'])->name('user.buybooks');
+
 Route::get('/user.viewbuybooks', function () {
     return view('user/viewbuybooks');
 })->name('user.viewbuybooks');
+
 Route::post('user.sendinterest',[App\Http\Controllers\GuestController::class,'sendinterest'])->name('user.sendinterest');
+
 Route::post('user.sendcomment',[App\Http\Controllers\GuestController::class,'sendcomment'])->name('user.sendcomment');
+
 Route::post('user.sendcomplaint',[App\Http\Controllers\GuestController::class,'sendcomplaint'])->name('user.sendcomplaint');
 
 Route::get('user.viewblogs/{id}',[App\Http\Controllers\GuestController::class,'blogdetails'])->name('user.viewmoreblogs');
