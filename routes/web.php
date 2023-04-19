@@ -148,7 +148,7 @@ Route::post('user.deleteintbook',[App\Http\Controllers\GuestController::class,'d
 
 Route::post('user.acceptrequest',[App\Http\Controllers\GuestController::class,'acceptrequest'])->name('user.acceptrequest');
 
-Route::get('user.viewcareercomments/{id}',[App\Http\Controllers\GuestController::class,'viewcareercomments'] )->name('user.viewcareercomments');
+
 
 Route::get('/user.sellbooks', function () {
     return view('user/sellbooks');

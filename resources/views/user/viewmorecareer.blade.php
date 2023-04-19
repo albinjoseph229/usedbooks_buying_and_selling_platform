@@ -64,7 +64,7 @@
                     <div class="white-block-content">
                         <div class="comment-content comments">
                             <!-- comment -->
-                            @foreach($careercomments as $careercomments)
+                            @foreach($careercomments as $careercomment)
                             <div class="comment " id="comment-27">
                                 <div class="flex-wrap flex-start-h">
                                     <div class="flex-left">
@@ -79,14 +79,14 @@
                                                     sizes="(max-width: 100px) 100vw, 100px">
                                             </div>
                                             <div class="comment-info">
-                                                <h5>{{$careercomments->name}}</h5>
-                                                <p>{{$careercomments->created_at}}</p>
+                                                <h5>{{$careercomment->name}}</h5>
+                                                <p>{{$careercomment->created_at}}</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="comment-content-wrap">
-                                    <p>{{$careercomments->comment}}</p>
+                                    <p>{{$careercomment->comment}}</p>
 
                                 </div>
                             </div>
