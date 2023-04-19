@@ -377,11 +377,7 @@ class GuestController extends Controller
     }
 
     
-    public function viewblogcomments($id)
-    {
-        $comments=BlogComments::join('blogs','blogs.id','blogcomments.blog_id')->join('users','users.id','blogcomments.user_id')->select('blogcomments.*','users.name')->where('blogcomments.blog_id',$id)->get();
-        return view('user/myblogcomments',['comments'=>$comments]);
-    }
+  
     public function deleteblogcomment(Request $request)
     {
         $id=$request->dodelete;
