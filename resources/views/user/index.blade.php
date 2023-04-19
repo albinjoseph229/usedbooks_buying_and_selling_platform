@@ -70,7 +70,7 @@
                                     <div class="white-block hover-shadow advert-item advert-grid advert-hightlight">
 
 
-                                        <a href="{{url('user.buybooks/'.$books->slug.'/'.$books->slug)}}"
+                                        <a href="{{url('user.buybooks/'.$books->id.'')}}"
                                             class="advert-media">
                                             <img width="355" height="250"
                                                 src="{{asset('bookimages/'.$books->coverpage1.'')}}"
@@ -80,10 +80,7 @@
                                         <div class="white-block-content">
 
                                             <div class="top-advert-meta flex-wrap">
-                                                <div class="advert-cat text-overflow">
-                                                    <i class="aficon-dot-circle-o"></i>
-                                                    <a href="{{ route('user.viewbuybooks')}}">Vehicles</a>
-                                                </div>
+                                               
                                                 <div class="advert-city text-overflow">
                                                     <i class="aficon-map-marker-alt-o"></i>
                                                     <a href="advert-location/amsterdam/index.html">
@@ -100,15 +97,10 @@
                                                 <div class="flex-right">
                                                     <a href="javascript:void(0);" class="compare-add " data-id="88"
                                                         title="Add This To Compare">
-                                                        <i class="aficon-repeat"></i>
+                                                       
                                                     </a>
 
-                                                    <a title="Favorite" href="#" class="af-favs " data-toggle="modal"
-                                                        data-target="#login">
-                                                        <i class="aficon-heart-o"></i>
-                                                        <span>Favorite</span>
-                                                        <span class="small-icon">Favorite</span>
-                                                    </a>
+                                                   
                                                 </div>
                                             </div>
                                         </div>
