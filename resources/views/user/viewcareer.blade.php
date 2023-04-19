@@ -63,8 +63,7 @@
                                         Read More </a>
                                     <div class="top-advert-meta">
                                         <i class="aficon-dot-circle-o"></i>
-                                        <a href="category/tips-tricks/index.html" class="bz-cat">Tips &amp;
-                                            Tricks</a>
+                                        <a href="category/tips-tricks/index.html" class="bz-cat"></a>
                                     </div>
                                 </div>
 

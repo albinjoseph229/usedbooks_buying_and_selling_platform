@@ -366,6 +366,13 @@ class GuestController extends Controller
             return back()->with('error','Some error occured please try again later..');
         }
     }
+
+    public function viewcareercomments($id)
+    {
+        $comments=CareerComments::join('career','career.id','careercomments.career_id')->join('users','users.id','careercomments.user_id')->select('careercomments.*','users.name')->where('careercomments.career_id',$id)->get();
+        return view('user/mycareercomments',['comments'=>$comments]);
+    }
+
     public function dashboard()
     {
         return view('user.dashboard');
