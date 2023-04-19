@@ -981,23 +981,23 @@
                                 <ul id="menu-widget-menu" class="menu">
                                     <li id="menu-item-358"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-358">
-                                        <a href="how-it-works/index.html">How It Works</a>
+                                        <a href="{{ route('user.sellbooks')}}">Sell Books</a>
                                     </li>
                                     <li id="menu-item-359"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-359">
-                                        <a href="faq/index.html">FAQ</a>
+                                        <a href="{{ route('user.buybooks')}}">Buy Books</a>
                                     </li>
                                     <li id="menu-item-360"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360">
-                                        <a href="news/index.html">News</a>
+                                        <a href="{{ route('user.viewcareer')}}">Career</a>
                                     </li>
                                     <li id="menu-item-361"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361">
-                                        <a href="browse-with-map/index.html">Browse With Map</a>
+                                        <a href="{{ route('user.postblogs')}}">Post Blogs</a>
                                     </li>
                                     <li id="menu-item-362"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362">
-                                        <a href="browse-ads/index.html">Browse Ads</a>
+                                        <a href="{{ route('user.viewblogs')}}">View Blogs</a>
                                     </li>
                                 </ul>
                             </div>
@@ -1013,24 +1013,17 @@
                                 <ul id="menu-widget-menu" class="menu">
                                     <li id="menu-item-358"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-358">
-                                        <a href="how-it-works/index.html">How It Works</a>
+                                        <a href="{{ route('user.dashboard')}}">My Dashboard</a>
                                     </li>
                                     <li id="menu-item-359"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-359">
-                                        <a href="faq/index.html">FAQ</a>
+                                        <a href="{{ route('user.howitworks')}}">How It Works</a>
                                     </li>
                                     <li id="menu-item-360"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360">
-                                        <a href="news/index.html">News</a>
+                                        <a href="{{ route('user.changepassword')}}">Change Password</a>
                                     </li>
-                                    <li id="menu-item-361"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361">
-                                        <a href="browse-with-map/index.html">Browse With Map</a>
-                                    </li>
-                                    <li id="menu-item-362"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362">
-                                        <a href="browse-ads/index.html">Browse Ads</a>
-                                    </li>
+                                    
                                 </ul>
                             </div>
                         </div>

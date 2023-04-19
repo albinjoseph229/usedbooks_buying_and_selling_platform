@@ -111,7 +111,7 @@
                             <input type="file" id="file" name="file" placeholder="Select Your First Cover Image">
                         </div>
                         <div class="input-with-icon-left">
-                            <input type="file" id="file1" name="file1" placeholder="Select Your First Cover Image">
+                            <input type="file" id="file1" name="file1" placeholder="Select Your Second Cover Image">
                         </div>
                     </div>
                 </div>

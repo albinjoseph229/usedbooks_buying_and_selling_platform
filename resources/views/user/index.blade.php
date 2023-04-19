@@ -126,12 +126,6 @@
                         </div>
 </section>
 
-
-</div>
-</div>
-</div>
-</div>
-</section>
 <section data-kc-equalheight="true" data-kc-equalheight-align="middle" class="kc-elm kc-css-662149 kc_row">
     <div class="kc-row-container  kc-container">
         <div class="kc-wrap-columns">
@@ -220,78 +214,78 @@
             <div class="kc-elm kc-css-300456 kc_col-sm-12 kc_column kc_col-sm-12">
                 <div class="kc-col-container">
                     <div class="af-title text-center">
-                        <h3 class="af-heading">Pricing Packages</h3>
-                        <p><span style="color: #666">You can set to charge users for Packages, <b
-                                    style="color: #374252">Subscriptions</b>, <b style="color: #374252">Hybrid</b> or <b
-                                    style="color: #374252">Free</b></span></p>
+                        <h3 class="af-heading">Different Functionalities</h3>
+                        <p><span style="color: #666">You can find different pages </p>
                     </div>
                     <div class="kc-elm kc-css-800123" style="height: 35px; clear: both; width:100%;"></div>
                     <div class="kc-elm kc-css-519657 kc_row kc_row_inner">
-                        <div class="kc-elm kc-css-305756 kc_col-sm-3 kc_column_inner kc_col-sm-3">
-                            <div class="kc_wrapper kc-col-inner-container">
-                                <div class="white-block price-table-element hover-shadow ">
-                                    <div class="price-table-price">
-                                        <span class="price-symbol">$</span>11.99<p class="tax-included">*VAT included
-                                        </p>
-                                    </div>
-                                    <div class="price-table-title">
-                                        <h5>Bronze</h5>
-                                    </div>
-                                    <div class="price-table-content">
-                                        Purchase this package and extend your subscription by <b>30</b> days </div>
-                                    <a href="#" data-target="#login" data-toggle="modal"
-                                        class="af-button purchase-pack">Purchase Now</a>
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="kc-elm kc-css-255486 kc_col-sm-3 kc_column_inner kc_col-sm-3">
                             <div class="kc_wrapper kc-col-inner-container">
                                 <div class="white-block price-table-element hover-shadow active-price-table">
                                     <div class="price-table-price">
-                                        <span class="price-symbol">$</span>23.99<p class="tax-included">*VAT included
-                                        </p>
+
                                     </div>
                                     <div class="price-table-title">
-                                        <h5>Silver</h5>
+                                        <h5>Buy Books</h5>
                                     </div>
                                     <div class="price-table-content">
-                                        Purchase this package and extend your subscription by <b>90</b> days </div>
-                                    <a href="#" data-target="#login" data-toggle="modal"
-                                        class="af-button purchase-pack">Purchase Now</a>
+                                        Explore Different Used Books And Save Money And Nature</div>
+                                    <a href="{{ route('user.buybooks')}}" data-target="#login" data-toggle="modal"
+                                        class="af-button purchase-pack">Explore Now</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="kc-elm kc-css-631237 kc_col-sm-3 kc_column_inner kc_col-sm-3">
-                            <div class="kc_wrapper kc-col-inner-container">
-                                <div class="white-block price-table-element hover-shadow ">
-                                    <div class="price-table-price">
-                                        <span class="price-symbol">$</span>47.99<p class="tax-included">*VAT included
-                                        </p>
-                                    </div>
-                                    <div class="price-table-title">
-                                        <h5>Gold</h5>
-                                    </div>
-                                    <div class="price-table-content">
-                                        Purchase this package and extend your subscription by <b>180</b> days </div>
-                                    <a href="#" data-target="#login" data-toggle="modal"
-                                        class="af-button purchase-pack">Purchase Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="kc-elm kc-css-831121 kc_col-sm-3 kc_column_inner kc_col-sm-3">
+
+                        <div class="kc-elm kc-css-255486 kc_col-sm-3 kc_column_inner kc_col-sm-3">
                             <div class="kc_wrapper kc-col-inner-container">
                                 <div class="white-block price-table-element hover-shadow active-price-table">
                                     <div class="price-table-price">
-                                        <span class="price-symbol">$</span>71.99<p class="tax-included">*VAT included
-                                        </p>
+
                                     </div>
                                     <div class="price-table-title">
-                                        <h5>Platinum</h5>
+                                        <h5>Sell Books</h5>
                                     </div>
                                     <div class="price-table-content">
-                                        Purchase this package and extend your subscription by <b>365</b> days </div>
-                                    <a href="#" data-target="#login" data-toggle="modal"
-                                        class="af-button purchase-pack">Purchase Now</a>
+                                        You can Sell Your Old Books And Earn Money</div>
+                                    <a href="{{ route('user.sellbooks')}}" data-target="#login" data-toggle="modal"
+                                        class="af-button purchase-pack">Explore Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="kc-elm kc-css-255486 kc_col-sm-3 kc_column_inner kc_col-sm-3">
+                            <div class="kc_wrapper kc-col-inner-container">
+                                <div class="white-block price-table-element hover-shadow active-price-table">
+                                    <div class="price-table-price">
+
+                                    </div>
+                                    <div class="price-table-title">
+                                        <h5>Post Blogs</h5>
+                                    </div>
+                                    <div class="price-table-content">
+                                        Write Blogs That Can Change The World</div>
+                                    <a href="{{ route('user.postblogs')}}" data-target="#login" data-toggle="modal"
+                                        class="af-button purchase-pack">Explore Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="kc-elm kc-css-255486 kc_col-sm-3 kc_column_inner kc_col-sm-3">
+                            <div class="kc_wrapper kc-col-inner-container">
+                                <div class="white-block price-table-element hover-shadow active-price-table">
+                                    <div class="price-table-price">
+
+                                    </div>
+                                    <div class="price-table-title">
+                                        <h5>View CAreer</h5>
+                                    </div>
+                                    <div class="price-table-content">
+                                        Learn About Different Career Options And Improve Your Life</div>
+                                    <a href="{{ route('user.viewcareer')}}" data-target="#login" data-toggle="modal"
+                                        class="af-button purchase-pack">Explore Now</a>
                                 </div>
                             </div>
                         </div>

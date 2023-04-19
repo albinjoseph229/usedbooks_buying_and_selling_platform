@@ -48,28 +48,32 @@
                         </div>
 
                         <div class="white-block-content">
-                            
+
 
                             <div class="form-group">
-                            
+
                                 <ul id="menu-widget-menu" class="menu">
                                     <li id="menu-item-362"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362"><a
-                                            href="{{ route('user.postblogs')}}">Post Blogs</a></li>
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362">
+                                        <a href="{{ route('user.postblogs')}}">Post Blogs</a>
+                                    </li>
                                     <li id="menu-item-358"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-358"><a
-                                            href="{{ route('user.howitworks')}}">How It Works</a></li>
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-358">
+                                        <a href="{{ route('user.howitworks')}}">How It Works</a>
+                                    </li>
                                     <li id="menu-item-359"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-359"><a
-                                            href="{{ route('user.usercontactus')}}">Contact Us</a></li>
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-359">
+                                        <a href="{{ route('user.usercontactus')}}">Contact Us</a>
+                                    </li>
                                     <li id="menu-item-360"
                                         class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-360">
                                         <a href="{{ route('user.viewcareer')}}">View Creer</a>
                                     </li>
                                     <li id="menu-item-361"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361"><a
-                                            href="{{ route('user.sellbooks')}}">Sell Books</a></li>
-        
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361">
+                                        <a href="{{ route('user.sellbooks')}}">Sell Books</a>
+                                    </li>
+
                                 </ul>
                             </div>
 
@@ -93,25 +97,7 @@
                                     ads found
                                 </h6>
 
-                                <div class="flex-right flex-wrap">
-                                    <div class="styled-select styled-select-no-label">
-                                        <select name="af_orderby" class="orderby">
-                                            <option value="" selected='selected'>Sort By Date</option>
-                                            <option value="expire-ASC">Sort By Expire</option>
-                                            <option value="views-DESC">Sort By Popularity</option>
-                                            <option value="price-ASC">Sort By Price - Ascending</option>
-                                            <option value="price-DESC">Sort By Price - Descending</option>
-                                        </select>
-                                    </div>
-                                    <div class="layout-view">
-                                        <a href="javascript:void(0);" class="active" data-style="grid"><i
-                                                class="aficon-th"></i></a>
-                                        <a href="javascript:void(0);" class="" data-style="list"><i
-                                                class="aficon-th-list"></i></a>
-                                        <a href="javascript:void(0);" class="" data-style="card"><i
-                                                class="aficon-th-large"></i></a>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -130,13 +116,15 @@
                                     <div class="white-block-content">
 
                                         <div class="top-advert-meta flex-wrap">
-                                            <div class="advert-cat text-overflow">
-                                                <i class="aficon-dot-circle-o"></i>
-                                                <a href="{{url('user.buybooks/'.$book->id.'')}}">Vehicles</a>
-                                            </div>
+
                                             <div class="advert-city text-overflow">
-                                                <i class="aficon-map-marker-alt-o"></i>
-                                                <a href="{{url('user.buybooks/'.$book->id.'')}}"> {{$book->location}}</a>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                </svg>
+                                                <a href="{{url('user.buybooks/'.$book->id.'')}}">
+                                                    {{$book->location}}</a>
                                             </div>
                                         </div>
                                         <h5 class="adv-title">
@@ -148,17 +136,9 @@
                                         <div class="bottom-advert-meta flex-wrap">
                                             <div class="price">₹{{$book->price}}</div>
                                             <div class="flex-right">
-                                                <a href="javascript:void(0);" class="compare-add " data-id="88"
-                                                    title="Add This To Compare">
-                                                    <i class="aficon-repeat"></i>
-                                                </a>
 
-                                                <a title="Favorite" href="{{url('user.buybooks/'.$book->id.'')}}"
-                                                    class="af-favs " data-toggle="modal" data-target="#login">
-                                                    <i class="aficon-heart-o"></i>
-                                                    <span>Favorite</span>
-                                                    <span class="small-icon">Favorite</span>
-                                                </a>
+
+
                                 </a>
                             </div>
                         </div>
@@ -176,11 +156,11 @@
             @php $i++; @endphp
             @endforeach
         </div>
-      
+
         <div class="">
-           
+
             {{ $books->links() }}
-                       
+
         </div>
 
     </div>
