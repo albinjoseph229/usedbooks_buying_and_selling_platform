@@ -98,37 +98,7 @@
         <input type="submit" class="submit-ajax-form af-button" value="Register" />
     </form>
 
-    <div class="text-center">
-        <a href="#" class="forgot" data-toggle="modal" data-target="#resend" data-dismiss="modal">Resend
-            verification?</a>
-    </div>
-
-    <div class="or-divider">
-        <h6>OR</h6>
-    </div>
-
-    <div class="text-center">
-        <label>Sign In With</label>
-    </div>
-    <ul class="list-unstyled social-login">
-        <li>
-            <a href="javascript:void(0);" class="facebook">
-                <img src="wp-content/themes/adifier/images/facebook.png" width="48" height="48">
-                <span>Facebook</span>
-            </a>
-        </li>
-        <li>
-            <a href="javascript:void(0);" class="twitter">
-                <img src="wp-content/themes/adifier/images/twitter.png" width="58" height="48">
-                <span>Twitter</span>
-            </a>
-        </li>
-        <li>
-            <a href="javascript:void(0);" class="google">
-                <img src="wp-content/themes/adifier/images/google.png" width="70" height="70">
-                <span>Google</span>
-            </a>
-        </li>
+   
     </ul>
 
     <div class="text-center">
