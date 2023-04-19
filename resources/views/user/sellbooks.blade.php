@@ -110,12 +110,18 @@
                         <div class="input-with-icon-left">
                             <input type="file" id="file" name="file" placeholder="Select Your First Cover Image">
                         </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-md-12">
+
                         <div class="input-with-icon-left">
                             <input type="file" id="file1" name="file1" placeholder="Select Your Second Cover Image">
                         </div>
                     </div>
                 </div>
-                @error('file1')
+                @error('file')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
