@@ -4,10 +4,10 @@
     <div class="container">
         <div class="flex-wrap">
             <div class="flex-left">
-                <h1 class="h4-size">Browse Ads</h1>
+                <h1 class="h4-size">MyBlog Comment</h1>
                 <ul class="list-unstyled list-inline breadcrumbs">
                     <li><a href="{{ route('/')}}">Home</a></li>
-                    <li>Buy Book</li>
+                    <li>My Blog Comment</li>
                 </ul>
             </div>
             <div class="flex-right">

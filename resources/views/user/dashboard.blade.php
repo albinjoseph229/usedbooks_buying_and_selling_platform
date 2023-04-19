@@ -4,10 +4,10 @@
     <div class="container">
         <div class="flex-wrap">
             <div class="flex-left">
-                <h1 class="h4-size">Browse Ads</h1>
+                <h1 class="h4-size">Dashboard</h1>
                 <ul class="list-unstyled list-inline breadcrumbs">
                     <li><a href="{{ route('/')}}">Home</a></li>
-                    <li>Buy Book</li>
+                    <li>Dashboard</li>
                 </ul>
             </div>
             <div class="flex-right">
@@ -48,7 +48,7 @@
                                         <div class="styled-radio">
                                             <input type="radio" name="category" value="" id="category" checked="&quot;checked&quot;">
                                             <label for="category">Profile</label>
-                                            <a href=""><i class="aficon-angle-down"></i></a>
+                                            <a href="{{route('user.dashboard')}}"><i class="gg-abstract"></i></a>
                                         </div>
                                     </li>
                                     <li>

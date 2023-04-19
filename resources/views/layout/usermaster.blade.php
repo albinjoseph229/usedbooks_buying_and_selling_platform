@@ -696,6 +696,8 @@
 
     <script type='text/javascript' src='wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script>
 
+
+    
     <link rel="https://api.w.org/" href="wp-json/index.html" />
     <link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/10.json" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />

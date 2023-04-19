@@ -53,9 +53,7 @@
                                         {{$blogs->blog_title}}</a>
                                 </h5>
 
-                                <div class="article-excerpt">
-                                    <p>{{$blogs->blog_description}}</p>
-                                </div>
+                               
 
                                 <div class="flex-wrap">
                                     <a href="{{url('user.viewblogs/'.$blogs->id.'')}}"
@@ -63,8 +61,7 @@
                                         Read More </a>
                                     <div class="top-advert-meta">
                                         <i class="aficon-dot-circle-o"></i>
-                                        <a href="{{url('user.viewblogs/'.$blogs->id.'')}}" class="bz-cat">Tips &amp;
-                                            Tricks</a>
+                                        <a href="{{url('user.viewblogs/'.$blogs->id.'')}}" class="bz-cat">{{$blogs->created_at}}</a>
                                     </div>
                                 </div>
 

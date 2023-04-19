@@ -4,7 +4,7 @@
     <div class="container">
         <div class="flex-wrap">
             <div class="flex-left">
-                <h1 class="h4-size">Browse Ads</h1>
+                <h1 class="h4-size">View My Blogs</h1>
                 <ul class="list-unstyled list-inline breadcrumbs">
                     <li><a href="{{ route('/')}}">Home</a></li>
                     <li>My blogs</li>
