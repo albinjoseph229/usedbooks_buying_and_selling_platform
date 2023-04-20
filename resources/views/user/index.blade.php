@@ -154,62 +154,10 @@
             <div class="kc-elm kc-css-670989 kc_col-sm-12 kc_column kc_col-sm-12">
                 <div class="kc-col-container">
                     <div class="af-title text-center">
-                        <h3 class="af-heading">Popular Locations</h3>
-                        <p>Check out ads from our members located in popular locations</p>
+                        <h3 class="af-heading">Different Functionalities</h3>
+                        <p>Check out different functionalities of our website</p>
                     </div>
                     <div class="kc-elm kc-css-706319" style="height: 35px; clear: both; width:100%;"></div>
-                    <div class="element-locations-wrap style3 clearfix">
-                        <a href="advert-location/london/index.html" class="elem-location-item"
-                            style="background-image:url('wp-content/uploads/2018/07/london.jpg')">
-                            <div class="location-title animation">
-                                <h6>London</h6>
-                                <p>1 ad posted</p>
-                            </div>
-                        </a>
-                        <a href="advert-location/rome/index.html" class="elem-location-item"
-                            style="background-image:url('wp-content/uploads/2018/07/rome.jpg')">
-                            <div class="location-title animation">
-                                <h6>Rome</h6>
-                                <p>1 ad posted</p>
-                            </div>
-                        </a>
-                        <a href="advert-location/barcelona/index.html" class="elem-location-item"
-                            style="background-image:url('wp-content/uploads/2018/07/barcelona.jpg')">
-                            <div class="location-title animation">
-                                <h6>Barcelona</h6>
-                                <p>1 ad posted</p>
-                            </div>
-                        </a>
-                        <a href="advert-location/los-angeles/index.html" class="elem-location-item"
-                            style="background-image:url('wp-content/uploads/2018/07/los-angeles.jpg')">
-                            <div class="location-title animation">
-                                <h6>Los Angeles</h6>
-                                <p>1 ad posted</p>
-                            </div>
-                        </a>
-                        <a href="advert-location/paris/index.html" class="elem-location-item"
-                            style="background-image:url('wp-content/uploads/2018/07/paris.jpg')">
-                            <div class="location-title animation">
-                                <h6>Paris</h6>
-                                <p>2 ads posted</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="kc-elm kc-css-83579 kc_row">
-    <div class="kc-row-container  kc-container">
-        <div class="kc-wrap-columns">
-            <div class="kc-elm kc-css-300456 kc_col-sm-12 kc_column kc_col-sm-12">
-                <div class="kc-col-container">
-                    <div class="af-title text-center">
-                        <h3 class="af-heading">Different Functionalities</h3>
-                        <p><span style="color: #666">You can find different pages </p>
-                    </div>
-                    <div class="kc-elm kc-css-800123" style="height: 35px; clear: both; width:100%;"></div>
                     <div class="kc-elm kc-css-519657 kc_row kc_row_inner">
 
                         <div class="kc-elm kc-css-255486 kc_col-sm-3 kc_column_inner kc_col-sm-3">
@@ -272,7 +220,7 @@
 
                                     </div>
                                     <div class="price-table-title">
-                                        <h5>View CAreer</h5>
+                                        <h5>View Career</h5>
                                     </div>
                                     <div class="price-table-content">
                                         Learn About Different Career Options And Improve Your Life</div>
@@ -287,6 +235,7 @@
         </div>
     </div>
 </section>
+
 </main>
 <a href="javascript:;" class="to_top af-button">
     <i class="aficon-angle-up"></i>

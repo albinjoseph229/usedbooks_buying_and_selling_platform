@@ -315,7 +315,7 @@ class GuestController extends Controller
         $careercomments=CareerComments::join('users','users.id','career_comments.user_id')->select('career_comments.*','users.name','users.email',)
         ->where('career_comments.career_id',$id)->get();
         $careers=Career::where('id',$id)->select('*')->first();
-        return view('user/viewmorecareer',['career'=>$careers]);
+        return view('user/viewmorecareer',['career'=>$careers,'careercomments'=>$careercomments]);
     }
 
     public function saveblogcomment(Request $request)
@@ -427,6 +427,20 @@ class GuestController extends Controller
         $complaints=BookComplaint::join('book','book.id','bookcomplaint.book_id')->join('users','users.id','bookcomplaint.buyer_id')->select('bookcomplaint.*','users.name','book.bookname','book.seller')->where('bookcomplaint.book_id',$id)->get();
         return view('user.viewcomplaints',['complaints'=>$complaints]);
     }
+    public function viewblogcomments($id)
+    {
+        $blogs=BlogComments::join('blogs','blogs.id','blogcomments.blog_id')->join('users','users.id','blogcomments.user_id')->select('blogcomments.*','users.name','blogs.blog_title')->where('blogcomments.blog_id',$id)->get();
+        return view('user.myblogcomments',['comments'=>$blogs]);
+    }
+
+    public function mybookcomments($id)
+    {
+       /* $bookcomments=CommentReplies::join('blogs','blogs.id','blogcomments.blog_id')->join('users','users.id','blogcomments.user_id')->select('blogcomments.*','users.name','blogs.blog_title')->where('blogcomments.blog_id',$id)->get();
+        return view('user.myblogcomments',['comments'=>$blogs]);*/
+        $bookcomments=CommentReplies::join('users','users.id','commentreplies.buyer_id')->select('commentreplies.*','users.name','users.email')->where('commentreplies.book_id',$id)->where('commentreplies.seller_id',auth::user()->id)->get();
+        return view('user.mybookcomments',['bookcomments'=>$bookcomments]);
+    }
+
     public function deletecomplaint(Request $request)
     {
         $id=$request->dodelete;
@@ -445,7 +459,7 @@ class GuestController extends Controller
         $requests=Transaction::join('users','users.id','booksales.buyer_id')->select('booksales.*','users.name','users.phoneno')->where('booksales.seller_id',auth::user()->id)->get();
         return view('user.viewbookrequests',['requests'=>$requests]);
     }
-    public function deleteintbooks()
+    public function deleteintbook(Request $request)
     {
         $id=$request->dodelete;
         $delete=Transaction::where('id',$id)->delete();
@@ -471,4 +485,5 @@ class GuestController extends Controller
             return back()->with('error','Some error occured please try again later..');
         }
     }
+
 }

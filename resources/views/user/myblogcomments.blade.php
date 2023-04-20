@@ -123,7 +123,7 @@
                                             <form method="post" action="{{route('user.deletemyblogcomment')}}">
                                                 @csrf
                                                 <input type="hidden" id="dodelete" name="dodelete" value="{{$comment->id}}" />
-                                            <button title="Delete Book" class="btn btn-danger btn-sm deleteme"
+                                            <button title="Delete Blog Comment" class="btn btn-danger btn-sm deleteme"
                                                 data-value="{{$comment->id}}" data-toggle="modal"
                                                 data-target="#modal-primary"><i class="fa fa-trash"></i></button>
                                             </form>

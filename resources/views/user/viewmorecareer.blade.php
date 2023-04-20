@@ -59,7 +59,7 @@
                <div class="white-block">
                     <div class="white-block-title">
                         <h5>
-                            1 Comment </h5>
+                            {{count($careercomments)}} Comment </h5>
                     </div>
                     <div class="white-block-content">
                         <div class="comment-content comments">
