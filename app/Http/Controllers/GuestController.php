@@ -485,5 +485,19 @@ class GuestController extends Controller
             return back()->with('error','Some error occured please try again later..');
         }
     }
+    public function replytocomment(Request $request)
+    {
+        $id=$request->doreply;
+        $reply=$request->replym;
+        $update=CommentReplies::where('id',$id)->update(['reply'=>$reply]);
+        if($update)
+        {
+            return back()->with('status','Reply Sent successfully..');
+        }
+        else
+        {
+            return back()->with('error','Some error occurred please try again later..');
+        }
+    }
 
 }

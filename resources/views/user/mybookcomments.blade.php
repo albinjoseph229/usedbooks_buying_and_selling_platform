@@ -106,9 +106,10 @@
                                     <thead>
                                         <tr>
                                             <th>S.No</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
                                             <th>Comment</th>
                                             <th>Date</th>
-                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                 <tbody>
@@ -120,21 +121,15 @@
                                         <td>{{$bookcomment->email}}</td>
                                         <td>{{$bookcomment->comment}}</td>
                                         <td>{{$bookcomment->date}}</td>
-                                         <td>
-                                            <form method="post" action="#">
-                                                @csrf
-                                                <input type="hidden" id="dodelete" name="dodelete" value="{{$bookcomment->id}}" />
-                                            <button title="Delete Book" class="btn btn-danger btn-sm deleteme"
-                                                data-value="{{$bookcomment->id}}" data-toggle="modal"
-                                                data-target="#modal-primary"><i class="fa fa-trash"></i></button>
-                                            </form>
-                                        </td>
+                                         
                                         <td>
-                                            <form method="post' action="{{route('replycomment')}}">
-                                            <textare id="replyn" name="replym" class="form-control"></textarea>
-                                            <button type="submit" title="Delete Book" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                                            <form method="post" action="{{route('user.replycomment')}}">
+                                             @csrf
+                                             <input type="hidden" id="doreply" name="doreply" value="{{$bookcomment->id}}" />
+                                            <textarea id="replym" name="replym" class="form-control">Reply:</textarea>
+                                            <button type="submit" title="Reply To Message" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
 
-                </form>
+                                            </form>
                                         </td>
                                         </td>
                                     </tr>
@@ -143,10 +138,11 @@
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <th>S.No</th>
-                                        <th>Comment</th>
-                                        <th>Date</th>
-                                        <th>Action</th>
+                                    <th>S.No</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Comment</th>
+                                            <th>Date</th>
                                     </tr>
                                 </tfoot>
                             </table>

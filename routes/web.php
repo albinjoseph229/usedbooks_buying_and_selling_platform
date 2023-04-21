@@ -223,5 +223,6 @@ Route::post('admin.deletemessages',[App\Http\Controllers\AdminController::class,
 Route::post('user.saveblogcomment',[App\Http\Controllers\GuestController::class,'saveblogcomment'])->name('user.saveblogcomment');
 
 Route::post('user.savecareercomment',[App\Http\Controllers\GuestController::class,'savecareercomment'])->name('user.savecareercomment');
+Route::post('user.replycomment',[App\Http\Controllers\GuestController::class,'replytocomment'])->name('user.replycomment');
 
 });

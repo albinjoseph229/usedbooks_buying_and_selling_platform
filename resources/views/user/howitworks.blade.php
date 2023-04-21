@@ -59,10 +59,10 @@
                                 <div class="kc-elm kc-css-456439 kc_col-sm-6 kc_column kc_col-sm-6">
                                     <div class="kc-col-container">
                                         <div class="kc-elm kc-css-44279 kc_text_block">
-                                            <h4 style="text-align: center;">2. Sell Books</h4>
+                                            <h4 style="text-align: center;">2. Sell & Buy Books</h4>
                                             <p style="text-align: center;">Once you are finished with creating your
-                                                account it is time to sell goods and/or services you are offering and in
-                                                order to do that add submit some ads so people can notice you</p>
+                                                account you can now sell books post blogs view career etc..
+                                            You can also buy books by browsing through the ads listed</p>
                                         </div>
                                     </div>
                                 </div>
@@ -76,10 +76,7 @@
                                     <div class="kc-col-container">
                                         <div class="kc-elm kc-css-115636 kc_text_block">
                                             <h4 style="text-align: center;">3. Start Earning</h4>
-                                            <p style="text-align: center;">Now sit back, relax and wait for the
-                                                potential buyers to contact you regarding goods and/or&nbsp; services
-                                                you are offering and start earning money and building contact as easy as
-                                                that</p>
+                                            <p style="text-align: center;">By selling books you can earn money. You cann earn money for your old books which is no longer needed.</p>
                                         </div>
                                     </div>
                                 </div>
