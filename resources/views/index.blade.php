@@ -13,49 +13,7 @@
                         <p><span style="color: #fff">Browse from the books listed and choose the one you need</span></p>
                     </div>
                     <div class="kc-elm kc-css-997839" style="height: 35px; clear: both; width:100%;"></div>
-                    <div class="kc-search ">
 
-                        <form action="https://browse-ads/" class="header-search flex-wrap">
-                            <div class="keyword-wrap">
-                                <input type="text" class="form-control" name="keyword" placeholder="Search for...">
-                            </div>
-
-
-
-
-                            <div class="styled-select">
-                                <select name="category">
-                                    <option value="">In Category</option>
-                                    <option value="38">Electronics</option>
-                                    <option value="13">&nbsp;&nbsp;Computers</option>
-                                    <option value="37">&nbsp;&nbsp;Drones</option>
-                                    <option value="15">&nbsp;&nbsp;Notebooks</option>
-                                    <option value="39">&nbsp;&nbsp;Phones</option>
-                                    <option value="36">&nbsp;&nbsp;Watches</option>
-                                    <option value="81">Furniture</option>
-                                    <option value="42">Jobs</option>
-                                    <option value="46">&nbsp;&nbsp;Dancers</option>
-                                    <option value="51">&nbsp;&nbsp;Drivers</option>
-                                    <option value="43">&nbsp;&nbsp;Film Stunts</option>
-                                    <option value="9">Real Estate</option>
-                                    <option value="11">&nbsp;&nbsp;Appartments</option>
-                                    <option value="29">&nbsp;&nbsp;Houses</option>
-                                    <option value="17">Services</option>
-                                    <option value="57">&nbsp;&nbsp;Builders</option>
-                                    <option value="18">&nbsp;&nbsp;Car Mechanic</option>
-                                    <option value="59">&nbsp;&nbsp;Moving &amp; Storage</option>
-                                    <option value="2">Vehicles</option>
-                                    <option value="25">&nbsp;&nbsp;Boats &amp; Watercrafts</option>
-                                    <option value="24">&nbsp;&nbsp;Campers</option>
-                                    <option value="5">&nbsp;&nbsp;Cars</option>
-                                    <option value="22">&nbsp;&nbsp;Motocycles</option>
-                                    <option value="23">&nbsp;&nbsp;Snowmobiles</option>
-                                    <option value="6">&nbsp;&nbsp;Trucks</option>
-                                </select>
-                            </div> <a href="javascript:void(0);" class="af-button submit-form">Search</a>
-                        </form>
-
-                    </div>
                     <div class="kc-elm kc-css-880530" style="height: 25px; clear: both; width:100%;"></div>
                 </div>
             </div>
@@ -75,9 +33,9 @@
                     <div class="kc-elm kc-css-466926 kc_text_block">
                         <h2><span style="color: #ffffff;">Register &#038; Benefit</span></h2>
                         <ul style="color: #fff;">
-                            <li><span style="color: #ffffff;">Participate in auctions</span></li>
-                            <li><span style="color: #ffffff;">Submit your ads</span></li>
-                            <li><span style="color: #ffffff;">Promote your ads</span></li>
+                            <li><span style="color: #ffffff;">Sell Your Old Books</span></li>
+                            <li><span style="color: #ffffff;">Post Your Blogs</span></li>
+                            <li><span style="color: #ffffff;">View Career Options</span></li>
                             <li><span style="color: #ffffff;">Get reviewed to become noticeable</span></li>
                             <li><span style="color: #ffffff;">Save favorite ads</span></li>
                             <li><span style="color: #ffffff;">And more</span></li>
@@ -86,7 +44,7 @@
                     <div class="kc-elm kc-css-318212" style="height: 30px; clear: both; width:100%;"></div>
                     <div class="kc-elm kc-css-260901 kc_text_block">
                         <p>
-                            <a class="af-button" href="how-it-works/index.html">How It Works</a>
+                            <a class="af-button" href="{{ route('contactus')}}">How It Works</a>
                         </p>
                     </div>
                 </div>
@@ -97,143 +55,90 @@
         </div>
     </div>
 </section>
+
 <section class="kc-elm kc-css-481809 kc_row">
     <div class="kc-row-container  kc-container">
         <div class="kc-wrap-columns">
             <div class="kc-elm kc-css-670989 kc_col-sm-12 kc_column kc_col-sm-12">
                 <div class="kc-col-container">
                     <div class="af-title text-center">
-                        <h3 class="af-heading">Popular Locations</h3>
-                        <p>Check out ads from our members located in popular locations</p>
+                        <h3 class="af-heading">Different Functionalities</h3>
+                        <p>Check out different functionalities of our website</p>
                     </div>
                     <div class="kc-elm kc-css-706319" style="height: 35px; clear: both; width:100%;"></div>
-                    <div class="element-locations-wrap style3 clearfix">
-                        <a href="advert-location/london/index.html" class="elem-location-item"
-                            style="background-image:url('wp-content/uploads/2018/07/london.jpg')">
-                            <div class="location-title animation">
-                                <h6>London</h6>
-                                <p>1 ad posted</p>
+                    <div class="kc-elm kc-css-519657 kc_row kc_row_inner">
+
+                        <div class="kc-elm kc-css-255486 kc_col-sm-3 kc_column_inner kc_col-sm-3">
+                            <div class="kc_wrapper kc-col-inner-container">
+                                <div class="white-block price-table-element hover-shadow active-price-table">
+                                    <div class="price-table-price">
+
+                                    </div>
+                                    <div class="price-table-title">
+                                        <h5>Buy Books</h5>
+                                    </div>
+                                    <div class="price-table-content">
+                                        Explore Different Used Books And Save Money And Nature</div>
+                                    
+                                </div>
                             </div>
-                        </a>
-                        <a href="advert-location/rome/index.html" class="elem-location-item"
-                            style="background-image:url('wp-content/uploads/2018/07/rome.jpg')">
-                            <div class="location-title animation">
-                                <h6>Rome</h6>
-                                <p>1 ad posted</p>
+                        </div>
+
+                        <div class="kc-elm kc-css-255486 kc_col-sm-3 kc_column_inner kc_col-sm-3">
+                            <div class="kc_wrapper kc-col-inner-container">
+                                <div class="white-block price-table-element hover-shadow active-price-table">
+                                    <div class="price-table-price">
+
+                                    </div>
+                                    <div class="price-table-title">
+                                        <h5>Sell Books</h5>
+                                    </div>
+                                    <div class="price-table-content">
+                                        You can Sell Your Old Books And Earn Money</div>
+                                    
+                                </div>
                             </div>
-                        </a>
-                        <a href="advert-location/barcelona/index.html" class="elem-location-item"
-                            style="background-image:url('wp-content/uploads/2018/07/barcelona.jpg')">
-                            <div class="location-title animation">
-                                <h6>Barcelona</h6>
-                                <p>1 ad posted</p>
+                        </div>
+
+
+
+                        <div class="kc-elm kc-css-255486 kc_col-sm-3 kc_column_inner kc_col-sm-3">
+                            <div class="kc_wrapper kc-col-inner-container">
+                                <div class="white-block price-table-element hover-shadow active-price-table">
+                                    <div class="price-table-price">
+
+                                    </div>
+                                    <div class="price-table-title">
+                                        <h5>Post Blogs</h5>
+                                    </div>
+                                    <div class="price-table-content">
+                                        Write Blogs That Can Change The World</div>
+                                    
+                                </div>
                             </div>
-                        </a>
-                        <a href="advert-location/los-angeles/index.html" class="elem-location-item"
-                            style="background-image:url('wp-content/uploads/2018/07/los-angeles.jpg')">
-                            <div class="location-title animation">
-                                <h6>Los Angeles</h6>
-                                <p>1 ad posted</p>
+                        </div>
+
+                        <div class="kc-elm kc-css-255486 kc_col-sm-3 kc_column_inner kc_col-sm-3">
+                            <div class="kc_wrapper kc-col-inner-container">
+                                <div class="white-block price-table-element hover-shadow active-price-table">
+                                    <div class="price-table-price">
+
+                                    </div>
+                                    <div class="price-table-title">
+                                        <h5>View Career</h5>
+                                    </div>
+                                    <div class="price-table-content">
+                                        Learn About Different Career Options And Improve Your Life</div>
+                                    
+                                </div>
                             </div>
-                        </a>
-                        <a href="advert-location/paris/index.html" class="elem-location-item"
-                            style="background-image:url('wp-content/uploads/2018/07/paris.jpg')">
-                            <div class="location-title animation">
-                                <h6>Paris</h6>
-                                <p>2 ads posted</p>
-                            </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="kc-elm kc-css-83579 kc_row">
-			<div class="kc-row-container  kc-container">
-				<div class="kc-wrap-columns">
-					<div class="kc-elm kc-css-300456 kc_col-sm-12 kc_column kc_col-sm-12">
-						<div class="kc-col-container">
-							<div class="af-title text-center">
-								<h3 class="af-heading">Pricing Packages</h3>
-								<p><span style="color: #666">You can set to charge users for Packages, <b style="color: #374252">Subscriptions</b>, <b style="color: #374252">Hybrid</b> or <b style="color: #374252">Free</b></span></p>
-							</div>
-							<div class="kc-elm kc-css-800123" style="height: 35px; clear: both; width:100%;"></div>
-							<div class="kc-elm kc-css-519657 kc_row kc_row_inner">
-								<div class="kc-elm kc-css-305756 kc_col-sm-3 kc_column_inner kc_col-sm-3">
-									<div class="kc_wrapper kc-col-inner-container">
-										<div class="white-block price-table-element hover-shadow ">
-											<div class="price-table-price">
-												<span class="price-symbol">$</span>11.99<p class="tax-included">*VAT
-													included</p>
-											</div>
-											<div class="price-table-title">
-												<h5>Bronze</h5>
-											</div>
-											<div class="price-table-content">
-												Purchase this package and extend your subscription by <b>30</b> days
-											</div>
-											<a href="#" data-target="#login" data-toggle="modal" class="af-button purchase-pack">Purchase Now</a>
-										</div>
-									</div>
-								</div>
-								<div class="kc-elm kc-css-255486 kc_col-sm-3 kc_column_inner kc_col-sm-3">
-									<div class="kc_wrapper kc-col-inner-container">
-										<div class="white-block price-table-element hover-shadow active-price-table">
-											<div class="price-table-price">
-												<span class="price-symbol">$</span>23.99<p class="tax-included">*VAT
-													included</p>
-											</div>
-											<div class="price-table-title">
-												<h5>Silver</h5>
-											</div>
-											<div class="price-table-content">
-												Purchase this package and extend your subscription by <b>90</b> days
-											</div>
-											<a href="#" data-target="#login" data-toggle="modal" class="af-button purchase-pack">Purchase Now</a>
-										</div>
-									</div>
-								</div>
-								<div class="kc-elm kc-css-631237 kc_col-sm-3 kc_column_inner kc_col-sm-3">
-									<div class="kc_wrapper kc-col-inner-container">
-										<div class="white-block price-table-element hover-shadow ">
-											<div class="price-table-price">
-												<span class="price-symbol">$</span>47.99<p class="tax-included">*VAT
-													included</p>
-											</div>
-											<div class="price-table-title">
-												<h5>Gold</h5>
-											</div>
-											<div class="price-table-content">
-												Purchase this package and extend your subscription by <b>180</b> days
-											</div>
-											<a href="#" data-target="#login" data-toggle="modal" class="af-button purchase-pack">Purchase Now</a>
-										</div>
-									</div>
-								</div>
-								<div class="kc-elm kc-css-831121 kc_col-sm-3 kc_column_inner kc_col-sm-3">
-									<div class="kc_wrapper kc-col-inner-container">
-										<div class="white-block price-table-element hover-shadow active-price-table">
-											<div class="price-table-price">
-												<span class="price-symbol">$</span>71.99<p class="tax-included">*VAT
-													included</p>
-											</div>
-											<div class="price-table-title">
-												<h5>Platinum</h5>
-											</div>
-											<div class="price-table-content">
-												Purchase this package and extend your subscription by <b>365</b> days
-											</div>
-											<a href="#" data-target="#login" data-toggle="modal" class="af-button purchase-pack">Purchase Now</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
 </main>
 <a href="javascript:;" class="to_top af-button">
     <i class="aficon-angle-up"></i>
@@ -312,36 +217,7 @@
 
             <div>
                 <label for="category">Category</label>
-                <div class="styled-select">
-                    <select name="category">
-                        <option value="">In Category</option>
-                        <option value="38">Electronics</option>
-                        <option value="13">&nbsp;&nbsp;Computers</option>
-                        <option value="37">&nbsp;&nbsp;Drones</option>
-                        <option value="15">&nbsp;&nbsp;Notebooks</option>
-                        <option value="39">&nbsp;&nbsp;Phones</option>
-                        <option value="36">&nbsp;&nbsp;Watches</option>
-                        <option value="81">Furniture</option>
-                        <option value="42">Jobs</option>
-                        <option value="46">&nbsp;&nbsp;Dancers</option>
-                        <option value="51">&nbsp;&nbsp;Drivers</option>
-                        <option value="43">&nbsp;&nbsp;Film Stunts</option>
-                        <option value="9">Real Estate</option>
-                        <option value="11">&nbsp;&nbsp;Appartments</option>
-                        <option value="29">&nbsp;&nbsp;Houses</option>
-                        <option value="17">Services</option>
-                        <option value="57">&nbsp;&nbsp;Builders</option>
-                        <option value="18">&nbsp;&nbsp;Car Mechanic</option>
-                        <option value="59">&nbsp;&nbsp;Moving &amp; Storage</option>
-                        <option value="2">Vehicles</option>
-                        <option value="25">&nbsp;&nbsp;Boats &amp; Watercrafts</option>
-                        <option value="24">&nbsp;&nbsp;Campers</option>
-                        <option value="5">&nbsp;&nbsp;Cars</option>
-                        <option value="22">&nbsp;&nbsp;Motocycles</option>
-                        <option value="23">&nbsp;&nbsp;Snowmobiles</option>
-                        <option value="6">&nbsp;&nbsp;Trucks</option>
-                    </select>
-                </div>
+
             </div>
             <div class="search-submit">
                 <a href="javascript:void(0);" class="af-button submit-form">Search</a>

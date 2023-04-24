@@ -36,24 +36,16 @@
                 @endif
                 <div class="single-advert-media">
                     <div class="owl-carousel single-slider owl-marked owl-loaded owl-drag" style="">
-                        <div class="owl-stage-outer owl-height" style="height: 369.987px;">
+                        <div class="owl-stage-outer owl-height" style="height: 380.987px;">
                             <div class="owl-stage"
                                 style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 4934px;">
-                                <div class="owl-item active" style="width: 616.662px;"><a
+                                <div class="owl-item active" style="width: 750.662px;"><a
                                         href="{{asset('bookimages/'.$book->coverpage1.'')}}"
                                         class="single-slider-href"><img width="750" height="450"
                                             src="{{asset('bookimages/'.$book->coverpage1.'')}}"
                                             class="attachment-adifier-single-slider size-adifier-single-slider" alt=""
                                             decoding="async" loading="eager"></a></div>
-                                <div class="owl-item" style="width: 616.662px;"><a
-                                        href="{{asset('bookimages/'.$book->coverpage2.'')}}"
-                                        class="single-slider-href"><img width="750" height="450"
-                                            src="{{asset('bookimages/'.$book->coverpage2.'')}}"
-                                            class="attachment-adifier-single-slider size-adifier-single-slider" alt=""
-                                            decoding="async" loading="eager"
-                                            srcset="{{asset('bookimages/'.$book->coverpage2.'')}}"
-                                            sizes="(max-width: 750px) 100vw, 750px"></a></div>
-
+                               
                             </div>
                         </div>
                         <div class="owl-nav">
@@ -82,13 +74,7 @@
                                             loading="eager" srcset="{{asset('bookimages/'.$book->coverpage1.'')}}"
                                             sizes="(max-width: 150px) 100vw, 150px"></div>
                                 </div>
-                                <div class="owl-item active" style="width: 72.708px; margin-right: 5px;">
-                                    <div class="single-thumb-item animation " data-item="1"><img width="150"
-                                            height="150" src="{{asset('bookimages/'.$book->coverpage2.'')}}"
-                                            class="attachment-thumbnail size-thumbnail" alt="" decoding="async"
-                                            loading="eager" srcset="{{asset('bookimages/'.$book->coverpage2.'')}}"
-                                            sizes="(max-width: 150px) 100vw, 150px"></div>
-                                </div>
+                               
 
                             </div>
                         </div>
@@ -131,8 +117,7 @@
                             </li>
 
                             <li>
-                                <i class="aficon-eye"></i>
-                                <i class="aficon-calendar-alt"></i> {{$book->created_at}}
+                             Date&Time: {{$book->created_at}}
                             </li>
                         </ul>
                         <form method="POST" action="{{route('user.sendinterest')}}">
