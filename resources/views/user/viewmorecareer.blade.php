@@ -43,13 +43,12 @@
                         </div>
                         <ul class="list-inline list-unstyled single-meta top-advert-meta">
                             <li>
-                                <i class="aficon-user-alt"></i>
+                             
                                 {{$career->name}}
                             </li>
 
                             <li>
-                                <i class="aficon-dot-circle-o"></i>
-                                <a href="../category/tips-tricks/index.html" class="bz-cat"> {{$career->created_at}}</a>
+                               <a > Date:{{$career->created_at}}</a>
                             </li>
                         </ul>
                     </div>
@@ -80,7 +79,7 @@
                                             </div>
                                             <div class="comment-info">
                                                 <h5>{{$careercomment->name}}</h5>
-                                                <p>{{$careercomment->created_at}}</p>
+                                                <p>Date:{{$careercomment->created_at}}</p>
                                             </div>
                                         </div>
                                     </div>

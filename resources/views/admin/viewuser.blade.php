@@ -67,8 +67,6 @@
                                                 data-value="{{$user->id}}" data-toggle="modal"
                                                 data-target="#modal-primary"><i class="fa fa-trash"></i></button>
 
-                                            <a title="User details" href="{{ route('admin.viewuserdetails')}}"
-                                                class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></a>
 
                                         </td>
                                     </tr>

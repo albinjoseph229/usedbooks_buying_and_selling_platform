@@ -15,8 +15,8 @@
     </div>
 </div>
 <main>
-    
-@if (session('status'))
+
+    @if (session('status'))
     <div class="alert alert-success" role="alert">
         {{ session('status') }}
     </div>
@@ -29,39 +29,36 @@
     <div class="container">
 
         <div class="row">
-     
+
             <div class="col-sm-12">
-            
+
 
                 <div class="row">
-                      @php $i=1; @endphp
+                    @php $i=1; @endphp
                     @foreach($blog as $blogs)
-                    <div class="col-sm-4"> 
+                    <div class="col-sm-4">
                         <article id="post-425"
                             class="hover-shadow white-block post-425 post type-post status-publish format-standard has-post-thumbnail hentry category-tips-tricks tag-cite tag-dollor tag-ipsum tag-laudantium tag-lorem">
 
-                            <a href="{{url('user.viewblogs/'.$blogs->id.'')}}"
-                                class="article-media">
+                            <a href="{{url('user.viewblogs/'.$blogs->id.'')}}" class="article-media">
                                 <img width="750" height="450" src="{{asset('blogimages/'.$blogs->bimage1.'')}}"
                                     class="attachment-adifier-single-slider size-adifier-single-slider wp-post-image"
                                     alt="" decoding="async"> </a>
 
                             <div class="white-block-content">
                                 <h5>
-                                    <a href="{{url('user.viewblogs/'.$blogs->id.'')}}"
-                                        class="text-overflow" title="Velit Esse Cillum Dolore Eu Fugiat Nulla Pariatur">
-                                        {{$blogs->blog_title}}</a>
+                                    <a href="{{url('user.viewblogs/'.$blogs->id.'')}}" class="text-overflow"
+                                        title="{{$blogs->blog_title}}">
+                                        </a>
                                 </h5>
 
-                               
-
                                 <div class="flex-wrap">
-                                    <a href="{{url('user.viewblogs/'.$blogs->id.'')}}"
-                                        class="af-button">
+                                    <a href="{{url('user.viewblogs/'.$blogs->id.'')}}" class="af-button">
                                         Read More </a>
                                     <div class="top-advert-meta">
-                                        <i class="aficon-dot-circle-o"></i>
-                                        <a href="{{url('user.viewblogs/'.$blogs->id.'')}}" class="bz-cat">{{$blogs->created_at}}</a>
+                                        </i>
+                                        <a href="{{url('user.viewblogs/'.$blogs->id.'')}}"
+                                            class="bz-cat">{{$blogs->created_at}}</a>
                                     </div>
                                 </div>
 
@@ -71,15 +68,15 @@
                     </div>
                     @php $i++; @endphp
                     @endforeach
-    </div>
                 </div>
-
-
-               
             </div>
-           
+
+
 
         </div>
-        
+
+
+    </div>
+
 </main>
 @endsection

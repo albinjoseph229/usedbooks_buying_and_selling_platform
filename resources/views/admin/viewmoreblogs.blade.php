@@ -25,7 +25,7 @@
                 <div class="col-md-12">
                     <div class="card card-primary card-outline">
                         <div class="card-header">
-                            <h3 class="card-title">Read Mail</h3>
+                  
 
                             <div class="card-tools">
                                 <a href="#" class="btn btn-tool" title="Previous"><i
@@ -68,17 +68,7 @@
                             </ul>
                         </div>
                         <!-- /.card-footer -->
-                        <div class="card-footer">
-                            <div class="float-right">
-                                <button type="button" class="btn btn-default"><i class="fas fa-reply"></i>
-                                    Reply</button>
-                                <button type="button" class="btn btn-default"><i class="fas fa-share"></i>
-                                    Forward</button>
-                            </div>
-                            <button type="button" class="btn btn-default"><i class="far fa-trash-alt"></i>
-                                Delete</button>
-                            <button type="button" class="btn btn-default"><i class="fas fa-print"></i> Print</button>
-                        </div>
+                      
                         <!-- /.card-footer -->
                     </div>
                     <!-- /.card -->

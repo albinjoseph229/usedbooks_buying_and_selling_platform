@@ -129,7 +129,7 @@
                                                 <input type="hidden" id="dodelete" name="dodelete" value="{{$complaint->id}}" />
                                             <button title="Delete Book" class="btn btn-danger btn-sm deleteme"
                                                 data-value="{{$complaint->id}}" data-toggle="modal"
-                                                data-target="#modal-primary"><i class="fa fa-trash"></i></button>
+                                                data-target="#modal-primary">Delete</i></button>
                                             </form>
                                         </td>
                                         </td>

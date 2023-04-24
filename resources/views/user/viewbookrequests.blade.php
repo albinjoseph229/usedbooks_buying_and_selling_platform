@@ -130,14 +130,14 @@
                                                 <input type="hidden" id="dodelete" name="dodelete" value="{{$book->id}}" />
                                             <button title="Reject Request" class="btn btn-danger btn-sm deleteme"
                                                 data-value="{{$book->id}}" data-toggle="modal"
-                                                data-target="#modal-primary">x</button>
+                                                data-target="#modal-primary">Delete</button>
                                             </form>
                                             <form method="post" action="{{route('user.acceptrequest')}}">
                                                 @csrf
                                                 <input type="hidden" id="doupdate" name="doupdate" value="{{$book->id}}" />
                                             <button title="Accept Request" class="btn btn-danger btn-sm deleteme"
                                                 data-value="{{$book->id}}" data-toggle="modal"
-                                                data-target="#modal-primary">+</button>
+                                                data-target="#modal-primary">Accept</button>
                                             </form>
                                                
                                         </td>

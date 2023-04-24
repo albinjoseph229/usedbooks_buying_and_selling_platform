@@ -126,8 +126,8 @@
                                             <form method="post" action="{{route('user.replycomment')}}">
                                              @csrf
                                              <input type="hidden" id="doreply" name="doreply" value="{{$bookcomment->id}}" />
-                                            <textarea id="replym" name="replym" class="form-control">Reply:</textarea>
-                                            <button type="submit" title="Reply To Message" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
+                                            <textarea id="replym" name="replym" class="form-control"></textarea>
+                                            <button type="submit" title="Reply To Message" class="btn btn-primary btn-sm">Reply</i></button>
 
                                             </form>
                                         </td>

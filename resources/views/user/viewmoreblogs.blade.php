@@ -42,13 +42,13 @@
                         </div>
                         <ul class="list-inline list-unstyled single-meta top-advert-meta">
                             <li>
-                                <i class="aficon-user-alt"></i>
+                                Uploader:
                                 {{$blogs->name}}
                             </li>
 
                             <li>
-                                <i class="aficon-dot-circle-o"></i>
-                                <a href="../category/tips-tricks/index.html" class="bz-cat"> {{$blogs->bdate}}</a>
+                               
+                                <a href="../category/tips-tricks/index.html" class="bz-cat"> Date:{{$blogs->bdate}}</a>
                             </li>
                         </ul>
                     </div>

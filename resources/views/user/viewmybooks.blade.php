@@ -136,14 +136,14 @@
                                                     value="{{$book->id}}" />
                                                 <button title="Delete Book" class="btn btn-danger btn-sm deleteme"
                                                     data-value="{{$book->id}}" data-toggle="modal"
-                                                    data-target="#modal-primary">x<i class="fa fa-trash"></i></button>
+                                                    data-target="#modal-primary">Delete</i></button>
                                             </form>
                                             <a title="View complaints"
                                                 href="{{ route('user.viewcomplaints',$book->id)}}"
-                                                class="btn btn-sm btn-warning">View Complaints,</a>
+                                                class="btn btn-sm btn-warning">||View Complaints,</a>
                                             <a title="View Comments"
                                                 href="{{ route('user.mybookcomments',$book->id)}}"
-                                                class="btn btn-sm btn-warning">View Comments</a>
+                                                class="btn btn-sm btn-warning">||View Comments</a>
                                         </td>
                 </td>
                                     </tr>
