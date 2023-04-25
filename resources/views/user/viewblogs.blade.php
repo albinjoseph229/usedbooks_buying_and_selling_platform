@@ -46,9 +46,9 @@
                                     alt="" decoding="async"> </a>
 
                             <div class="white-block-content">
-                                <h5>
+                                <h5> {{$blogs->blog_title}}
                                     <a href="{{url('user.viewblogs/'.$blogs->id.'')}}" class="text-overflow"
-                                        title="{{$blogs->blog_title}}">
+                                    title="">
                                         </a>
                                 </h5>
 

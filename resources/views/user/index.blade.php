@@ -82,9 +82,9 @@
                                             <div class="top-advert-meta flex-wrap">
                                                
                                                 <div class="advert-city text-overflow">
-                                                    <i class="aficon-map-marker-alt-o"></i>
+                                                   
                                                     <a href="advert-location/amsterdam/index.html">
-                                                        {{$books->address}}</a>
+                                                        {{$books->location}}</a>
                                                 </div>
                                             </div>
                                             <h5 class="adv-title">

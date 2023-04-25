@@ -36,10 +36,10 @@
                 @endif
                 <div class="single-advert-media">
                     <div class="owl-carousel single-slider owl-marked owl-loaded owl-drag" style="">
-                        <div class="owl-stage-outer owl-height" style="height: 380.987px;">
+                        <div class="owl-stage-outer owl-height" style="height: 700px; width:500px;">
                             <div class="owl-stage"
                                 style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 4934px;">
-                                <div class="owl-item active" style="width: 750.662px;"><a
+                                <div class="owl-item active" style="width:500px;"><a
                                         href="{{asset('bookimages/'.$book->coverpage1.'')}}"
                                         class="single-slider-href"><img width="750" height="450"
                                             src="{{asset('bookimages/'.$book->coverpage1.'')}}"
@@ -48,10 +48,7 @@
                                
                             </div>
                         </div>
-                        <div class="owl-nav">
-                            <div class="owl-prev disabled"><i class="aficon-angle-left"></i></div>
-                            <div class="owl-next"><i class="aficon-angle-right"></i></div>
-                        </div>
+                        
                         <div class="owl-dots">
                             <div class="owl-dot active"><span></span></div>
                             <div class="owl-dot"><span></span></div>
@@ -256,7 +253,7 @@
                                 <div class="user-rating">
                                     {{$book->email}}
                                 </div>
-                                <div class="online-status offline flex-wrap flex-start-h"><span></span>Offline</div>
+                                
                             </div>
                         </div>
 

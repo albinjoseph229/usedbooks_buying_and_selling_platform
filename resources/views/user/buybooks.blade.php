@@ -113,6 +113,7 @@
                                     <img width="355" height="250" src="{{asset('bookimages/'.$book->coverpage1.'')}}"
                                         class="attachment-adifier-grid size-adifier-grid wp-post-image" alt=""
                                         decoding="async" loading="lazy" />
+                                        
                                     <div class="white-block-content">
 
                                         <div class="top-advert-meta flex-wrap">
