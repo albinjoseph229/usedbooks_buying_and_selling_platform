@@ -1,5 +1,5 @@
 ## Used Books Buying And Selling Platform
-<br><br>
+<br>
 <p>The UsedBooks Buying and Selling Platform is an online portal designed to facilitate the buying and selling of pre-owned books. This platform provides a convenient way for users to browse, buy, and sell books from the comfort of their own homes. Whether you're a book lover looking to expand your collection or someone looking to declutter their shelves, this platform offers a user-friendly interface and robust features to meet your needs.</p>
 
 <h2>Key Features</h2>
